@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vester Product</title>
+    <title>Vester Panel</title>
     <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
@@ -97,8 +97,9 @@
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Add User <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Feedback <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
+
                     <div class="pickColor">
                         <p>Change Color</p>
                         <ul>
@@ -109,79 +110,50 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-7 col-lg-8">
+                <div class="container px-4 py-5" id="featured-3">
 
-                    <form class="needs-validation" novalidate="">
-                        <div class="row g-12">
-                            <div class="col-sm-6">
-                                <label for="userFirstName" class="form-label"><i class="fas fa-signature"></i>&nbsp;
-                                    First name</label>
-                                <input type="text" class="form-control " id="userFirstName" placeholder="John" value=""
-                                    required="">
-                                <div class="invalid-feedback">
-                                    Valid user name is required.
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="userLastName" class="form-label"><i class="fas fa-signature"></i>&nbsp;
-                                    Last name</label>
-                                <input type="text" class="form-control " id="userLastName" placeholder="Dawod" value=""
-                                    required="">
-                                <div class="invalid-feedback">
-                                    Valid user name is required.
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="email" class="form-label"><i class="fas fa-envelope"></i>&nbsp;
-                                    Email</label>
-                                <input type="email" class="form-control " id="email" placeholder="free@example.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address.
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="numberPhone" class="form-label"><i class="fas fa-phone"></i>&nbsp;
-                                    Phone number</label>
-                                <input type="number" class="form-control " id="numberPhone" placeholder="+20-1069856">
-                                <div class="invalid-feedback">
-                                    Please enter a valid number address.
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label for="code" class="form-label"><i class="fas fa-barcode"></i>&nbsp; User
-                                    ID</label>
-                                <input type="text" class="form-control " id="code" placeholder="13458" required="">
-                                <div class="invalid-feedback">
-                                    id required
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="date" class="form-label"></label><i class="far fa-calendar-alt"></i>&nbsp;
-                                Birth date</label>
-                                <input type="date" class="form-control" id="date" placeholder="" required="">
-                                <div class="invalid-feedback">
-                                    "date required.
-                                </div>
-                            </div>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
+                        <div class="feature col">
+                            <h3>User 1</h3>
+                            <h6>Product id</h6>
+                            <p> Your website is fantastic. keep going . God save you.</p>
+                            <a href="#accepted" class="icon-link feed accepted">
+                                Accept
+                            </a>
+                            <a href="#rejected" class="icon-link feed rejected">
+                                Reject
+                            </a>
                         </div>
-
-                        <br>
-                        <button class="w-100 g-12 btn btn-lg fix text-white" style="border-radius: 0;" type="submit">Add
-                            User</button>
-                        <br>
-                        <br>
+                        <div class="feature col">
+                            <h3>User 2</h3>
+                            <h6>Product id</h6>
+                            <p> Your website is fantastic. keep going . God save you.</p>
+                            <a href="#accepted" class="icon-link feed accepted">
+                                Accept
+                            </a>
+                            <a href="#rejected" class="icon-link feed rejected">
+                                Reject
+                            </a>
+                        </div>
+                        <div class="feature col">
+                            <h3>User 3</h3>
+                            <h6>Product id</h6>
+                            <p> Your website is fantastic. keep going . God save you.</p>
+                            <a href="#accepted" class="icon-link feed accepted">
+                                Accept
+                            </a>
+                            <a href="#rejected" class="icon-link feed rejected ">
+                                Reject
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
 
 
 
-                </form>
+            </main>
         </div>
-
-
-        </main>
-    </div>
     </div>
 
 

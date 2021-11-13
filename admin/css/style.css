@@ -124,10 +124,16 @@ main{
 a{
   text-decoration: none;
 }
-.fa-edit{
+.fa-edit {
   color:rgb(11, 226, 144)
 }
 .fa-trash-alt {
+  color: rgb(243, 73, 73);
+}
+.fa-check{
+  color:rgb(11, 226, 144)
+}
+.fa-times {
   color: rgb(243, 73, 73);
 }
 .fa-layer-group{
@@ -184,5 +190,29 @@ a{
 header{
   background-color: #0d6efd;
 }
+.feed{
+  font-weight: 500;
+}
+.accepted{
+  color:rgb(11, 226, 144);
+  margin-right: 15px;
+}
+.rejected{
+  color: rgb(243, 73, 73);
+}
+.feature h6{
+  font-weight: 400;
+}
+.accepted:hover{
+  color:rgb(90, 218, 169);
+  margin-right: 15px;
+}
+.rejected:hover{
+  color: rgb(240, 92, 92);
+}
+
+
+
+
 
 
