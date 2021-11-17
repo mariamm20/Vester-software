@@ -427,9 +427,13 @@ footer a:hover{
     justify-content: start;
     flex-direction: row;
 }
+footer i {
+    color: rgb(255, 232, 29);
+}
 .icons i{
     padding-right:30px ;
     cursor: pointer;
+    color: #fff;
 }
 .icons i:hover{
     color: #c8e2f3;
@@ -442,8 +446,9 @@ footer span{
     margin-top: 40px;
 }
 footer h5{
-    background-color: #e0eef6;
-    color: #1c2750;
+    
+    color: #fff;
+    border-bottom: 1px solid #e0eef6;;
    
 }
 .fixed-image{
