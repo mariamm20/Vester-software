@@ -327,7 +327,7 @@ header{
     height: 530px;
     border-radius: 50% 50% 0 0 ;
     display: flex;
-    flex-direction: column;
+   
     justify-content: center;
     position: relative;
 }
@@ -451,11 +451,11 @@ footer h5{
     background-image: url(../9.jpg);
     background-attachment: fixed;
     background-size: auto;
-    width: 40%;
+    width: 200px;
     height: 180px;
     border-radius: 50%;
     position: absolute;
-    left: 160px;
+    top:135px;
     border: 3px solid #c8e2f3;
 }
 
