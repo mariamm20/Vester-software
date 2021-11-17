@@ -32,14 +32,12 @@ header{
     position: relative;
     top: 6px;
 }
-.v{
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 2px;
-    
-}
+
 .v a {
     text-decoration: none;
     color: #1c2750;
+    font-family: 'Architects Daughter', cursive;
+    letter-spacing: 2px;
 }
 header{
     display: flex;
