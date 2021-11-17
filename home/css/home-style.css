@@ -452,7 +452,11 @@ footer h5{
 }
 .fixed-image{
     
+<<<<<<< HEAD
     background-image: url("9.jpg");
+=======
+    background-image: url("../img/9.jpg");
+>>>>>>> d238b0e6bbe4654f451da1cb1cf130ae120725c4
     background-attachment: fixed;
     background-size: auto;
     width: 200px;
