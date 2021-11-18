@@ -143,12 +143,7 @@ header{
     border: none;
     padding: 15px;
 }
-.c-btn:hover {
-    color: #1c2750;
-    background-color: #e0eef6;
-    border: 1px solid #1c2750;
-    padding: 14px;
-}
+
 .check{
     text-align: left;
     margin-bottom: 17px; 
