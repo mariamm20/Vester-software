@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arimo:wght@600&family=Lobster+Two&family=Open+Sans:wght@300;400;500&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
+body{
+    color: #1c2750;
+    scroll-behavior: smooth ;
+    transition: all .8s ease;
+    padding-bottom: 0;
+}
+header{
+    background-color: #fff;
+}
+.cart{
+    background-color: #e0eef6;
+    border-radius: 45% 0 0 45%;
+    border-right: 1px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cart-number{
+    background-color: #1c2750;
+    color: #fff;
+    border-radius: 0 45% 45% 0;
+    padding: 5px 10px;
+    margin-right: 0;
+    border:1px solid #e0eef6;
+}
+.menu{
+    position: relative;
+    top: 6px;
+}
+
+.v a {
+    text-decoration: none;
+    color: #1c2750;
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: 2px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+#menu{
+    user-select: none;
+    
+    background-color: #1c2750;
+    height: 637px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 3em;
+    letter-spacing: 6px;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Shadows Into Light', cursive;
+   
+}
+.smooth{
+    
+    transition: all .5s ease-in-out ;
+}
+.menu-list{
+    list-style: none;
+    
+}
+.menu-list a{
+    text-decoration: none;
+    color: #fff;
+}
+.menu-list a:hover{
+    text-decoration: none;
+    color:#ccc;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color:#e0eef6 ;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color:#1c2750;
+    
+}
+
+/* section style*/
+.main{
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    background-color: #E0EEF6;
+    padding: 0;
+}
+.form-content{
+    background-color: #fff;
+    width: 500px; 
+    border-radius: 50% 50% 0 0; 
+    margin-top: 75px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    
+}
+
+.form-content h2{
+    margin-top: 40px;
+}
+.inputs{
+    margin-top: 35px;
+    padding: 0;
+    
+}
+.just-width{
+    width: 300px;
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.special-width{
+    width: 147.5px;
+    padding: 7px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.create-btn{
+    width: 100%;
+    background-color: #1c2750;
+    color: #fff;
+    border: none;
+    padding: 15px;
+}
+.c-btn:hover {
+    color: #1c2750;
+    background-color: #e0eef6;
+    border: 1px solid #1c2750;
+    padding: 14px;
+}
+.check{
+    text-align: left;
+    margin-bottom: 17px; 
+    position: relative; 
+    left: 95px;
+    width: fit-content;
+}
+
+
+.content{
+    background-color: #fff; 
+    width: 500px; 
+    border-radius: 0 0 50% 50%;
+    height: 548.6px;
+    padding: 0;
+    text-align: center;
+}
+
+.phrases{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+}
+.icons{
+    display: flex; 
+    flex-direction: column;
+}
+.words{
+    display: flex; 
+    flex-direction: column; 
+    text-align: left ;
+}
+.icons i{
+    margin-bottom: 17px;
+    color:rgb(255, 232, 29);
+}
+.words span{
+    margin-bottom: 8px;
+}
+.content .become{
+    font-size: 14px;
+    color: #21bfca;
+    margin-top: 35px;
+}
+
+.reverse-btn{
+    background-color: #1c2750;
+    color: #fff;
+    border: 1px solid #fff; 
+    padding:10px 30px;
+    border-radius:25px;
+}
+.reverse-btn:hover{
+    color: #1c2750;
+    background-color: #e0eef6;
+}
+.already{
+    font-size: 14px;
+    color: #21bfca;
+
+}
+
+
+
+
+
+
+
+@media (max-width: 575.98px) { 
+    header{
+        display: block!important;
+        text-align: center;
+    }
+
+    
+    
+ }
+ @media (max-width:515px){
+    .check{
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+    }
+    /* .just-width{
+        width: 220px;
+    }
+    .special-width{
+        width: 220px;
+    } */
+
+ }
+ @media (max-width:440px){
+    
+    .just-width{
+        width: 220px;
+    }
+    .special-width{
+        width: 220px;
+    }
+
+ }
+@media (max-width:1020px) {
+    .form-content{
+        margin-bottom: 25px;
+    }
+    .content{
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
