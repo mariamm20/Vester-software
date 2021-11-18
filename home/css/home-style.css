@@ -315,14 +315,14 @@ header{
     color: #1c2750;
     border-bottom: 2px solid #1c2750;
     position: relative;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
 }
 .arrow a:after{
     position: absolute;
     margin-left: -2px;
     content: ">";
-    top: 26.79px;    
+    top: 21.79px;    
     font-size: 18px;
     font-weight: 600;
 }
