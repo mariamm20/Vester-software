@@ -96,6 +96,7 @@ header{
     flex-wrap: wrap;
     background-color: #E0EEF6;
     padding: 0;
+    padding-bottom: 135px;
 }
 .form-content{
     background-color: #fff;
@@ -111,7 +112,7 @@ header{
     margin-top: 40px;
 }
 .inputs{
-    margin-top: 35px;
+    margin-top: 45px;
     padding: 0;
     
 }
@@ -155,65 +156,15 @@ header{
     left: 95px;
     width: fit-content;
 }
-
-
-.content{
-    background-color: #fff; 
-    width: 500px; 
-    border-radius: 0 0 50% 50%;
-    height: 548.6px;
-    padding: 0;
-    text-align: center;
-}
-
-.phrases{
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center;
-}
-.icons{
-    display: flex; 
-    flex-direction: column;
-}
-.words{
-    display: flex; 
-    flex-direction: column; 
-    text-align: left ;
-}
-.icons i{
-    margin-bottom: 17px;
-    color:rgb(255, 232, 29);
-}
-.words span{
-    margin-bottom: 8px;
-}
-.content .become{
-    font-size: 14px;
-    color: #21bfca;
-    margin-top: 35px;
-}
-
-.reverse-btn{
-    background-color: #1c2750;
-    color: #fff;
-    border: 1px solid #fff; 
-    padding:10px 30px;
-    border-radius:25px;
-}
-.reverse-btn:hover{
-    color: #1c2750;
-    background-color: #e0eef6;
-}
 .already{
     font-size: 14px;
     color: #21bfca;
-
+    
 }
-
-
-
-
-
+.check a {
+    text-decoration: none;
+    color:#1c2750;
+}
 
 
 @media (max-width: 575.98px) { 
@@ -229,7 +180,7 @@ header{
     .check{
         margin-left: auto;
         margin-right: auto;
-        left: 0;
+        left: 8px;
     }
    
 
@@ -244,21 +195,3 @@ header{
     }
 
  }
-@media (max-width:1020px) {
-    .form-content{
-        margin-bottom: 25px;
-    }
-    .content{
-        margin-bottom: 25px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
