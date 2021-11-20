@@ -248,7 +248,7 @@ margin-right: 10px;
     width: 300px;
     box-shadow:2px 2px 5px #ccc;
     position: relative;
-    
+    height: fit-content;
     padding: 0;
 }
 .main-div img{
