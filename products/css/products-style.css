@@ -233,25 +233,15 @@ margin-right: 10px;
 }
 .parent-product{
     display: grid;
-    grid-template-areas: 
-    "child1  child2 child3"
-    ;
+    grid: 493.9px/ auto auto auto;
     position: relative;
     top :60px;
     padding: 0;
+    row-gap: 25px;
+    column-gap: 10px;
 }
-.child1{
-    grid-area: child1;
-    
-}
-.child2{
-    grid-area: child2;
-    
-}
-.child3{
-    grid-area: child3;
-    
-}
+ 
+
 
 
 .main-div{
@@ -358,7 +348,9 @@ margin-right: 10px;
 .child{
         margin-bottom: 15px;
     }
-
+.rotate{
+    transform: rotate(-90deg);
+}
 
 
 
@@ -388,7 +380,7 @@ margin-right: 10px;
     }
    
  }
-@media (max-width: 1318px) {
+@media (max-width: 1024px) {
     .list{
         display: none;
     }
@@ -408,32 +400,30 @@ margin-right: 10px;
     
 
 }
-@media (max-width: 1318px) {
-
+@media (max-width:1318px) {
     .parent-product{
     display: grid;
-    grid-template-areas: 
-    "child1 child2 child3 ";
-    
-    }
-    .child{
-        margin-bottom: 15px;
-    }
+    grid: 493.9px/ auto auto;
+    position: relative;
+    top :60px;
+    padding: 0;
+    row-gap: 25px;
+    column-gap: 10px;
+    justify-content: center;
 }
-@media (max-width: 936px) {
+}
 
+@media (max-width:660px) {
     .parent-product{
     display: grid;
-    grid-template-areas: 
-    ". child1 ." ". child2 ." ". child3 .";
-
-    justify-items: center;
-    
-    }
-    
+    grid: 493.9px/ auto;
+    position: relative;
+    top :60px;
+    padding: 0;
+    row-gap: 25px;
+    justify-content: center;
 }
-
-
+}
 
 
 
