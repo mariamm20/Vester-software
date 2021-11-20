@@ -103,6 +103,9 @@ header{
 .intro{
     color:  #21bfca;
     font-size: 14px;
+    
+}
+.intro-center{
     text-align: center;
 }
 .pick-up{
