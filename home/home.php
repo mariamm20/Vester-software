@@ -101,13 +101,13 @@
                 <img src="../img/5.jpg" />
                 <div class="name-product">
                     <h4>Net Software</h4>
-                    <div>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+<div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
                     <p>
                         It is a good software to ease your work and ease your life. It can be used by an organizations
                         and teams.
@@ -123,13 +123,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
 
@@ -139,12 +140,12 @@
                 <img src="../img/6.jpg" />
                 <div class="name-product">
                     <h4>Kit Software</h4>
-                    <div>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+<div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p>
                         It is a good software to ease your work and ease your life. It can be used by an organizations
@@ -161,13 +162,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -176,11 +178,11 @@
                 <div class="name-product">
                     <h4>Jola Software</h4>
                     <div>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p>
                         It is a good software to ease your work and ease your life. It can be used by an organizations
@@ -197,13 +199,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -276,7 +279,7 @@
                     <div>
                         <p>
                             ''Awesome website. I bought a software to mange my clinic and it was super simple. <br>
-                         Please, Choose yours carefully''
+                            Please, Choose yours carefully''
                         </p>
                     </div>
 
