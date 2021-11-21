@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arimo:wght@600&family=Lobster+Two&family=Open+Sans:wght@300;400;500&display=swap');
 *{
     box-sizing: border-box;
@@ -274,8 +276,8 @@ header{
     width:100%;
     text-align: center;
     padding-top: 23px;
-    border-left: 1px solid #1c2750;
-    display: none;
+    
+    opacity:0;
     font-weight: 600;
 }
 .price-text{
@@ -287,18 +289,19 @@ header{
     color: #1c2750;
 }
 .price:hover .add-to-cart{
-    display: block;
-    transition: all .2s ease-in;
+    opacity: 1;
+    transition:  .5s ease-in-out;
 }
 .price:hover .price-text{
-    display: none;
-    transition: all .2s ease-in;
+    opacity: 0;
+    
 }
 .price:hover {
     padding-left: 0;
+    background-color: #e0eef6;
 }
 .main-div:hover{
-    transform: translateY(-1%);
+    box-shadow:2px 2px 5px #ccc , -1px -1px 3px #ccc;
     transition: all .2s ease-in;
 
 }
@@ -538,3 +541,4 @@ footer h5{
 }
     
 }
+>>>>>>> e1dd7fc6d432c822437e9bc71028f7312d411330

@@ -123,13 +123,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
 
@@ -161,13 +162,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -197,13 +199,14 @@
                         <h5>Price</h5>
                         <p>50$</p>
                     </div>
+                    <div class="add-to-cart">
+                        <a href="#"> Add to cart</a>
+                    </div>
                     <div class="cart-icon">
                         <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
 
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -219,7 +222,7 @@
         <div class="land-text req-text">
             <p class="intro">Get to know new features </p>
             <h2>
-                <span class="pick-up">Make a Request for </span><br>
+                <span class="pick-up-edit">Make a Request for </span><br>
                 your company software
             </h2>
             <p class="text">
@@ -244,14 +247,14 @@
     <!--Fifth section-->
     <div style="text-align: center; padding-top: 50px;">
         <p class="intro">OUR TESTIMONIALS</p>
-        <h2>Why they recommend Us</h2>
+        <h2>Why They Recommend Us</h2>
     </div>
     <section class="review">
 
         <div class="backcolor">
 
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel " data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -262,7 +265,8 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
 
-                    <img src="../img/4.png" class="d-block carousel-image " alt="man" style="width: 100px;height: 100px; ">
+                    <img src="../img/4.png" class="d-block carousel-image " alt="man"
+                        style="width: 100px;height: 100px; ">
 
                     <div class="stars">
                         <h5>Jack Dawood</h5>
