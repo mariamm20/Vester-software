@@ -1,7 +1,7 @@
 <?php
 
 
-    // inhirit from "Signup" class to use the "checkUser" function  -----   he doesn't do this
+    
     class loginView extends Login {
 
         
@@ -11,7 +11,7 @@
         
         
         // make constructor to equal the properties with the parameters inside the constructor
-        public function __construct($pass, $email)
+        public function __construct($email, $pass)
         {
         
             

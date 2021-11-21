@@ -34,8 +34,8 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Request Software</a></li>
-            <li><a href="../sign-up/sign-up.html">Sign up</a></li>
-            <li><a href="../sign-in/sign-in.html">Sign In</a></li>
+            <li><a href="sign-up.php">Sign up</a></li>
+            <li><a href="sign-in.php">Sign In</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>

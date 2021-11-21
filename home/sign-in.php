@@ -36,8 +36,8 @@
             <li><a href="../home/home.html">Home</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Request Software</a></li>
-            <li><a href="../sign-up/sign-up.html">Sign up</a></li>
-            <li><a href="../sign-in/sign-in.html">Sign In</a></li>
+            <li><a href="sign-up.php">Sign up</a></li>
+            <li><a href="sign-in.php">Sign In</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
@@ -47,7 +47,7 @@
             <h2>Sign In</h2>
             <form class="inputs" action="../includes/login.inc.php" method="POST">
                 
-                <input type="email" required class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
+                <input type="text" required class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
                 <input type="password" required class="just-width" name= "pass" placeholder="Password" /><br>
                 
                 <div class="check">

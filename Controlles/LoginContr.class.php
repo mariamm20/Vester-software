@@ -5,30 +5,25 @@ class Login extends Db
     // set the user data
     protected function getUser($email, $pass)
     {
-        $hashpass = password_hash($pass, PASSWORD_DEFAULT);
         
-        $stmt = $this->Connect()->prepare('SELECT password FROM users WHERE email =? AND password = ?;');
-        
-        
+        $stmt = $this->Connect()->prepare('SELECT password FROM users WHERE email =? or phone = ?');
         
 
          
-        if (!  $stmt->execute(array($email,$hashpass)))
+        if (!$stmt->execute([$email,$email]))
         {
             $stmt = null;  // if it faild the statement will be closed
-            header("location: ../home/sign-up.php?error=stmtfailed");
+            header("location: ../home/sign-in.php?error=stmtfailed");
             exit();
         }
 
         if($stmt->rowCount()== 0)
-        {
-            echo "wrong password";
-            
-            header("location: ../home/sign-up.php?error= . $stmt->rowCount() .  " ); 
+        {            
+            header("location: ../home/sign-in.php?error=usernotfound" ); 
             exit();
         }
 
-        // 
+        
 
         $hashedpass = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $checkpass =password_verify($pass,$hashedpass[0]['password'] );
@@ -42,19 +37,19 @@ class Login extends Db
         }
         elseif($checkpass == true)
         {
-            $stmt = $this->Connect()->prepare('SELECT * FROM users WHERE Fname =? OR Lname = ? OR email =? OR phone =? OR country =? AND password = ?;');
+            $stmt = $this->Connect()->prepare('SELECT * FROM users WHERE email =? OR phone =? AND password = ?;');
 
-            if (!  $stmt->execute(array($email,$pass)))
+            if (!  $stmt->execute(array($email,$email,$pass)))
             {
                 $stmt = null;  // if it faild the statement will be closed
-                header("location: ../home/sign-up.php?error=stmt2failed");
+                header("location: ../home/sign-in.php?error=stmt2failed");
                 exit();
             }
 
-            if($stmt->rowCount()== 0)
+        if($stmt->rowCount()== 0)
         {
             $stmt = null;
-            header("location: ../home/sign-up.php?error=usernotfound2");
+            header("location: ../home/sign-in.php?error=usernotfound2");
             exit();
         }
 
@@ -63,7 +58,7 @@ class Login extends Db
         session_start();
 
         $_SESSION["email"] = $user[0]["email"];
-        $_SESSION["pass"] = $user[0]["password"];
+        $_SESSION["id"] = $user[0]["id"];
         $stmt = null;
 
 
