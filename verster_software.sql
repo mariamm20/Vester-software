@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL
+  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -40,8 +40,8 @@ CREATE TABLE `cart` (
 --
 
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -51,11 +51,11 @@ CREATE TABLE `category` (
 --
 
 CREATE TABLE `contact_us` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `phone` varchar(11) DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL
+  `description` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -65,10 +65,10 @@ CREATE TABLE `contact_us` (
 --
 
 CREATE TABLE `feedback` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` varchar(50) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL
+  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -78,8 +78,8 @@ CREATE TABLE `feedback` (
 --
 
 CREATE TABLE `lan_programming` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -87,9 +87,9 @@ CREATE TABLE `lan_programming` (
 --
 -- Table structure for table `products`
 --
-
+    
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `description` varchar(50) DEFAULT NULL,
   `price` tinyint(4) NOT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE `products` (
   `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `users_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `file` varchar(50) NOT NULL
+  `file` varchar(50) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -109,9 +109,9 @@ CREATE TABLE `products` (
 --
 
 CREATE TABLE `product_lan` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `lan_programming_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL
+  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,10 +121,10 @@ CREATE TABLE `product_lan` (
 --
 
 CREATE TABLE `requests` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(50) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
-  `users_id` int(11) NOT NULL
+  `users_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -134,10 +134,10 @@ CREATE TABLE `requests` (
 --
 
 CREATE TABLE `sales` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL
+  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -145,9 +145,9 @@ CREATE TABLE `sales` (
 --
 -- Table structure for table `users`
 --
-
+   
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `Fname` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `Lname` varchar(20) NOT NULL,
@@ -157,7 +157,7 @@ CREATE TABLE `users` (
   `last_login` datetime DEFAULT NULL,
   `role` varchar(10) NOT NULL,
   `country` varchar(50) DEFAULT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -167,9 +167,9 @@ CREATE TABLE `users` (
 --
 
 CREATE TABLE `wishlist` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL
+  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -180,41 +180,35 @@ CREATE TABLE `wishlist` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `Products_cart` (`Products_id`),
   ADD KEY `users_cart` (`users_id`);
 
 --
 -- Indexes for table `category`
 --
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `contact_us`
 --
-ALTER TABLE `contact_us`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`id`),
+  
   ADD KEY `Products_feedback` (`Products_id`),
   ADD KEY `users_feedback` (`users_id`);
 
 --
 -- Indexes for table `lan_programming`
 --
-ALTER TABLE `lan_programming`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `Products_ix_1` (`name`),
   ADD KEY `category_Products` (`category_id`),
   ADD KEY `users_Products` (`users_id`);
@@ -223,7 +217,6 @@ ALTER TABLE `products`
 -- Indexes for table `product_lan`
 --
 ALTER TABLE `product_lan`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `Products_product_lan` (`Products_id`),
   ADD KEY `lan_programming_product_lan` (`lan_programming_id`);
 
@@ -231,14 +224,12 @@ ALTER TABLE `product_lan`
 -- Indexes for table `requests`
 --
 ALTER TABLE `requests`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `users_requests` (`users_id`);
 
 --
 -- Indexes for table `sales`
 --
 ALTER TABLE `sales`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `Products_orders` (`Products_id`),
   ADD KEY `users_orders` (`users_id`);
 
@@ -246,14 +237,12 @@ ALTER TABLE `sales`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_ix_1` (`email`);
 
 --
 -- Indexes for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `Products_wishlist` (`Products_id`),
   ADD KEY `users_wishlist` (`users_id`);
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,25 +44,26 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign Up</h2>
-            <form class="inputs">
+            <form class="inputs" action="../includes/signup.inc.php" method="POST">
                 <div style="padding: 0;margin: 0;">
-                    <input type="text" required class="special-width" placeholder="First Name" />
-                    <input type="text" required class="special-width" placeholder="Last Name" />
+                    <input type="text" required class="special-width" name="fname" placeholder="First Name" />
+                    <input type="text" required class="special-width" name="lname" placeholder="Last Name" />
                 </div>
-                <input type="email" required class="just-width" placeholder="email@yahoo.com" /><br>
-                <input type="password" required class="just-width" placeholder="Password" /><br>
-                <select class="just-width">
+                <input type="email" required class="just-width" name="email" placeholder="email@yahoo.com" /><br>
+                <input type="password" required class="just-width" name="pass" placeholder="Password" /><br>
+                <input type="password" required class="just-width" name="rpass" placeholder="Enter Password Again" /><br>
+                <select class="just-width" name="country">
                     <option>Select Country</option>
                     <option>alex</option>
                     <option>cairo</option>
                 </select><br>
-                <input type="date" required class="just-width" /><br>
+                <input type ="text" required class="just-width" name="num" placeholder="Phone Number"/><br>
                 <div class="check">
                     <input type="checkbox" id="accept" required /><label for="accept">Accept all privacy
                         policy</label><br>
                     <input type="checkbox" id="robot" required /><label for="robot">I a person not a robot</label>
                 </div>
-                <button type="submit" class="create-btn c-btn">Create Account</button>
+                <button type="submit" class="create-btn c-btn" name="cacount">Create Account</button>
             </form>
         </div>
 

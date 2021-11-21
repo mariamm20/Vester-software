@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,18 +45,18 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign In</h2>
-            <form class="inputs">
+            <form class="inputs" action="../includes/login.inc.php" method="POST">
                 
-                <input type="email" required class="just-width" placeholder="email@yahoo.com" /><br>
-                <input type="password" required class="just-width" placeholder="Password" /><br>
+                <input type="email" required class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
+                <input type="password" required class="just-width" name= "pass" placeholder="Password" /><br>
                 
                 <div class="check">
-                    <input type="checkbox" id="accept" required /><label for="accept">Show Password</label><br>
+                    <input type="checkbox" id="accept"  /><label for="accept">Show Password</label><br>
                     <p class="already">Have not an account yet?<a href="../sign-up/sign-up.html">Sign Up!</a></p>
 
                 </div>
                 
-                <button type="submit" class="create-btn">Enter Account</button>
+                <button type="submit" class="create-btn" name="submit">Enter Account</button>
             </form>
         </div>
 
