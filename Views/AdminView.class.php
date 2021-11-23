@@ -1,4 +1,5 @@
  <?php
+    // add categories options in add product
 
 
 class AdminView extends AdminContr{
@@ -29,20 +30,21 @@ class AdminView extends AdminContr{
 
     }
      
-   public function setProduct($name,$description,$price,$category,$discount,$image, $thumbnail, $file){
+    public function setProduct($name,$description,$price,$category,$discount,$image, $thumbnail, $file){
 
-    $image_obj = new Upload("image",$image);
-    $imageName =$image_obj->save();
+        $image_obj = new Upload("image",$image);
+        $imageName =$image_obj->save();
 
-    $thumbnail_obj = new Upload("image",$thumbnail);
-    $thumbnailName = $thumbnail_obj->save();
+        $thumbnail_obj = new Upload("image",$thumbnail);
+        $thumbnailName = $thumbnail_obj->save();
 
-    $file_obj = new Upload("file",$file);
-    $fileName =$file_obj->save();
+        $file_obj = new Upload("file",$file);
+        $fileName =$file_obj->save();
 
 
-    $this->setProductContr($name,$description,$price,$category,$discount,$imageName,$thumbnailName, $fileName);
-   }
+        $this->setProductContr($name,$description,$price,$category,$discount,$imageName,$thumbnailName, $fileName);
+    }
+
 
 
 
