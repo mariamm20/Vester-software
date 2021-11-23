@@ -32,13 +32,13 @@ class AdminView extends AdminContr{
      
     public function setProduct($name,$description,$price,$category,$discount,$image, $thumbnail, $file){
 
-        $image_obj = new Upload("image",$image);
+        $image_obj = new Upload("image",$image,'add-product');
         $imageName =$image_obj->save();
 
-        $thumbnail_obj = new Upload("image",$thumbnail);
+        $thumbnail_obj = new Upload("image",$thumbnail,'add-product');
         $thumbnailName = $thumbnail_obj->save();
 
-        $file_obj = new Upload("file",$file);
+        $file_obj = new Upload("file",$file,'add-product');
         $fileName =$file_obj->save();
 
 
@@ -47,13 +47,38 @@ class AdminView extends AdminContr{
 
 
 
+    public function showUsers() {
+
+        $data = $this->getUsers();
+    
+        foreach($data as $item){
+
+        ?>
+        <tr>
+            <td><?php echo $item['id'];?></td>
+            <td><?php echo $item['Fname'] . " ". $item['Lname']?></td>
+            <td><?php echo $item['email']?></td>
+            <td><?php echo $item['phone'] ?></td>
+            <td>
+                <a href="update-product.php/id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
+                &nbsp;
+                <a href="?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr> 
+
+        <?php
+        }
+
+    }
+    public function addUser($Fname,$Lname,$email,$phone,$photo,$role, $country,$password){
+
+        $image_obj = new Upload("image",$photo,'add-user');
+        $imageName =$image_obj->save();
 
 
-
-
-
-
-
+        $this->setUserContr($Fname,$Lname,$email,$phone,$imageName,$role, $country,$password);
+        echo "done";
+    }
 
 }
 
@@ -64,10 +89,10 @@ class  Upload {
     private $fileTmpName;
     private $fileSize;
     private $fileError;
+    private $page;
+    public function __construct($type, $file,$page){
 
-    public function __construct($type, $file){
-
-
+        $this->page =$page;
         $this->type = $type;
         $this->fileSize =$file['size'];
         $this->fileError =$file['error'];
@@ -78,15 +103,15 @@ class  Upload {
     }
     public function save(){
         if($this->check_Extension()== false){
-            header("location: ../add-product.php?error=extensionerror");
+            header("location: ../".$this->page.".php?error=extensionerror");
             exit();
         }
         if($this->check_size()== false){
-            header("location: ../add-product.php?error=sizeerror".$this->fileFinalExt);
+            header("location: ../".$this->page.".php?error=sizeerror");
             exit();
         }
         if($this->Check_Errors() == false){
-            header("location: ../add-product.php?error=uploaderrors");
+            header("location: ../".$this->page.".php?error=uploaderrors");
             exit();
         }
         $name = $this->move();
@@ -163,6 +188,190 @@ class  Upload {
         return $fileNewName;
     }
     
+}
+
+class checkUserData extends AdminContr{
+    private $fname;
+    private $lname;
+    private $email;
+    private $pass;
+    private $rpass;
+    private $country;
+    private $num;
+    private $role;
+    private $photo;
+    
+        // make constructor to equal the properties with the parameters inside the constructor
+    public function __construct($Fname,$Lname,$email,$phone,$photo,$role, $country,$password,$rePassword)
+    {
+        $this->fname = $Fname;
+        $this->lname = $Lname;
+        $this->email = $email;
+        $this->pass = $password;
+        $this->rpass = $rePassword;
+        $this->country = $country;
+        $this->num = $phone;
+        $this->role= $role;
+        $this->photo = $photo;
+           
+
+    }
+
+    //  don't return error لو الكل الفانكشنز اللي تحت دي مشsignup for user  المفروض هعمل فانكشن تعملي 
+
+    public function userSignup()
+    {
+        if($this->emptyInput() == false)  
+        {
+            //echo "Empty Input!";
+            header("location: ../add-user.php?error=emptyinput");
+            exit();
+        }  
+        echo 1;
+        if($this->validateFname() == false)  
+        {
+            //echo "Invalid First Name!";
+            header("location: ../add-user.php?error=invalidFname");
+            exit();
+        }  
+        echo 2;
+
+        if($this->validateLname() == false){
+            //echo "Invalid Last Name!";
+            header("location: ../add-user.php?error=invalidLname");
+            exit();
+        }  
+        echo 3;
+
+        if($this->validateEmail() == false)  
+        {
+            //echo "Invalid Email!";
+            header("location: ../add-user.php?error=invalidEmail");
+            exit();
+        }  
+        echo 4;
+
+        if($this->checkEmeilPhone() == false)  
+        {
+            //echo "This Email Is Already Taken!";
+            header("location: ../add-user.php?error=takenEmailorPhone");
+            exit();
+        }  
+        echo 5;
+
+        if($this->validatePhone() == false)  
+        {
+            //echo "Invalid Phone Number";
+            header("location: ../add-user.php?error=InvalidPhoneNumber");
+            exit();
+        }  
+        echo 6;
+
+        $add2  = new AdminView();
+
+        $add2->addUser($this->fname,$this->lname,$this->email,$this->num,$this->photo,$this->role, $this->country,$this->pass);
+        echo 7;
+
+    }
+
+    //  ----------------  check if there any empty input  -------------------
+
+    private function emptyInput()
+    {   
+        $result = false; // assign the (value true or false) in it
+        
+        
+        if(empty($this->fname) || empty($this->lname) || empty($this->email) || empty($this->pass) ||
+        empty($this->country)  || empty($this->num) || empty($this->rpass))
+        {
+            $result = false; 
+            
+        }
+        else
+        {
+            $result = true;
+        }
+        return $result;
+    }
+
+    //  --------------------  validate the first name-----------------
+    private function validateFname()
+    {
+        $result = false;
+        if(!preg_match("/^[a-zA-z0-9]*$/",$this->fname ))
+        {
+            $result = false;
+        }
+        else{
+            $result = true;
+        }
+        return $result;
+    }
+
+    // validate the last name
+    private function validateLname()
+    {
+        $result = false;
+        if(!preg_match("/^[a-zA-z0-9]*$/",$this->lname))
+        {
+            $result = false;
+        }
+        else{
+            $result = true;
+        }
+        return $result;
+    }
+
+
+    // validate email
+    private function validateEmail()
+    {
+        $result = false;
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
+        {
+            $result = false;
+        }
+        else
+        {
+            $result = true;
+        }
+        return $result;
+    }
+
+    // ------------  checkuser فيها الميثود اللي هي  check المفروض الميثود دي ه 
+    // --------------------هو بيتأكد عن طريق الايميل و رقم التليفون 
+    private function checkEmeilPhone(){
+        $result = false;
+        if(!$this->checkUser($this->email,$this->num ))
+        {
+            $result = false;
+        }
+        else
+        {
+            $result = true;
+        }
+        return $result;
+    }
+
+    // this function to insure that the user will enter just numbers in the phone input
+
+    private function validatePhone()
+    {
+        $result = false;
+       
+        if(!is_numeric($this->num))
+        {
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+
+        return $result;
+
+    
+    }
+
 }
 
 

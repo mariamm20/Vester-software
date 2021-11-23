@@ -75,7 +75,7 @@
                 header("location: ../home/sign-up.php?error=InvalidPhoneNumber");
                 exit();
             }  
-            $this->setUser($this->fname, $this->lname, $this->email,$this->pass,$this->country, $this->num, $this->rpass);
+            $this->setUser($this->fname, $this->lname, $this->email,$this->pass,$this->country, $this->num);
 
         }
 

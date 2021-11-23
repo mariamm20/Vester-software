@@ -17,15 +17,15 @@ include "includes/header.inc.php";
                     </thead>
                     <tbody>
                     <?php 
-                                    // includes
+                        // includes
                         include "../Controlles/db.class.php";
                         include "../Controlles/AdminContr.class.php";
                         include "../Views/AdminView.class.php";
 
-                        //  make an object of the "Signup" class
+                        //  make object from view class
                         $AdminView = new AdminView(); 
 
-                        // running error handlers and user signup
+                        // call show method
                         $AdminView->showProducts();
 
                     ?>

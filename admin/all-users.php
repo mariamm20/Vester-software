@@ -28,182 +28,21 @@ include "includes/header.inc.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>random</td>
-                            <td>data</td>
-                            <td>placeholder</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>placeholder</td>
-                            <td>irrelevant</td>
-                            <td>visual</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>data</td>
-                            <td>rich</td>
-                            <td>dashboard</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>information</td>
-                            <td>placeholder</td>
-                            <td>illustrative</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>text</td>
-                            <td>random</td>
-                            <td>layout</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>dashboard</td>
-                            <td>irrelevant</td>
-                            <td>text</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>dashboard</td>
-                            <td>illustrative</td>
-                            <td>rich</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>placeholder</td>
-                            <td>tabular</td>
-                            <td>information</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>random</td>
-                            <td>data</td>
-                            <td>placeholder</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>placeholder</td>
-                            <td>irrelevant</td>
-                            <td>visual</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>data</td>
-                            <td>rich</td>
-                            <td>dashboard</td>
-                            <td>
-                                <a href="update.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>information</td>
-                            <td>placeholder</td>
-                            <td>illustrative</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>text</td>
-                            <td>placeholder</td>
-                            <td>layout</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>dashboard</td>
-                            <td>irrelevant</td>
-                            <td>text</td>
-                            <td>
-                                <a href="update.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>dashboard</td>
-                            <td>illustrative</td>
-                            <td>rich</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>random</td>
-                            <td>tabular</td>
-                            <td>information</td>
-                            <td>
-                                <a href="update-user.html" class="icon-link"><i class="fas fa-edit"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
+                    <?php 
+                        // includes
+                        include "../Controlles/db.class.php";
+                        include "../Controlles/AdminContr.class.php";
+                        include "../Views/AdminView.class.php";
+
+                        //  make object rom view class
+                        $AdminView = new AdminView(); 
+
+                        // call show function
+                        $AdminView->showUsers();
+
+                    ?>
+                       
+                      
                     </tbody>
                 </table>
 

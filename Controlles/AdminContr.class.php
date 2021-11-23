@@ -29,8 +29,48 @@ class AdminContr extends Db{
     }
 
 
+    protected function getUsers(){
 
+        $stmt = $this->Connect()->query("
+        select id,Fname,Lname,phone,email from  users  
+        ");
+        $data = $stmt->fetchAll();
+        return $data;
+    }
 
+    protected function setUserContr($Fname,$Lname,$email,$phone,$photo,$role, $country,$password){
+    
+        $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
+        $query="INSERT INTO users( Fname, Lname,email, phone,photo,role,country,password) 
+            VALUES (?,?,?,?,?,?,?,?)";
+        $stmt = $this->Connect()->prepare($query);
+
+        $check =$stmt->execute([$Fname,$Lname,$email,$phone,$photo, $role,$country, $hashPassword]);
+    }
+
+    protected function checkUser($email, $num){
+
+        
+        $stmt = $this->Connect()->prepare('SELECT * FROM users WHERE  email = ? OR phone = ? ;');
+        // check if it failed 
+        if (!  $stmt->execute(array($email, $num))){
+            $stmt = null;  // if it faild the statement will be closed
+            header("location: ../add-user.php?error=stmtfailed");
+            exit();
+        }
+        // check if we got any results back in the database
+        // check if we have any rows that returned from this query up  
+        
+        $resultCheck = false;
+        if($stmt->rowCount() > 0) // number of errors  
+        {
+            $resultCheck = false;
+        }
+        else{
+            $resultCheck = true;
+        }
+        return $resultCheck;
+    }
 
 }
