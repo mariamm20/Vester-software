@@ -24,6 +24,18 @@
                 <span class="cart">Cart</span>
                 <span class="cart-number">0</span>
             </div>
+            <!--User Icon-->
+            <div class="dropdown">
+                    <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                    aria-expanded="false"></i>            
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                    <li class="dropdown-item user-name">Jack Jerry</li>
+                    <li><hr class="dropdown-divider p-0"></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
             <i class="fas fa-bars fa-2x" style="margin-left: 10px; width: 28px;" onclick="menu()"></i>
         </div>
 
