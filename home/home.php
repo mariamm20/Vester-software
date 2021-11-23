@@ -16,7 +16,7 @@
 <body>
     <header>
         <div>
-            <h2 class="v"><a href="home.html">Vester&nbsp;Software</a></h2>
+            <h2 class="v"><a href="home.php">Vester&nbsp;Software</a></h2>
         </div>
         <div class="d-flex justify-content-center menu ">
             <i class="fab fa-opencart fa-2x"></i>
