@@ -390,8 +390,31 @@ footer span{
     outline: none;
 }
 
-
-
+.breadcrumb{
+    position: relative;
+    bottom: 135px;
+}
+.inforamtion h1{
+    position: relative;
+    bottom: 260px;
+}
+.rate{
+    position: relative;
+    bottom: 265px;
+}
+.price{
+    position: relative;
+    bottom: 270px;
+    margin: 0;
+}
+.car{
+    position: relative;
+    top:175px;
+}
+.info-content{
+    position: relative;
+    top: 40px;
+}
 
 
 
