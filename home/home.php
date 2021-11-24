@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +31,9 @@
                     <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
                     aria-expanded="false"></i>            
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-
-                    <li class="dropdown-item user-name">Jack Jerry</li>
+               
+                    <li class="dropdown-item user-name" > Jack kerry</li>
+                   
                     <li><hr class="dropdown-divider p-0"></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Sign out</a></li>

@@ -25,11 +25,13 @@
                 <span class="cart-number">0</span>
             </div>
             <!--User Icon-->
+            
             <div class="dropdown">
                 <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-bs-toggle="dropdown" aria-expanded="false"></i>
+
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            
+
                     <li class="dropdown-item user-name">Jack Jerry</li>
                     <li>
                         <hr class="dropdown-divider p-0">
@@ -162,6 +164,65 @@
 
                 </div>
 
+        <!-- the php code  -->
+                <?php
+                // includes
+                    include "../Controlles/db.class.php";
+                    include "../Controlles/ProductsContr.class.php";
+                    include "../Views/ProductsView.class.php";
+                // make an object fron the view
+                    $proView = new productView();
+
+                // call the method to show products
+                
+                    $proView->showProducts();
+                ?>
+
+
+
+                <div class="main-div">
+                    <img src="../img/5.jpg" />
+                    <div class="name-product">
+                        <h4>Net Software</h4>
+                        <div>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>
+                            It is a good software to ease your work and ease your life. It can be used by an
+                            organizations
+                            and teams.
+                        </p>
+                        <div class="more-des">
+                            <a href="#">More Description</a>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between price">
+                        <div class="price-text">
+                            <h5>Price</h5>
+                            <p>50$</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="#"> Add to cart</a>
+                        </div>
+                        <div class="cart-icon">
+                            <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+                
+               
+
+
 
                 <div class="main-div">
                     <img src="../img/5.jpg" />
@@ -203,86 +264,6 @@
 
                 </div>
 
-
-                <div class="main-div">
-                    <img src="../img/5.jpg" />
-                    <div class="name-product">
-                        <h4>Net Software</h4>
-                        <div>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>
-                            It is a good software to ease your work and ease your life. It can be used by an
-                            organizations
-                            and teams.
-                        </p>
-                        <div class="more-des">
-                            <a href="#">More Description</a>
-                        </div>
-
-                    </div>
-
-                    <div class="d-flex justify-content-between price">
-                        <div class="price-text">
-                            <h5>Price</h5>
-                            <p>50$</p>
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="#"> Add to cart</a>
-                        </div>
-                        <div class="cart-icon">
-                            <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
-                        </div>
-
-                        
-
-                    </div>
-
-                </div>
-
-                <div class="main-div">
-                    <img src="../img/5.jpg" />
-                    <div class="name-product">
-                        <h4>Net Software</h4>
-                        <div>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>
-                            It is a good software to ease your work and ease your life. It can be used by an
-                            organizations
-                            and teams.
-                        </p>
-                        <div class="more-des">
-                            <a href="#">More Description</a>
-                        </div>
-
-                    </div>
-
-                    <div class="d-flex justify-content-between price">
-                        <div class="price-text">
-                            <h5>Price</h5>
-                            <p>50$</p>
-                        </div>
-                        <div class="add-to-cart">
-                            <a href="#"> Add to cart</a>
-                        </div>
-                        <div class="cart-icon">
-                            <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
-                        </div>
-
-                        
-
-                    </div>
-
-                </div>
                 <div class="main-div">
                     <img src="../img/5.jpg" />
                     <div class="name-product">
@@ -361,7 +342,6 @@
                     </div>
 
                 </div>
-
                 <div class="main-div">
                     <img src="../img/5.jpg" />
                     <div class="name-product">
@@ -399,6 +379,46 @@
                         
 
                     </div>
+
+                </div>
+
+                <div class="main-div">
+                    <img src="../img/5.jpg" />
+                    <div class="name-product">
+                        <h4>Net Software</h4>
+                        <div>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>
+                            It is a good software to ease your work and ease your life. It can be used by an
+                            organizations
+                            and teams.
+                        </p>
+                        <div class="more-des">
+                            <a href="#">More Description</a>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between price">
+                        <div class="price-text">
+                            <h5>Price</h5>
+                            <p>50$</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="#"> Add to cart</a>
+                        </div>
+                        <div class="cart-icon">
+                            <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
+                        </div>
+
+                        
+
+                    </div> 
 
                 </div>
 
@@ -424,7 +444,7 @@
 
 
 
-    <!--Footer-->
+    <!--Footer -->
     <footer>
         <div>
             <h5>Navigate to</h5>
