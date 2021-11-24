@@ -168,7 +168,7 @@ header{
     font-weight: 600;
 }
 .nav-tabs{
-    border-bottom: 3px solid #21bfca;
+    border-bottom: 3px solid #1c2750;
     padding: 0;
 }
 .nav-tabs a{
@@ -181,9 +181,9 @@ header{
     padding: .8rem 1.5rem;
 }
 .nav-tabs .nav-link.active{
-    color: #1c2750;
-    background-color: #e0eef6;
-    border: 1px solid #21bfca;
+    color: #fff;
+    background-color: #1c2750;
+    border: 1px solid #1c2750;
 }
 .nav-tabs li{
     padding: 0;
@@ -193,6 +193,7 @@ header{
 }
 .font-grey{
     color: #5a5a5a;
+    text-align: justify;
 }
 .ov{
     height: 130px;
@@ -211,17 +212,13 @@ header{
 .btns button{
     width: 45%;
     padding: 10px 0;
-    border: 1px solid #21bfca;
-    background-color: #e0eef6;
-    color: #1c2750;
+    border: 1px solid #1c2750;
+    background-color: #1c2750;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
 }
-.btns button:hover{
-    background-color: #1c2750;
-    color: #fff;
-    transition: all .3s ease-in;
-}
+
 .features {
     list-style: none;
     padding-left: 0;
@@ -257,21 +254,17 @@ q{
 .submit-btn button{
     width: 20%;
     padding: 10px 0;
-    border: 1px solid #21bfca;
-    background-color: #e0eef6;
-    color: #1c2750;
+    border: 1px solid #1c2750;
+    background-color: #1c2750;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
 }
-.submit-btn button:hover{
-    background-color: #1c2750;
-    color: #fff;
-    transition: all .3s ease-in;
-}
+
 .submit-btn input{
     width: 70%;
     padding: 10px ;
-    border: 1px solid #21bfca;
+    border: 1px solid #1c2750;
     outline: none;
 }
 
@@ -346,9 +339,6 @@ footer span{
     .btns button{
     width: 100%;
     padding: 10px 0;
-    border: 1px solid #21bfca;
-    background-color: #e0eef6;
-    color: #1c2750;
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: 500;
@@ -371,22 +361,15 @@ footer span{
 .submit-btn button{
     width: 100%;
     padding: 10px 0;
-    border: 1px solid #21bfca;
-    background-color: #e0eef6;
-    color: #1c2750;
     font-size: 18px;
     font-weight: 500;
     margin-top: 10px;
 }
-.submit-btn button:hover{
-    background-color: #1c2750;
-    color: #fff;
-    transition: all .3s ease-in;
-}
+
 .submit-btn input{
     width: 100%;
     padding: 10px ;
-    border: 1px solid #21bfca;
+
     outline: none;
 }
 
@@ -414,6 +397,7 @@ footer span{
 .info-content{
     position: relative;
     top: 40px;
+    width: 100%;
 }
 
 
