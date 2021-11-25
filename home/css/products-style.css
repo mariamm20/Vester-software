@@ -234,8 +234,7 @@ margin-right: 10px;
 .parent-product{
     display: grid;
     grid: 493.9px/ auto auto auto;
-    position: relative;
-    top :60px;
+    
     padding: 0;
     row-gap: 25px;
     column-gap: 10px;
