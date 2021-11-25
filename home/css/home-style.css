@@ -223,6 +223,8 @@ header{
 }
 .name-product h4{
     margin-bottom: 0;
+    overflow-y: hidden;
+    height: 38.8px;
 }
 
 .name-product i{
@@ -231,7 +233,10 @@ header{
 }
 .name-product p{
     text-align: justify;
-    
+    overflow-y: hidden;
+    height: 82px;
+    font-size: 14px;
+    color: #5a5a5a;
     margin-bottom: 5px;
 }
 .more-des{
