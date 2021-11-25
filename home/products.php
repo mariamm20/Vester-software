@@ -122,6 +122,12 @@
                     style="padding: 21px;border-radius: 0;">
                 <span class="search-span"><i class="fas fa-search"></i></span>
             </div>
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="bread">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Products</li>
+                </ol>
+            </nav>
             <div class="parent-product">
 
                 <div class="main-div">
