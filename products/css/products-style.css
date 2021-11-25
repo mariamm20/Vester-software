@@ -234,8 +234,6 @@ margin-right: 10px;
 .parent-product{
     display: grid;
     grid: 493.9px/ auto auto auto;
-    position: relative;
-    top :60px;
     padding: 0;
     row-gap: 25px;
     column-gap: 10px;
@@ -264,6 +262,8 @@ margin-right: 10px;
 }
 .name-product h4{
     margin-bottom: 0;
+    overflow-y: hidden;
+    height: 38.8px
 }
 
 .name-product i{
@@ -272,8 +272,11 @@ margin-right: 10px;
 }
 .name-product p{
     text-align: justify;
-    
+    height: 82px;
+    overflow-y: hidden;
     margin-bottom: 5px;
+    font-size: 14px;
+    color: #5a5a5a;
 }
 .more-des{
     display: flex;
@@ -309,7 +312,7 @@ margin-right: 10px;
 .price p{
     margin-bottom: 0;
     padding-top: 0;
-
+    
 } 
 .add-to-cart{
     background-color: #e0eef6;
@@ -368,9 +371,16 @@ margin-right: 10px;
 }
 
 
+.bread{
+    padding-left: 0;
+}
+.bread li {
+    padding-left: 0;
+}
 
-
-
+.bread a{
+    text-decoration: none;
+}
 
 
 
@@ -418,8 +428,7 @@ margin-right: 10px;
     .parent-product{
     display: grid;
     grid: 493.9px/ auto auto;
-    position: relative;
-    top :60px;
+    
     padding: 0;
     row-gap: 25px;
     column-gap: 10px;
@@ -431,8 +440,7 @@ margin-right: 10px;
     .parent-product{
     display: grid;
     grid: 493.9px/ auto;
-    position: relative;
-    top :60px;
+    
     padding: 0;
     row-gap: 25px;
     justify-content: center;

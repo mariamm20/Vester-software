@@ -163,7 +163,7 @@ header{
 .fa-star-half-alt{
     color: rgb(255, 232, 29);
 }
-.price{
+.product-price{
     font-size: 18px;
     font-weight: 600;
 }
@@ -267,6 +267,29 @@ q{
     border: 1px solid #1c2750;
     outline: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer{
     display: flex;

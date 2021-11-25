@@ -224,6 +224,8 @@ header{
 }
 .name-product h4{
     margin-bottom: 0;
+    overflow-y: hidden;
+    height: 38.8px;
 }
 
 .name-product i{
@@ -232,8 +234,11 @@ header{
 }
 .name-product p{
     text-align: justify;
-    
+    overflow-y: hidden;
+    height: 82px;
     margin-bottom: 5px;
+    font-size: 14px;
+    color: #5a5a5a;
 }
 .more-des{
     display: flex;
@@ -271,6 +276,8 @@ header{
 .price p{
     margin-bottom: 0;
     padding-top: 0;
+    height: 29px;
+    overflow-y: hidden;
 
 } 
 .add-to-cart{
