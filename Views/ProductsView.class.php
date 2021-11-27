@@ -25,18 +25,19 @@
                 <p>
                 <?php
                 $descr = $products['description'];
-                $limitedDescr = substr($descr, 0, 10);
-                if(strlen($descr) > 50)
+                $limitedDescr = substr($descr, 0, 100);
+                if(strlen($descr) > 100)
                 {
-                ?>
-                    
-                    <?php echo $limitedDescr . '....';  ?>  <!-- product description -->
-                <?php
+                    echo $limitedDescr . '....';  
+                
+                }else{
+
+                    echo $descr ;  
                 }
                 ?>
                 </p>
                 <div class="more-des">
-                    <a href="products.php?id= <?php echo $products['id'];  ?>">   </a> <!--  "product id"-->
+                    <a href="products.php?id=<?php echo $products['id'];  ?>">   </a> <!--  "product id"-->
                 </div>
 
             </div>
@@ -49,7 +50,7 @@
                 <div class="add-to-cart"> 
 
                
-                    <a href="products.php?id= <?php echo $products['id'];  ?> "> Add to cart</a>  <!-- product id -->
+                    <a href="products.php?id=<?php echo $products['id'];  ?> "> Add to cart</a>  <!-- product id -->
                 </div>
                 <div class="cart-icon">
                     <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>

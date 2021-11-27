@@ -12,18 +12,18 @@ class AdminView extends AdminContr{
         foreach($data as $item){
 
         ?>
-        <tr>
-            <td><?php echo $item['id'];?></td>
-            <td><?php echo $item['name'];?></td>
-            <td><?php echo $item['price'];?></td>
-            <td><?php echo $item['Fname'] . " ".  $item['Lname']; ?></td>
-            <td><?php echo $item['category'];?></td>
-            <td>
-                <a href="update-product.php/id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
-                &nbsp;
-                <a href="?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
-            </td>
-        </tr> 
+            <tr>
+                <td><?php echo $item['id'];?></td>
+                <td><?php echo $item['name'];?></td>
+                <td><?php echo $item['price'];?></td>
+                <td><?php echo $item['Fname'] . " ".  $item['Lname']; ?></td>
+                <td><?php echo $item['category'];?></td>
+                <td>
+                    <a href="update-product.php/id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
+                    &nbsp;
+                    <a href="?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr> 
 
         <?php
         }
@@ -44,6 +44,7 @@ class AdminView extends AdminContr{
 
         $this->setProductContr($name,$description,$price,$category,$discount,$imageName,$thumbnailName, $fileName);
     }
+
 
 
 
