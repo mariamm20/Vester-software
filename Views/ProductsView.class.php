@@ -25,18 +25,21 @@
                 <p>
                 <?php
                 $descr = $products['description'];
-                $limitedDescr = substr($descr, 0, 10);
-                if(strlen($descr) > 50)
+                $limitedDescr = substr($descr, 0, 100);
+                if(strlen($descr) > 100)
                 {
-                ?>
                     
-                    <?php echo $limitedDescr . '....';  ?>  <!-- product description -->
-                <?php
+                    echo $limitedDescr . '....';    // product description 
+               
+                }
+                else
+                {
+                    echo $descr;
                 }
                 ?>
                 </p>
                 <div class="more-des">
-                    <a href="products.php?id= <?php echo $products['id'];  ?>">   </a> <!--  "product id"-->
+                    <a href="products.php?id= <?php echo $products['id'];  ?>"> More Description  </a> <!--  "product id"-->
                 </div>
 
             </div>
