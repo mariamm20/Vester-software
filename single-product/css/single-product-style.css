@@ -267,25 +267,125 @@ q{
     border: 1px solid #1c2750;
     outline: none;
 }
+.similar{
+    margin-top: 20px;
+}
 
+.intro{
+    color:  #21bfca;
+    font-size: 14px;
+    text-align: center;
+}
+.similar h3{
+    text-align: center;
+}
 
+.caruasel-div {
+    width:100%;
+    height: 300px;
+}
+.single-product{
+    width: 220px;
+}
+.caruasel-div img{
+    width: 300px;
+}
+.carousel-item.active{
+    display: flex;
+    justify-content: center;
+    
+}
 
+.carousel-item{
+    display: none;
+}
+.similar img {
+    width:100%; 
+    height: 150px;
+}
 
+.caruasel-div h5{
+    margin-bottom: 0;
+    padding-bottom: 0;
 
+}
+.caruasel-div h5 a {
+    text-decoration: none;
+    color: #1c2750;
+    padding: 0;
+}
+.price i{
+       font-size: 12px;
+       font-weight: 600;
+}
+.caruasel-div .rate{
+    margin-bottom: 10px;
+}
+.price a{
+    text-decoration: none;
+    color:#1c2750;
+    font-size: 16px;
+}
+.price {
+    background-color:#1c2750;
+    color: #fff;
+    padding: 0;
+    height: 35px;
+    
+    
+}
+.price p{
+    margin-bottom: 0;
+    padding-top: 0;
+    
+    overflow-y: hidden;
 
+} 
+.add-to-cart{
+    background-color: #e0eef6;
+    color:#1c2750;
+    width:100%;
+    text-align: center;
+    height: 35px;
+    opacity: 0;
+    
+}
+.price-text{
+    display: block;
+    
+}
+.cart-icon{
+    background-color: #e0eef6;
+    color: #1c2750;
+    
+}
+.price:hover .add-to-cart{
+    opacity: 1;
+    transition:  1s ease-in-out;
+    
+}
+.price:hover .price-text{
+    opacity: 0;
+    display: none;
+}
+.price:hover {
+    
+    background-color: #e0eef6;
+}
 
+.similar .control {
+    background-color: #e0eef6;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
 
+.single-product:hover h5 a {
+    color: #21bfca;
+}
 
-
-
-
-
-
-
-
-
-
-
+.pageone{
+    display: flex;
+}
 
 
 
@@ -298,7 +398,7 @@ q{
     flex-direction: column;
     background-color: #1c2750;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
 }
 footer{
@@ -326,6 +426,7 @@ footer span{
         display: block!important;
         text-align: center;
     }
+
 }
 
 @media (max-width:1189px) {
@@ -351,6 +452,14 @@ footer span{
   margin: 10px 0;
   object-fit: scale-down;
 
+}
+.pageone{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.caruasel-div {
+    width:100%;
+    height: auto;
 }
 }
 
@@ -404,11 +513,11 @@ footer span{
     position: relative;
     bottom: 260px;
 }
-.rate{
+.rating{
     position: relative;
     bottom: 265px;
 }
-.price{
+.product-price{
     position: relative;
     bottom: 260px;
     margin: 0;
@@ -423,7 +532,11 @@ footer span{
     width: 100%;
 }
 
-
+.similar .control {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0;
+}
 
 
 }
