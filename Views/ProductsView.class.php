@@ -28,18 +28,16 @@
                 $limitedDescr = substr($descr, 0, 100);
                 if(strlen($descr) > 100)
                 {
-                    
-                    echo $limitedDescr . '....';    // product description 
-               
-                }
-                else
-                {
-                    echo $descr;
+                    echo $limitedDescr . '....';  
+                
+                }else{
+
+                    echo $descr ;  
                 }
                 ?>
                 </p>
                 <div class="more-des">
-                    <a href="products.php?id= <?php echo $products['id'];  ?>"> More Description  </a> <!--  "product id"-->
+                    <a href="products.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"-->
                 </div>
 
             </div>
@@ -52,7 +50,7 @@
                 <div class="add-to-cart"> 
 
                
-                    <a href="products.php?id= <?php echo $products['id'];  ?> "> Add to cart</a>  <!-- product id -->
+                    <a href="products.php?id=<?php echo $products['id'];  ?> "> Add to cart</a>  <!-- product id -->
                 </div>
                 <div class="cart-icon">
                     <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>

@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 include "includes/header.inc.php";
 ?>
 
@@ -19,39 +22,20 @@ include "includes/header.inc.php";
                 <div class="container px-4 py-5" id="featured-3">
 
                     <div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
-                        <div class="feature col">
-                            <h3>User 1</h3>
-                            <h6>Product id</h6>
-                            <p> Your website is fantastic. keep going . God save you.</p>
-                            <a href="#accepted" class="icon-link feed accepted">
-                                Accept
-                            </a>
-                            <a href="#rejected" class="icon-link feed rejected">
-                                Reject
-                            </a>
-                        </div>
-                        <div class="feature col">
-                            <h3>User 2</h3>
-                            <h6>Product id</h6>
-                            <p> Your website is fantastic. keep going . God save you.</p>
-                            <a href="#accepted" class="icon-link feed accepted">
-                                Accept
-                            </a>
-                            <a href="#rejected" class="icon-link feed rejected">
-                                Reject
-                            </a>
-                        </div>
-                        <div class="feature col">
-                            <h3>User 3</h3>
-                            <h6>Product id</h6>
-                            <p> Your website is fantastic. keep going . God save you.</p>
-                            <a href="#accepted" class="icon-link feed accepted">
-                                Accept
-                            </a>
-                            <a href="#rejected" class="icon-link feed rejected ">
-                                Reject
-                            </a>
-                        </div>
+                       
+                        <!-- the php code  -->
+                <?php
+                // includes
+                    include "../Controllers/db.class.php";
+                    include "../Controllers/feedback-adminContr.class.php";
+                    include "../Views/feedback-adminView.class.php";
+                // make an object fron the view
+                    $feedView = new feedbackView();
+
+                // call the method to show products
+                
+                    $feedView->showFeedback();
+                ?>
                     </div>
                 </div>
 

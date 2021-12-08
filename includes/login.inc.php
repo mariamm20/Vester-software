@@ -12,8 +12,8 @@ if(isset($_POST['submit']))
         
         
         // includes
-        include "../Controlles/db.class.php";
-        include "../Controlles/LoginContr.class.php";
+        include "../Controllers/db.class.php";
+        include "../Controllers/LoginContr.class.php";
         include "../Views/LoginView.class.php";
 
         //  make an object of the "Signup" class

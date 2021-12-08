@@ -30,8 +30,8 @@ include "includes/header.inc.php";
                     <tbody>
                     <?php 
                         // includes
-                        include "../Controlles/db.class.php";
-                        include "../Controlles/AdminContr.class.php";
+                        include "../Controllers/db.class.php";
+                        include "../Controllers/AdminContr.class.php";
                         include "../Views/AdminView.class.php";
 
                         //  make object rom view class

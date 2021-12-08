@@ -15,8 +15,8 @@ if(isset($_POST['cacount']))
         
         
         // includes
-        include "../Controlles/db.class.php";
-        include "../Controlles/Sign-upContr.class.php";
+        include "../Controllers/db.class.php";
+        include "../Controllers/Sign-upContr.class.php";
         include "../Views/Sign-upView.class.php";
 
         //  make an object of the "Signup" class
@@ -26,7 +26,7 @@ if(isset($_POST['cacount']))
         $SignupView->userSignup();
 
         // going back to front page 
-        header("location: ../home/sign-up.php?error=none");
+        header("location: ../home/sign-in.php?error=none");
 
 
 

@@ -68,6 +68,7 @@ CREATE TABLE `feedback` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` varchar(50) DEFAULT NULL,
   `users_id` int(11) NOT NULL,
+  
   `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

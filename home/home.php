@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,24 +28,85 @@
                 <span class="cart">Cart</span>
                 <span class="cart-number">0</span>
             </div>
-            <!--User Icon-->
-            <div class="dropdown">
-                    <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                    aria-expanded="false"></i>            
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-               
-                    <li class="dropdown-item user-name" > Jack kerry</li>
-                   
-                    <li><hr class="dropdown-divider p-0"></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
+            <!----------User Icon---------------->
+
+            <?php
+
+            
+            
+                if (isset($_SESSION["id"]))
+                {
+                    
+                    
+                ?>
+                    <div class="dropdown">
+                        <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>            
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                
+                        <li class="dropdown-item user-name" > <?php echo "Hello" . " " . $_SESSION["fname"] . "!"; ?></li>
+                    
+                        <li><hr class="dropdown-divider p-0"></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" name= "signout">Sign out</a></li>
+                    </ul>
+                </div>
+                <?php
+                
+                }
+                else{
+                    ?>
+                    <div class="dropdown"  style= "display:none;">
+                        <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>            
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                
+                        <li class="dropdown-item user-name" > </li>
+                    
+                        <li><hr class="dropdown-divider p-0"></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+                <?php    
+                }
+           
+
+            ?>
+        
             <i class="fas fa-bars fa-2x" style="margin-left: 10px; width: 28px;" onclick="menu()"></i>
         </div>
 
     </header>
     <!--Menu part-->
+    <!-- <div class="menu-section" id="menu">
+        <ul class="menu-list ">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Request Software</a></li>
+            <li><a href="sign-up.php">Sign up</a></li>
+            <li><a href="sign-in.php">Sign In</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div> -->
+    <?php
+    if (isset($_SESSION["id"]))
+    {
+    ?>
+    <div class="menu-section" id="menu">
+        <ul class="menu-list ">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Request Software</a></li>
+           
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <?php
+    }
+    else
+    {
+    ?>
     <div class="menu-section" id="menu">
         <ul class="menu-list ">
             <li><a href="home.html">Home</a></li>
@@ -54,6 +117,11 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
+    <?php
+    }
+    ?>
+
+
     <!--First Section landing page-->
     <section class="land">
         <div class="land-text">
@@ -112,119 +180,21 @@
         <p class="intro">Get to know to us</p>
         <h2>Our Products</h2>
         <div class="main">
-            <div class="main-div">
-                <img src="../img/5.jpg" />
-                <div class="name-product">
-                    <h4>Net Software</h4>
-<div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                    <p>
-                        It is a good software to ease your work and ease your life. It can be used by an organizations
-                        and teams.
-                    </p>
-                    <div class="more-des">
-                        <a href="#">More Description</a>
-                    </div>
+            
+         <!-- the php code  -->
+         <?php
+                // includes
+                    include "../Controllers/db.class.php";
+                    include "../Controllers/homeContr.class.php";
+                    include "../Views/homeView.class.php";
+                // make an object fron the view
+                    $home = new homeView();
 
-                </div>
+                // call the method to show products
+                
+                    $home->showProducts();
+                ?>
 
-                <div class="d-flex justify-content-between price">
-                    <div class="price-text">
-                        <h5>Price</h5>
-                        <p>50$</p>
-                    </div>
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
-                    <div class="cart-icon">
-                        <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
-                    </div>
-
-                    
-
-                </div>
-
-            </div>
-
-            <div class="main-div">
-                <img src="../img/6.jpg" />
-                <div class="name-product">
-                    <h4>Kit Software</h4>
-<div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p>
-                        It is a good software to ease your work and ease your life. It can be used by an organizations
-                        and teams.
-                    </p>
-                    <div class="more-des">
-                        <a href="#">More Description</a>
-                    </div>
-
-                </div>
-
-                <div class="d-flex justify-content-between price">
-                    <div class="price-text">
-                        <h5>Price</h5>
-                        <p>50$</p>
-                    </div>
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
-                    <div class="cart-icon">
-                        <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
-                    </div>
-
-                    
-
-                </div>
-            </div>
-            <div class="main-div">
-                <img src="../img/7.jpg" />
-                <div class="name-product">
-                    <h4>Jola Software</h4>
-                    <div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p>
-                        It is a good software to ease your work and ease your life. It can be used by an organizations
-                        and teams.
-                    </p>
-                    <div class="more-des">
-                        <a href="#">More Description</a>
-                    </div>
-
-                </div>
-
-                <div class="d-flex justify-content-between price">
-                    <div class="price-text">
-                        <h5>Price</h5>
-                        <p>50$</p>
-                    </div>
-                    <div class="add-to-cart">
-                        <a href="#"> Add to cart</a>
-                    </div>
-                    <div class="cart-icon">
-                        <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
-                    </div>
-
-                    
-
-                </div>
-            </div>
 
 
         </div>
