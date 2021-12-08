@@ -79,16 +79,7 @@ session_start();
 
     </header>
     <!--Menu part-->
-    <!-- <div class="menu-section" id="menu">
-        <ul class="menu-list ">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Request Software</a></li>
-            <li><a href="sign-up.php">Sign up</a></li>
-            <li><a href="sign-in.php">Sign In</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div> -->
+    
     <?php
     if (isset($_SESSION["id"]))
     {
