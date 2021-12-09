@@ -52,7 +52,7 @@
                 <input type="email" required class="just-width" name="email" placeholder="email@yahoo.com" /><br>
                 <input type="password" required class="just-width" name="pass" placeholder="Password" /><br>
                 <input type="password" required class="just-width" name="rpass" placeholder="Enter Password Again" /><br>
-               <select class="just-width" id = "countries" name="country"></select>><br>
+               <select class="just-width" id = "countries" name="country"></select><br>
                 <input type ="text" required class="just-width" name="num" placeholder="Phone Number"/><br>
                 <div class="check">
                     <input type="checkbox" id="accept" required /><label for="accept">Accept all privacy
@@ -87,7 +87,7 @@
 
             </div>
             <p class="already">Already have an account?</p>
-            <button class="reverse-btn contact-btn" onclick="window.location='../sign-in/sign-in.html';">
+            <button class="reverse-btn contact-btn" onclick="window.location='sign-in.php';">  <!-- location to sign-in page -->
                 Sign In
             </button>
 
