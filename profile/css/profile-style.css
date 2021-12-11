@@ -322,7 +322,7 @@ thead{
     background-color:#fff;
     border: none;
     color: #1c2750;
-    font-weight: 600;
+    font-weight: 500;
 }
 .show-product:hover{
     background-color:#fff;
@@ -337,7 +337,9 @@ thead{
 .ov{
     overflow-y: hidden;
 }
-
+.user-social a:hover{
+    color: #2dbdd3;
+}
 
 
 
