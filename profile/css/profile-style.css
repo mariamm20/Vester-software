@@ -162,6 +162,22 @@ header{
     background-color: #1c2750;
     width: 100%;
     padding:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.userName h5 {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    font-size: 16px;
+    top: 2px;
+}
+.userName h5 a{
+    text-decoration: none;
+    color: #fff;
+}
+.userName h5:hover{
+    transform: scalex(1.1);
 }
 .userRole{
     background-color: #EFEFEF;
