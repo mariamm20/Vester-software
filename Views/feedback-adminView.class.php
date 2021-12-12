@@ -11,10 +11,10 @@ class feedbackView extends feedbackContr
             
             
         ?>    
-            <div class="feature col">
-                            <h3><?php echo "USER ID" . " " . $comments['users_id'] ?></h3>  <!-- user id -->
-                            <h6><?php echo"PRODUCT ID" . " " . $comments['Products_id'] ?></h6>   <!-- product id -->
-                            <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product -->
+            <div class="feature col"> 
+                            <h3><?php echo "USER ID" . " " . $comments['users_id'] ?></h3>         <!-- user id هعرض  -->
+                            <h6><?php echo"PRODUCT ID" . " " . $comments['Products_id'] ?></h6>    <!-- product id هعرض-->
+                            <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product هعرض ال كومنت  --> 
 
                             <a href="feedback.php?state=accept" class="icon-link feed accepted">
                                 Accept
@@ -27,18 +27,6 @@ class feedbackView extends feedbackContr
         <?php    
         }
 
-        if (isset($_GET['accept']))
-        {
-            
-            $query = "UPDATE feedback SET status = 'accepted' where id =$comments[id] ";
-            $this->Connect()->query($query);
-        }
-
-        if (isset($_GET['reject']))
-        {
-            
-            $query = "UPDATE feedback SET status = 'rejected' where id =$comments[id] "; // احنا هنا حطينا ال  
-            $this->Connect()->query($query);
-        }
+       
     }
 }
