@@ -38,6 +38,8 @@ class Login extends Db
         elseif($checkpass == true)
         {
             $stmt = $this->Connect()->prepare('SELECT * FROM users WHERE email =? OR phone =? AND password = ?;');
+            
+            
 
             if (!  $stmt->execute(array($email,$email,$pass)))
             {
@@ -46,22 +48,27 @@ class Login extends Db
                 exit();
             }
 
-        if($stmt->rowCount()== 0)
-        {
+            if($stmt->rowCount()== 0)
+            {
+                $stmt = null;
+                header("location: ../home/sign-in.php?error=usernotfound2");
+                exit();
+            }
+        
+            $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            session_start();
+
+
+
+            $_SESSION["email"] = $user[0]["email"];
+            $_SESSION["id"] = $user[0]["id"];
+            $_SESSION['fname'] =$user[0]['Fname'];
             $stmt = null;
-            header("location: ../home/sign-in.php?error=usernotfound2");
-            exit();
-        }
 
-        $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        session_start();
-
-        $_SESSION["email"] = $user[0]["email"];
-        $_SESSION["id"] = $user[0]["id"];
-        $_SESSION['fname'] =$user[0]['Fname'];
-        $stmt = null;
-
+            
+            $query = "UPDATE users set last_login = now()  where id = ". $_SESSION['id'];
+            $stmt= $this->Connect()->query($query);
 
         }
 

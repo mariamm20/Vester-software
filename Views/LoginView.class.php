@@ -38,6 +38,7 @@
 
 
             $this->getUser($this->email,$this->pass);
+            
 
         }
 
