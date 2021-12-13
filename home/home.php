@@ -50,13 +50,48 @@ session_start();
             <li><a href="#">Request Software</a></li>
             <li><a href="sign-up.php">Sign up</a></li>
             <li><a href="sign-in.php">Sign In</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
         </ul>
     </div>
     <?php
     }
     ?>
 
+    <!--modal-->
+    <div class="modal" tabindex="-1" id="contact">
+        <div class="modal-dialog">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header ">
+                    <div class="contact-header">
+                        <p>Contact Us</p>
+                        <h4>
+                            GET IN TOUCH
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5>Name</h5>
+                    <input type="text" placeholder="John Dawood" required/>
+                    <h5>Email</h5>
+                    <input type="email" placeholder="user_email@gmail.com" required />
+                    <h5>Phone Number</h5>
+                    <input type="text" placeholder="0123456789" required />
+                    <h5>Message</h5>
+                    <textarea placeholder="Leave your message here"></textarea>
+
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--First Section landing page-->
     <section class="land">
