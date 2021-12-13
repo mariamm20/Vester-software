@@ -339,7 +339,9 @@ footer span{
     .user-social{
         width: auto;
     }
-
+    .user-social ul li p{
+        font-size: 13px;
+    }
 }
 
 @media (max-width:800px) {
