@@ -109,11 +109,24 @@ header{
 
 .whole{
     display: flex;
-    
+    justify-content: space-evenly;
 }
+
 .whole img{
     width: 370px;
     height: 340px;
+}
+.change-profile{
+    text-align: center;
+
+}
+.change-profile a{
+    text-decoration: none;
+    color: #1EAAF1;
+    font-weight: 500;
+}
+.change-profile a:hover{
+    color: #1c2750;
 }
 .user-social{
     width: 370px;
@@ -134,11 +147,7 @@ header{
     padding:5px 0 ;
     border-bottom: 1px solid #ccc;
 }
-.user-social ul li a{
-    color: #868686;
-    text-decoration: none;
-    
-}
+
 .user-social ul li i{
     font-size: 20px;
 }
@@ -153,56 +162,26 @@ header{
 #face{
     border-bottom: none;
 }
-.content{
-    width: 100%;
+.setting{
+    width: 60%;
     
 }
-.userName{
-    color: #fff;
-    background-color: #1c2750;
-    width: 100%;
-    padding:10px;
-    display: flex;
-    justify-content: space-between;
+.user-social input{
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #eee;
+    outline-color: #2dbdd3;
+    font-size: 13px;
+    color: #1c2750;
+    background-color: rgb(250 250 250);
+
 }
-.userName h5 {
-    color: #fff;
-    font-weight: 600;
-    position: relative;
-    font-size: 16px;
-    top: 2px;
-}
-.userName h5 a{
-    text-decoration: none;
-    color: #fff;
-}
-.userName h5:hover{
-    transform: scalex(1.1);
-}
-.userRole{
-    background-color: #EFEFEF;
-    padding: 14.9px;
-}
-.userRole p {
-    margin: 0;
-    font-size: 18px;
-}
+
 .about{
     padding: 10px;
     width: 400px;
     position: relative;
     top: 15px;
-}
-.about p {
-    text-align: justify;
-    color: #868686;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    overflow-y: scroll;
-    height: 125px;
-}
-p::-webkit-scrollbar{
-   display: none;
 }
 .about .line{
     border-top: 3px solid #ccc;
@@ -212,67 +191,11 @@ p::-webkit-scrollbar{
     width: 60px;
     
 }
-.about h5{
+.about h4{
     margin-bottom: 0;
     padding-bottom: 0;
-}
-
-.nav-tabs{
-    border-bottom: 3px solid #1c2750;
-    padding: 0;
-}
-.nav-tabs a{
-    color: #1c2750;
     font-weight: 600;
 }
-.nav-tabs .nav-link{
-    border-radius: 0;
-    border: none;
-    padding: .8rem 1.5rem;
-}
-.nav-tabs .nav-link.active{
-    color: #fff;
-    background-color: #1c2750;
-    border: 1px solid #1c2750;
-}
-.nav-tabs li{
-    padding: 0;
-}
-.info-content{
-    width: 85%;
-    position: relative;
-    top:42px;
-    padding-left: 10px;
-}
-.font-grey{
-    color: #5a5a5a;
-    text-align: justify;
-}
-.table-width{
-    width: 80%;
-}
-table{
-    border: 1px solid #ccc;
-    position: relative;
-    top: 30px;
-}
-td{
-    border: 1px solid #ccc;
-    
-}
-th{
-    text-align: center;
-    
-}
-td button{
-    width: 100%;
-    margin: 0;
-    background-color: #1c2750;
-    color: #fff;
-    border: none;
-    padding: 9px;
-}
-
 .head-table{
     padding: 0;
     position: relative;
@@ -281,65 +204,84 @@ td button{
     justify-content: space-between;
     width: 100%;
 }
-.table-width-sale{
-    width: 95%;
-}
 .head-table .line{
     position: absolute;
-    top:29px
+    top:33px
 }
-.head-table button{
-    background-color: #1c2750;
-    color: #fff;
-    border: none;
-    padding: 10px;
+.top{
+    position: relative;
+    top: 20px;
+    width: 510px;
 }
-.head-table i {
-    color: rgb(255, 232, 29);
-}
-#sale table{
-    top:25px
-}
-
-.left {
-    text-align: left;
-}
-.comment{
-    color: #868686;
-    font-weight: 400;
-}
-thead{
-    color: #1c2750;
-}
-#reviews th a{
-    text-decoration: none;
-    color: #1c2750;
+.name{
+    display: flex;
+ justify-content: space-between;
     padding: 0;
+    position: relative;
+    width: 500px;
+   
+}
+.names{
+    padding: 0;
+}
+.names p{
     margin: 0;
+    margin: 0 0 10px 0;
 }
-
-.show-product{
-    background-color:#fff;
-    border: none;
+.names input{
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline-color: #2dbdd3;
     color: #1c2750;
-    font-weight: 500;
 }
-.show-product:hover{
-    background-color:#fff;
-    border: none;
-    color: #21bfca;
+.standard{
+    padding: 0;
     
 }
-.date{
-    text-align: center;
+.standard p{
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+.standard input{
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline-color: #2dbdd3;
+    width: 100%;
+    color: #1c2750;
+}
+label{
+    padding: 0;
+}
+.save{
+    width: 510px;
+    text-align: right;
+
+}
+.save button{
+    background-color: #1c2750;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
 }
 
-.ov{
-    overflow-y: hidden;
-}
-.user-social a:hover{
-    color: #2dbdd3;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -367,9 +309,6 @@ footer span{
 
 }
 
-
-
-
 @media (max-width: 575.98px) { 
     header{
         display: block!important;
@@ -378,22 +317,14 @@ footer span{
 
 }
 
+
 @media (max-width:895px){
-    .nav{
-        display: flex;
-    }
+    
     .whole{
         flex-wrap: wrap;
         justify-content: center;
     }
-    .info-content{
-        width: 100%;
-    }
-}
-@media (max-width:745px){
-    .nav{
-        display: block;
-    }
+    
 }
 
 @media (max-width:430px) {
@@ -403,39 +334,28 @@ footer span{
     .user-social{
         width: auto;
     }
-    .about{
+
+}
+
+@media (max-width:800px) {
+    .save{
         width: auto;
     }
-    .sm-font{
-        font-size: initial;
+    .top{
+        width: auto;
     }
-    .head-table button{
-        padding : 5px 10px 5px;
+    .name{
+        flex-wrap: wrap;
+        width:auto;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 575.98px) { 
-    header{
-        display: block!important;
-        text-align: center;
+    .setting{
+        width: auto;
+    }
+    .names{
+        width: 100%;
+    }
+    .names input{
+        width: 100%;
     }
 }
+
