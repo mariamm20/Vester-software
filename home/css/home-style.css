@@ -511,6 +511,104 @@ footer h5{
 }
 
 
+
+
+
+/*modal*/
+.modal-header{
+    background-image: url("10.jpg");
+    height: 200px;
+    background-size: cover;
+    background-color: rgba(28, 39, 80, 0.7);
+    background-blend-mode: soft-light;
+}
+.modal-content{
+    padding: 0;
+}
+.contact-header{
+    width: 100%;
+    text-align: center;
+}
+.modal-header .btn-close{
+    position: relative;
+    bottom: 80px;
+    background:none;
+    color: #fff;
+    transform: scaleX(1.4);
+    font-size: 18px;
+    opacity: 1;
+    box-shadow: none;
+}
+
+.contact-header p{
+    margin: 0;
+    font-weight: 600;
+    color:#fff;
+}
+.contact-header h4{
+    font-weight: bold;
+    color:#fff;
+}
+.modal-body input{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.modal-body textarea{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.modal-body h5{
+    font-size: 18px;
+}
+.modal-body{
+    padding-bottom: 0;
+}
+.modal-footer button{
+    width: 100%;
+    color: #fff;
+    background-color: #1c2750;
+    border: none;
+}
+.modal-footer button:hover{
+    color:#1c2750;
+    background-color: #e0eef6;
+}
+
+.modal-footer{
+    border: none;
+    padding-top:0 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 575.98px) { 
     header{
         display: block!important;
