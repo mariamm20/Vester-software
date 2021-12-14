@@ -266,6 +266,7 @@ header{
     outline-color: #2dbdd3;
     width: 100%;
     color: #1c2750;
+    background-color: #fff;
 }
 .top{
     position: relative;
@@ -397,6 +398,13 @@ footer span{
     #sm-font{
         font-size: 15px;
     }
+    .side{
+    height: fit-content;
+    position: relative;
+    display: flex;
+    background-color: #e0eef6;
+        padding: 30px 20px 30px 50px;
+}
 
 }
 @media (max-width:800px) {
