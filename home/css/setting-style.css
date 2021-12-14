@@ -164,7 +164,10 @@ header{
 }
 .setting{
     width: 60%;
-    
+    pading:0;
+}
+form{
+    padding:0;
 }
 .user-social input{
     padding: 7px;
