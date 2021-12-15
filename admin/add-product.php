@@ -73,7 +73,7 @@ include "includes/header.inc.php";
                                <div class="top">
                             <div class="standard add-image">
                                 <p><i class="far fa-image
-                                                    "></i>Add software image</p>
+                                                    "></i> Add software image</p>
                                 <div class="in">
                                     <input type="file" name="uploadfile" id="img" style="display:none;" onchange="javascript:showoneimg()" />
                                     <label for="img">Browse</label>
@@ -89,7 +89,7 @@ include "includes/header.inc.php";
                         </div>
                         <div class="top">
                             <div class="standard add-image">
-                                <p id="sm-font"><i class="far fa-images"></i>Add software thumbnails <span class="warn">( Only 4
+                                <p id="sm-font"><i class="far fa-images"></i> Add software thumbnails <span class="warn">( Only 4
                                         images )</span></p>
                                 <div class="in">
                                     <input type="file" name="uploadfile" id="thumbnail" style="display:none;" multiple
@@ -106,7 +106,7 @@ include "includes/header.inc.php";
                         </div>
                         <div class="top">
                             <div class="standard add-image">
-                                <p><i class="far fa-file"></i>Add software file</p>
+                                <p><i class="far fa-file"></i> Add software file</p>
                                 <div class="in">
                                     <input type="file" name="uploadfile" id="files" style="display:none;" onchange="javascript:showfile()" />
                                     <label for="files">Browse</label>
