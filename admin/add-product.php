@@ -69,8 +69,62 @@ include "includes/header.inc.php";
                                     Please select a valid Category.
                                 </div>
                             </div>
+                                    
+                               <div class="top">
+                            <div class="standard add-image">
+                                <p><i class="far fa-image
+                                                    "></i>Add software image</p>
+                                <div class="in">
+                                    <input type="file" name="uploadfile" id="img" style="display:none;" onchange="javascript:showoneimg()" />
+                                    <label for="img">Browse</label>
+                                </div>
+                        
+                        
+                            </div>
+                            <div>
+                                <ul id="images">
+                        
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <div class="standard add-image">
+                                <p id="sm-font"><i class="far fa-images"></i>Add software thumbnails <span class="warn">( Only 4
+                                        images )</span></p>
+                                <div class="in">
+                                    <input type="file" name="uploadfile" id="thumbnail" style="display:none;" multiple
+                                        onchange="javascript:show()" />
+                                    <label for="thumbnail">Browse</label>
+                                </div>
+                        
+                            </div>
+                            <div>
+                                <ul id="imgs">
+                        
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <div class="standard add-image">
+                                <p><i class="far fa-file"></i>Add software file</p>
+                                <div class="in">
+                                    <input type="file" name="uploadfile" id="files" style="display:none;" onchange="javascript:showfile()" />
+                                    <label for="files">Browse</label>
+                                </div>
+                            </div>
+                            <div>
+                                <ul id="softfiles">
+                        
+                                </ul>
+                            </div>
+                        </div>
 
-                            <div class="col-12" style="padding:10px 10px">
+                       
+                             
+                                    
+                                    
+
+<!--                             <div class="col-12" style="padding:10px 10px">
                              
                              <label for="image" class="form-label"> choose image for your product </label>
                              <input type="file"  name="image" class="form-control-file" id="image" required>
@@ -87,8 +141,9 @@ include "includes/header.inc.php";
                                 <input type="file"  name="file" class="form-control-file" id="file" required>
                                 
                             </div>
-                            </div>
-
+                            </div> -->
+                            <br>
+                            <br>
                             <br>
                             <button class="w-100 g-12 btn fix text-white btn-lg" style="border-radius: 0;" type="submit" name="add_product">Add
                                 Product</button>
