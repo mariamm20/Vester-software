@@ -135,7 +135,7 @@ session_start();
 
         </div>
         <div class="arrow">
-            <a href="#">More Products</a>
+            <a href="products.php">More Products</a>
         </div>
     </section>
     <!--Forth section-->

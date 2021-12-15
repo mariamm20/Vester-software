@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2021 at 10:33 AM
+-- Generation Time: Dec 12, 2021 at 02:36 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `verster_software`
+-- Database: `vester_software`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -40,9 +40,17 @@ CREATE TABLE `cart` (
 --
 
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'hospital'),
+(2, 'clinic');
 
 -- --------------------------------------------------------
 
@@ -51,11 +59,11 @@ CREATE TABLE `category` (
 --
 
 CREATE TABLE `contact_us` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone` varchar(11) DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `email` varchar(70) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `review` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -65,80 +73,77 @@ CREATE TABLE `contact_us` (
 --
 
 CREATE TABLE `feedback` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(50) DEFAULT NULL,
-  `users_id` int(11) NOT NULL,
-  
-  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `review` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `lan_programming`
+-- Dumping data for table `feedback`
 --
 
-CREATE TABLE `lan_programming` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--INSERT INTO `feedback` (`id`, `user_id`, `content`, `product_id`, `review`) VALUES
+--(1, 1, 'hhhhhh ', 1, 0);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `products`
 --
-    
+
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) NOT NULL,
-  `description` varchar(50) DEFAULT NULL,
-  `price` tinyint(4) NOT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `description` text DEFAULT NULL,
+  `price` smallint(5) UNSIGNED NOT NULL,
   `discound` tinyint(4) DEFAULT NULL,
-  `image` varchar(50) NOT NULL,
-  `thumbnail` varchar(50) DEFAULT NULL,
-  `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `users_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL,
-  `file` varchar(50) NOT NULL, PRIMARY KEY (`id`)
+  `image` varchar(100) DEFAULT NULL,
+  `thumbnail` varchar(100) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `file` varchar(100) NOT NULL,
+  `img1` varchar(100) DEFAULT NULL,
+  `img2` varchar(100) DEFAULT NULL,
+  `img3` varchar(100) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `discound`, `image`, `thumbnail`, `created_at`, `file`, `img1`, `img2`, `img3`, `user_id`, `category_id`) VALUES
+(1, 'your hospital', 'this is your description', 500, 10, NULL, NULL, '2021-12-12 12:43:39', 'file.name', NULL, NULL, NULL, 1, 1),
+(2, 'my hospital', 'this is your description', 1000, 20, NULL, NULL, '2021-12-12 12:43:39', 'file.name', NULL, NULL, NULL, 1, 2),
+(3, 'my hospital', 'this is your description', 1000, 20, NULL, NULL, '2021-12-12 12:43:39', 'file.name', NULL, NULL, NULL, 1, 2),
+(4, 'test', 'description text', 200, 127, '61b5dcabc49f8.jpg', '61b5dcabc4bce.png', '2021-12-12 13:27:39', '61b5dcabc4d80.rar', NULL, NULL, NULL, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `id` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_lan`
+-- Table structure for table `slaes`
 --
 
-CREATE TABLE `product_lan` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `lan_programming_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `requests`
---
-
-CREATE TABLE `requests` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `description` varchar(50) DEFAULT NULL,
-  `type` varchar(20) DEFAULT NULL,
-  `users_id` int(11) NOT NULL, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sales`
---
-
-CREATE TABLE `sales` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
+CREATE TABLE `slaes` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -146,32 +151,33 @@ CREATE TABLE `sales` (
 --
 -- Table structure for table `users`
 --
-   
+
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Fname` varchar(20) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `Lname` varchar(20) NOT NULL,
-  `phone` varchar(11) NOT NULL,
-  `photo` varchar(20) DEFAULT NULL,
-  `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `last_login` datetime DEFAULT NULL,
-  `role` varchar(10) NOT NULL,
-  `country` varchar(50) DEFAULT NULL,
-  `password` varchar(255) NOT NULL, PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL,
+  `Fname` varchar(25) NOT NULL,
+  `Lname` varchar(25) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(12) NOT NULL,
+  `photo` varchar(50) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `last_login` datetime NOT NULL,
+  `role` varchar(5) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `country` varchar(30) NOT NULL,
+  `about` text NOT NULL,
+  `github` varchar(100) NOT NULL,
+  `twitter` varchar(100) NOT NULL,
+  `linkedin` varchar(100) NOT NULL,
+  `website` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `wishlist`
+-- Dumping data for table `users`
 --
 
-CREATE TABLE `wishlist` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `users_id` int(11) NOT NULL,
-  `Products_id` int(11) NOT NULL, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `users` (`id`, `Fname`, `Lname`, `email`, `phone`, `photo`, `created_at`, `last_login`, `role`, `password`, `country`, `about`, `github`, `twitter`, `linkedin`, `website`) VALUES
+(1, 'mohamed', 'hesham', 'm@gmail.com', '01282304755', NULL, '0000-00-00 00:00:00', '2021-12-12 15:22:58', 'admin', '$2y$10$4hGWRGRUTNc4nDhGLhhqQe91fRGV7vf2CUOMxalTbqxgil22gCL9e', 'Egypt', '', '', '', '', ''),
+(2, 'john', 'dawod', 'mlk@gmail.com', '01283304755', '61b5dda8b8587.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'user', '$2y$10$SXxT87VcIcsln7uqhfTUguIbSmF8pd79qyYkuTlb5PHkwSYJX5jtG', 'axes', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -181,71 +187,110 @@ CREATE TABLE `wishlist` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD KEY `Products_cart` (`Products_id`),
-  ADD KEY `users_cart` (`users_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `category`
 --
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `contact_us`
 --
-
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
-  
-  ADD KEY `Products_feedback` (`Products_id`),
-  ADD KEY `users_feedback` (`users_id`);
-
---
--- Indexes for table `lan_programming`
---
-
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD KEY `Products_ix_1` (`name`),
-  ADD KEY `category_Products` (`category_id`),
-  ADD KEY `users_Products` (`users_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `product_lan`
+-- Indexes for table `request`
 --
-ALTER TABLE `product_lan`
-  ADD KEY `Products_product_lan` (`Products_id`),
-  ADD KEY `lan_programming_product_lan` (`lan_programming_id`);
+ALTER TABLE `request`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `requests`
+-- Indexes for table `slaes`
 --
-ALTER TABLE `requests`
-  ADD KEY `users_requests` (`users_id`);
-
---
--- Indexes for table `sales`
---
-ALTER TABLE `sales`
-  ADD KEY `Products_orders` (`Products_id`),
-  ADD KEY `users_orders` (`users_id`);
+ALTER TABLE `slaes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD UNIQUE KEY `users_ix_1` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wishlist`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `wishlist`
-  ADD KEY `Products_wishlist` (`Products_id`),
-  ADD KEY `users_wishlist` (`users_id`);
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `request`
+--
+ALTER TABLE `request`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `slaes`
+--
+ALTER TABLE `slaes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -255,49 +300,35 @@ ALTER TABLE `wishlist`
 -- Constraints for table `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `Products_cart` FOREIGN KEY (`Products_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `users_cart` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `feedback`
 --
 ALTER TABLE `feedback`
-  ADD CONSTRAINT `Products_feedback` FOREIGN KEY (`Products_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `users_feedback` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `feedback_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `category_Products` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `users_Products` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 --
--- Constraints for table `product_lan`
+-- Constraints for table `request`
 --
-ALTER TABLE `product_lan`
-  ADD CONSTRAINT `Products_product_lan` FOREIGN KEY (`Products_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `lan_programming_product_lan` FOREIGN KEY (`lan_programming_id`) REFERENCES `lan_programming` (`id`);
+ALTER TABLE `request`
+  ADD CONSTRAINT `request_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `requests`
+-- Constraints for table `slaes`
 --
-ALTER TABLE `requests`
-  ADD CONSTRAINT `users_requests` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `sales`
---
-ALTER TABLE `sales`
-  ADD CONSTRAINT `Products_orders` FOREIGN KEY (`Products_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `users_orders` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `wishlist`
---
-ALTER TABLE `wishlist`
-  ADD CONSTRAINT `Products_wishlist` FOREIGN KEY (`Products_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `users_wishlist` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+ALTER TABLE `slaes`
+  ADD CONSTRAINT `slaes_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `slaes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

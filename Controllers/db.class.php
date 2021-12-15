@@ -6,7 +6,7 @@ class Db {
     private $host ="localhost";
     private $user = "root" ;
     private $pwd ="";
-    private $dbname ="vester_software" ;
+    private $dbname ="software" ;
 
 
 
