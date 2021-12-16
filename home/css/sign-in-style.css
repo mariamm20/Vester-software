@@ -112,7 +112,7 @@ header{
     margin-top: 40px;
 }
 .inputs{
-    margin-top: 45px;
+    margin-top: 20px;
     padding: 0;
     
 }
@@ -161,6 +161,18 @@ header{
     color:#1c2750;
 }
 
+.info i{
+    color: red;
+    padding: 0;
+    
+}
+.info p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
 
 @media (max-width: 575.98px) { 
     header{
@@ -188,5 +200,7 @@ header{
     .special-width{
         width: 220px;
     }
-
+    .info p{
+        font-size: 14px;
+    }
  }
