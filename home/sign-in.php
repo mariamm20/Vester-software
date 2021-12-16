@@ -45,6 +45,13 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign In</h2>
+            <div class="info">
+                <p>
+                    <i class="fas fa-info-circle"></i>
+                    This email already exist 
+                    
+                </p>
+            </div>
             <form class="inputs" action="../includes/login.inc.php" method="POST">
                 
                 <input type="text" required class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
