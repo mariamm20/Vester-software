@@ -240,7 +240,9 @@ form{padding: 0;}
     color: #1c2750;
     
 }
-
+.total i{
+    color: rgb(255, 232, 29);
+}
 
 /*modal*/
 .modal-header{
@@ -394,6 +396,9 @@ footer span{
 }
 .top{
     width: auto;
+}
+.total p{
+    font-size: 18px
 }
 
 
