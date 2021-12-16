@@ -108,10 +108,10 @@ header{
 }
 
 .form-content h2{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .inputs{
-    margin-top: 35px;
+    margin-top: 15px;
     padding: 0;
     
 }
@@ -211,6 +211,17 @@ header{
 }
 
 
+.info i{
+    color: red;
+    padding: 0;
+    
+}
+.info p{
+    padding: 0;
+    margin: 0;
+}
+
+
 
 
 
@@ -252,6 +263,9 @@ header{
     }
     .special-width{
         width: 210px;
+    }
+    .info p{
+        font-size: 14px;
     }
 
  }
