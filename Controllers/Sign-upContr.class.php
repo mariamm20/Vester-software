@@ -46,7 +46,7 @@ class Signup extends Db
         if($stmt->rowCount() > 0) // number of errors  
         {
             
-            echo "this email is already taken ";   
+              
             $resultCheck = false;
         }
         else{

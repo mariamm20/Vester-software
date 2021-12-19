@@ -34,6 +34,7 @@
 
         public function userSignup()
         {
+            
             if($this->emptyInput() == false)  
             {
                 //echo "Empty Input!";
@@ -67,7 +68,7 @@
             if($this->checkEmeilPhone() == false)  
             {
                
-                //echo "This Email Is Already Taken!";
+                echo "This Email Is Already Taken!";
                 header("location: ../home/sign-up.php?error=takenEmailorPhone");
                 exit();
             }  

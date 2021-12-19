@@ -1,5 +1,5 @@
 <?php
-    class profileView extends profileCont{
+    class profileView extends profileContr{
         public function showData()
         {
             $data= $this->getUserData();
@@ -47,7 +47,7 @@
                 <p><?php echo $userData["role"];?></p>
             </div>
             <div class="about">
-                <h5>About <?php echo $userData[Fname]." ".$userData[Lname];?></h5>
+                <h5>About <?php echo $userData["Fname"]." ".$userData["Lname"];?></h5>
                 <div class="line"></div>
                 <p>
                     <?php echo $userData["about"];?>

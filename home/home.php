@@ -32,7 +32,7 @@ session_start();
     
         <ul class="menu-list ">
             <li><a href="home.html">Home</a></li>
-            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="#">Request Software</a></li>
             
             <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
