@@ -24,6 +24,26 @@ session_start();
     ?>
     
     <!--Menu part-->
+    <?php
+    if (isset($_SESSION["id"]))
+    {
+    ?>
+    <div class="collapse" id="navbarToggleExternalContent">
+    
+        <ul class="menu-list ">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="#">Request Software</a></li>
+            
+            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
+        </ul>
+    
+    </div>
+    <?php
+    }
+    else
+    {
+    ?>
     <div class="collapse" id="navbarToggleExternalContent">
     
         <ul class="menu-list ">
@@ -36,6 +56,9 @@ session_start();
         </ul>
     
     </div>
+    <?php
+    }
+    ?>
 <!--Wishlist Modal-->
 
     <div class="modal" tabindex="-1" id="wishlist">
