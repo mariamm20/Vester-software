@@ -17,17 +17,12 @@ header{
 }
 .cart{
     background-color: #e0eef6;
-    border-radius: 45% 0 0 45%;
     border-right: 1px solid #fff;
-    padding-left: 10px;
-    padding-right: 10px;
+    
 }
 .cart-number{
     background-color: #1c2750;
     color: #fff;
-    border-radius: 0 45% 45% 0;
-    padding: 5px 10px;
-    margin-right: 0;
     border:1px solid #e0eef6;
 }
 .menu{
@@ -589,6 +584,99 @@ footer h5{
     border: none;
     padding-top:0 ;
 }
+/*new*/
+
+/* .about{
+    padding: 10px;
+    width: 400px;
+    position: relative;
+    top: 15px;
+} */
+.about .line{
+    border-top: 3px solid #ccc;
+    margin: 0;
+    margin-left: 4px;
+    margin-top: 4px;
+    width: 60px;
+    
+}
+.about h4{
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+.head-table{
+    padding: 0;
+    position: relative;
+    top:7px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+
+}
+.head-table .line{
+    position: absolute;
+    top:33px
+}
+.head-table span{
+    position: relative;
+    
+    font-weight: 600;
+}
+
+.header-contact{
+    background-image: url("10.jpg");
+}
+.header-wishlist{
+    background-image: url("11.jpg");
+}
+.header-wishlist .contact-header h4{
+    letter-spacing: 16px;
+    font-size: 28px;
+    position: relative;
+    left: 6px;
+    font-weight: 900;
+}
+.header-wishlist .contact-header p{
+    font-size: 14px;
+}
+.wishlist-product{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+.wishlist-product .left{
+    display: flex;
+    padding: 0;
+}
+.wishlist-product .left img{
+    width:73px;
+    height: 73px;
+}
+.wishlist-product .left p{
+
+    margin: 0;
+    position: relative;
+}
+.wishlist-product .left a{
+    padding: 0;
+    color: #1c2750;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.wishlist-product .right a{
+    color: red;
+    position: relative;
+    top: 25px;
+}
+.wishlist-product .right{
+    padding: 0 5px;
+}
 
 
 
@@ -650,5 +738,31 @@ footer h5{
 
 }
     
+}
+
+@media (max-width:700px) {
+    .menu-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+}
+.menu-list li{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #1c2750;
+}
+.menu-list li a{
+    color:#fff;
+}
+.menu-list {
+    padding: 0;
+}
+#wishlist .btn-close{
+    right: 15px;
+    padding: 0;
+}
 }
 

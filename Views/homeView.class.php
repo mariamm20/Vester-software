@@ -22,7 +22,7 @@ class homeView extends homeCont
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                     <p>                   <!-- software description -->
-                        <?php echo $products['description'] ?> ?> 
+                        <?php echo $products['description'] ?>  
                     </p>
                     <div class="more-des">
                     <a href="home.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"--> 

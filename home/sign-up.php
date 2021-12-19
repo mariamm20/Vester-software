@@ -44,6 +44,13 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign Up</h2>
+            <div class="info">
+                <p>
+                    <i class="fas fa-info-circle"></i>
+                    This email email already exist 
+                    
+                </p>
+            </div>
             <form class="inputs" action="../includes/signup.inc.php" method="POST">
                 <div style="padding: 0;margin: 0;">
                     <input type="text" required class="special-width" name="fname" placeholder="First Name" />

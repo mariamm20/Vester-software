@@ -84,8 +84,8 @@ CREATE TABLE `feedback` (
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `user_id`, `content`, `product_id`, `review`) VALUES
-(1, 1, 'hhhhhh ', 1, 0);
+--INSERT INTO `feedback` (`id`, `user_id`, `content`, `product_id`, `review`) VALUES
+--(1, 1, 'hhhhhh ', 1, 0);
 
 -- --------------------------------------------------------
 

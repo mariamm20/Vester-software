@@ -16,28 +16,51 @@ class feedbackView extends feedbackContr
                 <h6><?php echo"PRODUCT ID" . " " . $comments['product_id'] ?></h6>   <!-- product id -->
                 <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product -->
 
-                <a href="feedback.php?state=accept" class="icon-link feed accepted">
+                <a href="feedback.php?review=1&id=<?php echo $comments['id']; ?>" class="icon-link feed accepted">
                     Accept
                 </a>
-                <a href="feedback.php?state=reject" class="icon-link feed rejected">
-                    Reject
+                <a href="feedback.php?review=0&id=<?php echo $comments['id']; ?>" class="icon-link feed rejected">
+                    Reject 
                 </a>
-            </div>
-        <?php    
-        }
-    
-        if (isset($_GET['accept']))
-        {
+            </div> 
             
-            $query = "UPDATE feedback SET review = True  where id =$comments[id] ";
-            $this->Connect()->query($query);
+        <?php    
+        
+        }
+        
+       
+        if (isset($_GET["review"]) and $_GET["review"] == 1)
+        {
+            $id = $_GET["id"];  //دي مش متعرفه برا اللوب comments عشان ال    url  في  id هنجيب ال 
+            echo "accepted";
+                       
+
+            $this->Connect()->query("UPDATE feedback SET review = 1 WHERE id = $id ");
+            
         }
 
-        if (isset($_GET['reject']))
+
+        if (isset($_GET["review"]) and $_GET["review"] == 0 )
         {
+            $id = $_GET["id"];
+            echo "reject";
+        
+
+            $this->Connect()->query("UPDATE feedback SET review = 0 WHERE id = $id ");
             
-            $query = "UPDATE feedback SET status = False where id =$comments[id] "; // احنا هنا حطينا ال  
-            $this->Connect()->query($query);
+          
         }
+        
+
+
+        
+
+        
+
+        
+        
     }
+    
+
+
 }
