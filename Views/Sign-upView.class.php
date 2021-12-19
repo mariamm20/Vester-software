@@ -43,6 +43,7 @@
 
             if($this->validateFname() == false)  
             {
+            
                 //echo "Invalid First Name!";
                 header("location: ../home/sign-up.php?error=invalidFname");
                 exit();
@@ -57,6 +58,7 @@
 
             if($this->validateEmail() == false)  
             {
+                
                 //echo "Invalid Email!";
                 header("location: ../home/sign-up.php?error=invalidEmail");
                 exit();
@@ -64,6 +66,7 @@
 
             if($this->checkEmeilPhone() == false)  
             {
+               
                 //echo "This Email Is Already Taken!";
                 header("location: ../home/sign-up.php?error=takenEmailorPhone");
                 exit();
@@ -80,7 +83,7 @@
         }
 
         //  ----------------  check if there any empty input  -------------------
-
+       
         private function emptyInput()
         {   
             $result = false; // assign the (value true or false) in it
@@ -89,6 +92,7 @@
             if(empty($this->fname) || empty($this->lname) || empty($this->email) || empty($this->pass) ||
             empty($this->country)  || empty($this->num) || empty($this->rpass))
             {
+                
                 $result = false; 
             }
             else
@@ -134,6 +138,7 @@
             if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
             {
                 $result = false;
+            
             }
             else
             {
@@ -148,6 +153,7 @@
             $result = false;
             if(!$this->checkUser($this->email,$this->num ))
             {
+                echo "Please, fill in every single field in the form...";
                 $result = false;
             }
             else
@@ -175,6 +181,7 @@
 
         
         }
+        
 
         
 

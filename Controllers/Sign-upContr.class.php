@@ -7,7 +7,7 @@ class Signup extends Db
     {
 
         
-        $stmt = $this->Connect()->prepare('INSERT INTO users (Fname, Lname, email, password, country, phone, create_at) VALUES (?, ?, ?, ?, ?,?, now()) ;');
+        $stmt = $this->Connect()->prepare('INSERT INTO users (Fname, Lname, email, password, country, phone, created_at) VALUES (?, ?, ?, ?, ?,?, now()) ;');
         
         
         $hashpass = password_hash($pass, PASSWORD_DEFAULT);
@@ -45,6 +45,8 @@ class Signup extends Db
         $resultCheck = false;
         if($stmt->rowCount() > 0) // number of errors  
         {
+            
+            echo "this email is already taken ";   
             $resultCheck = false;
         }
         else{

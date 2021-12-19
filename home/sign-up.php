@@ -44,7 +44,7 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign Up</h2>
-            <div class="info">
+            <div class="info" style="display:none;">
                 <p>
                     <i class="fas fa-info-circle"></i>
                     This email email already exist 

@@ -25,8 +25,8 @@
                 <p>
                 <?php
                 $descr = $products['description'];
-                $limitedDescr = substr($descr, 0, 100);
-                if(strlen($descr) > 100)
+                $limitedDescr = substr($descr, 0, 30);
+                if(strlen($descr) > 30)
                 {
                     echo $limitedDescr . '....';  
                 

@@ -21,12 +21,23 @@ class homeView extends homeCont
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                    <p>                   <!-- software description -->
-                        <?php echo $products['description'] ?>  
-                    </p>
-                    <div class="more-des">
-                    <a href="home.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"--> 
-                    </div>
+                <p>                   <!-- software description -->
+                <?php
+                $descr = $products['description'];
+                $limitedDescr = substr($descr, 0, 30);
+                if(strlen($descr) > 30)
+                {
+                    echo $limitedDescr . '....';  
+                
+                }else{
+
+                    echo $descr ;  
+                }
+                ?>  
+                </p>
+                <div class="more-des">
+                <a href="home.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"--> 
+                </div>
 
                 </div>
 

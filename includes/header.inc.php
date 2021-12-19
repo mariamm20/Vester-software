@@ -29,7 +29,7 @@
                         <li class="dropdown-item user-name" > <?php echo "Hello" . " " . $_SESSION["fname"] . "!"; ?></li>
                     
                         <li><hr class="dropdown-divider p-0"></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                         <li><a class="dropdown-item" href="#" name= "signout">Sign out</a></li>
                     </ul>
                 </div>
