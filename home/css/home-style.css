@@ -17,17 +17,12 @@ header{
 }
 .cart{
     background-color: #e0eef6;
-    border-radius: 45% 0 0 45%;
     border-right: 1px solid #fff;
-    padding-left: 10px;
-    padding-right: 10px;
+    
 }
 .cart-number{
     background-color: #1c2750;
     color: #fff;
-    border-radius: 0 45% 45% 0;
-    padding: 5px 10px;
-    margin-right: 0;
     border:1px solid #e0eef6;
 }
 .menu{
