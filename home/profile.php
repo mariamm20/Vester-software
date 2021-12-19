@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,54 +59,15 @@
 
 
     <div class="whole">
-        <div>
-            <div class="pt-0">
-                <img src="../img/6.png" class="p-0"  alt="profile picture" />
-            </div>
-            <div class="user-social">
-                <ul>
-                    <li>
-                        <p><i class="fas fa-globe"></i> Website</p>
-                        <a href="#">https://bootdey.com</a>
-                    </li>
-                    <li>
-                        <p><i class="fab fa-github"></i> Github</p>
-                        <a href="#">bootdey</a>
-                    </li>
-                    <li>
-                        <p><i class="fab fa-twitter"></i> Twitter</p>
-                        <a href="#">@bootdey</a>
-                    </li>
-                    <li>
-                        <p><i class="fab fa-instagram"></i> Instagram</p>
-                        <a href="#">bootdey</a>
-                    </li>
-                    <li id="face">
-                        <p><i class="fab fa-facebook-f"></i> Facebook</p>
-                        <a href="#">bootdey</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="content">
-            
-            <div class="userName">
-                <h4>Lossy Bootdey</h4>
-                <h5><i class="fas fa-cog"></i><a href="#">Setting</a></h5>
-            </div>
-            <div class="userRole">
-                <p>Software Engineer</p>
-            </div>
-            <div class="about">
-                <h5>About Lossy</h5>
-                <div class="line"></div>
-                <p>
-                    Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna
-                    praesent at id quisque
-                    ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam
-                    wisi.
-                </p>
-            </div>
+        <?php
+            include "../Controllers/db.class.php";
+            include "../Controllers/ProfileContr.class.php";
+            include "../Views/ProfileView.class.php";
+
+            $profView = new ProfileView();
+
+            $profView-> showData();
+        ?>     
             <div class="info-content">
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="nav-item">
