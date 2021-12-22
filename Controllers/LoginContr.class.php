@@ -32,7 +32,7 @@ class Login extends Db
         {
             echo "wrong password";
             $stmt = null;
-            header("location: ../home/sign-up.php?error=wrongpassword");
+            header("location: ../home/sign-in.php?error=wrongpassword");
             exit();
         }
         elseif($checkpass == true)

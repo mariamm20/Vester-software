@@ -64,6 +64,13 @@
                 header("location: ../home/sign-up.php?error=invalidEmail");
                 exit();
             }  
+            if($this->passwordMatch() == false)  
+            {
+                
+                //echo "password and repeat password are not the same";
+                header("location: ../home/sign-up.php?error=passDontMatch");
+                exit();
+            }  
 
             if($this->checkEmeilPhone() == false)  
             {
@@ -79,6 +86,17 @@
                 header("location: ../home/sign-up.php?error=InvalidPhoneNumber");
                 exit();
             }  
+            if($this->phoneLength() == false)  
+            {
+                //echo "Please revise this phone number!";
+                header("location: ../home/sign-up.php?error=phoneLength");
+                exit();
+            }  
+            
+            
+                
+
+
             $this->setUser($this->fname, $this->lname, $this->email,$this->pass,$this->country, $this->num);
 
         }
@@ -107,7 +125,7 @@
         private function validateFname()
         {
             $result = false;
-            if(!preg_match("/^[a-zA-z0-9]*$/",$this->fname ))
+            if(!preg_match("/^[a-zA-z]*$/",$this->fname ))
             {
                 $result = false;
             }
@@ -121,7 +139,7 @@
         private function validateLname()
         {
             $result = false;
-            if(!preg_match("/^[a-zA-z0-9]*$/",$this->lname))
+            if(!preg_match("/^[a-zA-z]*$/",$this->lname))
             {
                 $result = false;
             }
@@ -181,6 +199,32 @@
             return $result;
 
         
+        }
+        private function passwordMatch()
+        {
+            $result = false;
+            if ($this->pass != $this->rpass)
+            {
+                $result = false;
+            }
+            else {
+                $result = true;
+            }
+            return $result;
+        }
+
+        private function phoneLength()
+        {
+            $result = false;
+            if (strlen($this->num) != 11 ) {
+               $result = false;
+            }
+            else {
+                $result = true;
+
+            }
+            return $result;
+
         }
         
 

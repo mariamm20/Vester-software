@@ -28,7 +28,11 @@ if(isset($_POST['cacount']))
         // going back to front page 
         header("location: ../home/sign-in.php?error=none");
 
+       
+        
+                
 
 
 
     }
+ 

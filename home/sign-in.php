@@ -45,21 +45,17 @@
     <section class="main">
         <div class="form-content">
             <h2>Sign In</h2>
-            <div class="info">
-                <p>
-                    <i class="fas fa-info-circle"></i>
-                    This email already exist 
-                    
-                </p>
-            </div>
+            <?php
+            include "../includes/signinHandler.inc.php";
+            ?>
             <form class="inputs" action="../includes/login.inc.php" method="POST">
                 
-                <input type="text" required class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
-                <input type="password" required class="just-width" name= "pass" placeholder="Password" /><br>
+                <input type="text"  class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
+                <input type="password" class="just-width" name= "pass" placeholder="Password" /><br>
                 
                 <div class="check">
                     <input type="checkbox" id="accept"  /><label for="accept">Show Password</label><br>
-                    <p class="already">Have not an account yet?<a href="../sign-up/sign-up.html">Sign Up!</a></p>
+                    <p class="already">Have not an account yet?<a href="sign-up.php"><b>Sign Up! </b></a></p>
 
                 </div>
                 
