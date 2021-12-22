@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: ../home/home.php?error= none");
 
+header("location:sign-in.php");

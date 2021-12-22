@@ -17,14 +17,14 @@
 <body>
     <header>
         <div>
-            <h2 class="v"><a href="../home/home.html">Vester&nbsp;Software</a></h2>
+            <h2 class="v"><a href="home.php">Vester&nbsp;Software</a></h2>
         </div>
         <div class="d-flex justify-content-center menu ">
             <i class="fab fa-opencart fa-2x"></i>
-            <div class="d-flex justify-content-center" style="height: 43.6px;">
+            <!-- <div class="d-flex justify-content-center" style="height: 43.6px;">
                 <span class="cart">Cart</span>
                 <span class="cart-number">0</span>
-            </div>
+            </div> -->
             <i class="fas fa-bars fa-2x" style="margin-left: 10px; width: 28px;" onclick="menu()"></i>
         </div>
 
@@ -32,7 +32,7 @@
     <!--Menu part-->
     <div class="menu-section" id="menu">
         <ul class="menu-list ">
-            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Request Software</a></li>
             <li><a href="sign-up.php">Sign up</a></li>

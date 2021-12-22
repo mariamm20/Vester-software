@@ -18,11 +18,11 @@ session_start();
 
 <body>
 
-
-
-<?php
-include "../includes/header.inc.php";
-?>
+ 
+<!--header-->
+        <?php
+        include "../includes/header.inc.php";
+        ?>
   
     <!--Menu part-->
                 <?php

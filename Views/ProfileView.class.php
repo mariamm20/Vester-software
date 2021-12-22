@@ -6,6 +6,7 @@
             foreach ($data as $userData)
             {
             ?>
+            <div>
             <div class="pt-0">
                 <img src="<?php echo $userData["photo"];?>" class="p-0"  alt="profile picture" />
             </div>
@@ -41,7 +42,7 @@
             
             <div class="userName">
                 <h4><?php $userData["Fname"]." ".$userData["Lname"];?></h4>
-                <h5><i class="fas fa-cog"></i><a href="#">Setting</a></h5>
+                <h5><i class="fas fa-cog"></i><a href="setting.php">Setting</a></h5>
             </div>
             <div class="userRole">
                 <p><?php echo $userData["role"];?></p>

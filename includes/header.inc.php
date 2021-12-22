@@ -30,7 +30,7 @@
                     
                         <li><hr class="dropdown-divider p-0"></li>
                         <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                        <li><a class="dropdown-item" href="#" name= "signout">Sign out</a></li>
+                        <li><a class="dropdown-item" href="sign-out.php" name= "signout">Sign out</a></li>
                     </ul>
                 </div>
                 <?php
