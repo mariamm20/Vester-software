@@ -129,7 +129,7 @@
             <div class="top">
                 <div class="standard">
                     <p>Phone Number</p>
-                    <input type="number" placeholder="0123456789" required />
+                    <input type="text" placeholder="0123456789" required />
                 </div>
                 
             </div>
