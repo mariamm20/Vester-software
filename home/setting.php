@@ -27,8 +27,48 @@
                 <img src="../img/6.png" class="p-0" alt="profile picture" />
             </div>
             <div class="change-profile">
-                <a href="#">Change profile picture</a>
+                <a href="#" data-bs-target="#change-modal" data-bs-toggle="modal">Change profile picture</a>
             </div>
+            <!--Change photo modal-->
+            <div class="modal fade" id="change-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content change-list">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Change you profile picture</h5>
+                            <button type="button" class="btn-close btn1" data-bs-dismiss="modal" aria-label="Close" >X</button>
+                        </div>
+                        <form>
+                            <div class="modal-body ">
+                                
+                                    <div class="standard add-image">
+                                        <p><i class="far fa-image
+                                                        "></i>Choose your picture</p>
+                                        <div class="in">
+                                            <input type="file" name="uploadfile" id="img"
+                                                style="display:none;" onchange="javascript:showoneimg()" />
+                                            <label for="img">Browse</label>
+                                        </div>
+
+
+                                    </div>
+                                    <div>
+                                        <ul id="images">
+
+                                        </ul>
+                                    </div>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                
+                                <button type="button" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-secondary btn2" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <div class="user-social">
                 <ul>
                     <li>
