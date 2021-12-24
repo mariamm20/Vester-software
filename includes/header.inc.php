@@ -227,12 +227,3 @@
     </header>
 
 
-                ?>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars fa-2x" style=" width: 28px;"></i>
-                    </button>
-        </div>
-
-    </header>
