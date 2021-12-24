@@ -63,3 +63,210 @@
         </div>
 
     </header>
+
+     <!--Menu part-->
+     <?php
+                if (isset($_SESSION["id"]))
+                {
+                ?>
+                <div class="menu-section" id="menu">
+                    <ul class="menu-list ">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="#">Request Software</a></li>
+                    
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <?php
+                }
+                else
+                {
+                ?>
+                <div class="menu-section" id="menu">
+                    <ul class="menu-list ">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="#">Request Software</a></li>
+                        <li><a href="sign-up.php">Sign up</a></li>
+                        <li><a href="sign-in.php">Sign In</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <?php
+                }
+                ?>
+
+                <!--Wishlist Modal-->
+
+    <div class="modal" tabindex="-1" id="wishlist">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header header-wishlist ">
+                    <div class="contact-header">
+                        <p>Make a wish come true</p>
+                        <h4>
+                            Wishlist
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                </div>
+                <!--Body-->
+
+                <div class="modal-body">
+                    <div class="about head-table">
+                        <h4>Desired Softwares</h4>
+                        <div class="line"></div>
+                        <span>( 400 )</span>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Product-->
+                    <div class="wishlist-product">
+                        <div class="left">
+                            <img src="../img/7.jpg" />
+                            <div>
+                                <p><a href="#">Net Software</a></p>
+                                <p>$ 0.00</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="#">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                   
+
+
+                </div>
+            </div>
+        </div>
+</div>
+
+ <!--modal-->
+ <div class="modal" tabindex="-1" id="contact">
+        <div class="modal-dialog">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header ">
+                    <div class="contact-header">
+                        <p>Contact Us</p>
+                        <h4>
+                            GET IN TOUCH
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5>Name</h5>
+                    <input type="text" placeholder="John Dawood" required/>
+                    <h5>Email</h5>
+                    <input type="email" placeholder="user_email@gmail.com" required />
+                    <h5>Phone Number</h5>
+                    <input type="text" placeholder="0123456789" required />
+                    <h5>Message</h5>
+                    <textarea placeholder="Leave your message here"></textarea>
+
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>

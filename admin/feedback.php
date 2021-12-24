@@ -28,8 +28,9 @@ include "includes/header.inc.php";
                 <?php
                 // includes
                     include "../Controllers/db.class.php";
-                    include "../Controllers/feedback-adminContr.class.php";
-                    include "../Views/feedback-adminView.class.php";
+                    //include "../Controllers/feedback-adminContr.class.php";
+                    include "../Controllers/AdminContr.class.php";
+                    include "../Views/AdminView.class.php";
                 // make an object fron the view
                     $feedView = new feedbackView();
 

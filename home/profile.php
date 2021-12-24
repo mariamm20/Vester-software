@@ -20,44 +20,7 @@
         <?php
         include "../includes/header.inc.php";
         ?>
-    <!--Menu part-->
-
-    <?php
-    if (isset($_SESSION["id"]))
-    {
-    ?>
-    <div class="collapse" id="navbarToggleExternalContent">
     
-        <ul class="menu-list ">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="#">Request Software</a></li>
-            
-            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
-        </ul>
-    
-    </div>
-    <?php
-    }
-    else
-    {
-    ?>
-    <div class="collapse" id="navbarToggleExternalContent">
-    
-        <ul class="menu-list ">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="../products/products.html">Products</a></li>
-            <li><a href="#">Request Software</a></li>
-            <li><a href="../sign-up/sign-up.html">Sign up</a></li>
-            <li><a href="../sign-in/sign-in.html">Sign In</a></li>
-            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
-        </ul>
-    
-    </div>
-    <?php
-    }
-    ?>
-
 
 
     
