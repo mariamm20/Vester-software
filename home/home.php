@@ -14,6 +14,7 @@ session_start();
         <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/home-style.css" rel="stylesheet" />
+        <link href="stand-css/header-footer-style.css " rel="stylesheet"/>
     </head>
 </head>
 
@@ -24,11 +25,6 @@ session_start();
     ?>
     
     
-
-
-
-   
-
     <!--First Section landing page-->
     <section class="land">
         <div class="land-text">
@@ -210,36 +206,10 @@ session_start();
 
     </section>
 
-    <!--Footer-->
-    <footer>
-        <div>
-            <h5>Navigate to</h5>
-            <a href="home.html"> <i class="fas fa-caret-right"></i> Home </a>
-            <a href="#"> <i class="fas fa-caret-right"></i> Products </a>
-            <a href="../sign-up/sign-up.html"> <i class="fas fa-caret-right"></i> Sign up </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Reviews </a>
-        </div>
-        <div>
-            <h5>Features</h5>
-            <a href="#"><i class="fas fa-caret-right"></i> Sell Software </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Request Software </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Ask for Help </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Privacy Policy </a>
-        </div>
-        <div>
-            <h5>Contact Us</h5>
-            <a href="#"><i class="fas fa-paper-plane"></i> vestersoftware_2021@gmail.com </a>
-            <a href="#"><i class="fas fa-phone-alt"></i> (+20)-1025635897</a>
-            <div class="icons">
-                <i class="fab fa-angellist" style="color: rgb(255, 232, 29);"></i>
-                <i class="fab fa-facebook-f "></i>
-                <i class="fab fa-twitter "></i>
-                <i class="fab fa-instagram"></i>
-            </div>
-        </div>
-        <span>&copy;All Rights Reserved 2021-2022</span>
-    </footer>
-
+    
+<?php
+    include "../includes/footer.inc.php";
+    ?>
 
     <!-- JavaScript -->
     <script src="../assests/bootstrap.bundle.min.js"></script>
