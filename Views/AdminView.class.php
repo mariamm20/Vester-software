@@ -374,6 +374,8 @@ class checkUserData extends AdminContr{
     }
 
 }
+
+// FEEDBACK
 class feedbackView extends AdminContr
 {
     public function showFeedback()
@@ -418,14 +420,7 @@ class feedbackView extends AdminContr
             $this->rejectFeedback();
 
         }
-        
-
-
-        
-
-        
-
-        
+   
         
     }
     

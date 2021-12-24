@@ -74,7 +74,7 @@ class AdminContr extends Db{
     }
 
 
-    // admin control
+    // FEEDBACK CONTROL
     protected function getFeedback()
     {
         $stmt = $this->Connect()->query("SELECT * FROM feedback where review IS NULL ");

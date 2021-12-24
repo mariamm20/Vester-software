@@ -10,7 +10,28 @@
                     <span class="cart-number">Wishlist</span>
                 </div>
                 <!--User Icon-->
+                <?php
+                if (isset($_SESSION["id"]))
+                {
+                ?>
                 <div class="dropdown">
+                    <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                        <li class="dropdown-item user-name"><?php echo "Hello " . $_SESSION["fname"] . "!"; ?></li>
+                        <li>
+                            <hr class="dropdown-divider p-0">
+                        </li>
+                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+                        <li><a class="dropdown-item" href="sign-out.php">Sign out</a></li>
+                    </ul>
+                </div>
+                <?php
+                }
+                else {
+                ?>
+                    <div class="dropdown" style="display:none;">
                     <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -23,6 +44,12 @@
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
+                <?php
+                }
+                ?>
+
+
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
                     aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars fa-2x" style=" width: 28px; "></i>
@@ -34,18 +61,43 @@
 
         </div>
         <!--Menu part-->
+
+        <?php
+        if (isset($_SESSION["id"]))
+        {
+        ?>
+            <div class="collapse" id="navbarToggleExternalContent">
+
+                <ul class="menu-list ">
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="#">Request Software</a></li>
+                    
+                    <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
+                </ul>
+
+            </div>
+        <?php
+        }
+        else {
+        ?>
         <div class="collapse" id="navbarToggleExternalContent">
 
-            <ul class="menu-list ">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="../products/products.html">Products</a></li>
-                <li><a href="#">Request Software</a></li>
-                <li><a href="../sign-up/sign-up.html">Sign up</a></li>
-                <li><a href="../sign-in/sign-in.html">Sign In</a></li>
-                <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
-            </ul>
+        <ul class="menu-list ">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="#">Request Software</a></li>
+            <li><a href="sign-up.php">Sign up</a></li>
+            <li><a href="sign-in.php">Sign In</a></li>
+            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
+        </ul>
 
         </div>
+
+         
+        <?php 
+        }
+        ?>
         <!--Contact Modal-->
         <div class="modal" tabindex="-1" id="contact">
             <div class="modal-dialog">
