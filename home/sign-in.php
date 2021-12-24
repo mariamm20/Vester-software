@@ -31,10 +31,10 @@
             <form class="inputs" action="../includes/login.inc.php" method="POST">
                 
                 <input type="text"  class="just-width" name= "email" placeholder="email@yahoo.com" /><br>
-                <input type="password" class="just-width" name= "pass" placeholder="Password" /><br>
+                <input type="password" class="just-width pass1" name= "pass" placeholder="Password" /><br>
                 
                 <div class="check">
-                    <input type="checkbox" id="accept"  /><label for="accept">Show Password</label><br>
+                    <input type="checkbox" id="accept" /><label for="accept" onclick="myFunction()">Show Password</label><br>
                     <p class="already">Have not an account yet?<a href="sign-up.php"><b>Sign Up! </b></a></p>
 
                 </div>
