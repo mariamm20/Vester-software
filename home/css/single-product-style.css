@@ -84,6 +84,9 @@
 .info-content{
     width: 85%;
 }
+.info-content .show{
+    box-shadow:none;
+}
 .font-grey{
     color: #5a5a5a;
     text-align: justify;
