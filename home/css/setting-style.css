@@ -172,6 +172,77 @@ label{
     
 }
 
+form{padding: 0;}
+
+ .custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Browse';
+  display: inline-block;
+  
+  color: #2dbdd3;
+  outline: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
+.add-image{
+    display: flex;
+    justify-content: space-between;
+}
+.add-image p{
+    width: 100%;
+    padding: 0;
+}
+.add-image label{
+    padding: 0 5px 0 0;
+    color: #0097FF;
+    cursor: pointer;
+}
+.add-image .in{
+    padding: 0;
+}
+.add-image i{
+    color: #0097FF;
+}
+.change-list ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+    padding: 7px;
+    padding-left: 15px;
+    border: 1px solid #1c2750;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline-color: #2dbdd3;
+    width: 100%;
+    color: #1c2750;
+    font-size: 14px;
+    display: none;
+}
+
+.change-list .modal-header{
+    height: auto;
+    background-color: #fff;
+}
+.change-list .modal-footer button{
+    width: 48%;
+}
+.change-list .modal-header .btn-close{
+    position: relative;
+    bottom: 2px;
+    background: none;
+    color: #1c2750;
+}
+
+@media (max-width:468px) {
+    .change-list .modal-footer button{
+    width: 46%;
+}
+}
 
 
 

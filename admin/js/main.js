@@ -77,6 +77,7 @@ let show = function () {
     let warning = document.querySelector(".warn");
     output.style.display = "block";
     let x = document.querySelectorAll("#imgs li").length;
+    output.innerHTML = "";
     for (let i = 0; i < thumb.files.length; i++) {
         if (x < 4 && thumb.files.length < 5) {
             if (warning.style.display == "inline-block") {
