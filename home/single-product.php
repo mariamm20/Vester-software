@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/single-product-style.css" rel="stylesheet" />
+        <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
     </head>
 </head>
 
