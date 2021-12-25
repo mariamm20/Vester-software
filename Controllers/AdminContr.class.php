@@ -1,6 +1,5 @@
 <?php
 
-
     class AdminContr extends Db{
 
         
@@ -80,5 +79,32 @@
             $stmt->execute(array($id));
             return $stmt;
         }
+
+
+        // FEEDBACK CONTROL
+        protected function getFeedback()
+        {
+            $stmt = $this->Connect()->query("SELECT * FROM feedback where review IS NULL ");
+            $f_data = $stmt->fetchAll();
+            return $f_data;    
+            
+        }
+
+        protected function acceptFeedback()
+        {
+            $review = $_GET["review"];
+            $id = $_GET["id"];
+            $this->Connect()->query("UPDATE feedback SET review = $review WHERE id = $id ");
+        }
+        protected function rejectFeedback()
+        {
+            $review = $_GET["review"];
+            $id = $_GET["id"];
+            $this->Connect()->query("UPDATE feedback SET review = $review WHERE id = $id ");
+
+        }
+
+    
+
     }
 ?>

@@ -10,6 +10,7 @@
         <title>Vester Software</title>
         <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
+        <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
         <link href="css/profile-style.css" rel="stylesheet" />
     </head>
 </head>
@@ -20,44 +21,7 @@
         <?php
         include "../includes/header.inc.php";
         ?>
-    <!--Menu part-->
-
-    <?php
-    if (isset($_SESSION["id"]))
-    {
-    ?>
-    <div class="collapse" id="navbarToggleExternalContent">
     
-        <ul class="menu-list ">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="#">Request Software</a></li>
-            
-            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
-        </ul>
-    
-    </div>
-    <?php
-    }
-    else
-    {
-    ?>
-    <div class="collapse" id="navbarToggleExternalContent">
-    
-        <ul class="menu-list ">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="../products/products.html">Products</a></li>
-            <li><a href="#">Request Software</a></li>
-            <li><a href="../sign-up/sign-up.html">Sign up</a></li>
-            <li><a href="../sign-in/sign-in.html">Sign In</a></li>
-            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
-        </ul>
-    
-    </div>
-    <?php
-    }
-    ?>
-
 
 
     
@@ -230,19 +194,11 @@
         </div>
 
     </div>
-<footer>
-    <div class="footer">
-        <h6 style="letter-spacing: 4px;">CONTACT US</h6>
 
-        <div class="icons">
-            <i class="fas fa-envelope"></i>
-            <i class="fab fa-facebook-f "></i>
-            <i class="fab fa-twitter "></i>
-            <i class="fab fa-instagram"></i>
-        </div>
-    </div>
-    <span>&copy;All Rights Reserved 2021-2022</span>
-</footer>
+<!--footer-->
+<?php
+    include "../includes/footer.inc.php";
+    ?>
 
 
 

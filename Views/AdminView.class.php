@@ -380,5 +380,58 @@ class checkUserData extends AdminContr{
 
 }
 
+// FEEDBACK
+class feedbackView extends AdminContr
+{
+    public function showFeedback()
+    {
+        $f_data= $this->getFeedback();
+
+
+        foreach($f_data as $comments)
+        {
+            
+            
+        ?>    
+            <div class="feature col">
+                <h3><?php echo "USER ID" . " " . $comments['user_id'] ?></h3>  <!-- user id -->
+                <h6><?php echo"PRODUCT ID" . " " . $comments['product_id'] ?></h6>   <!-- product id -->
+                <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product -->
+
+                <a href="feedback.php?review=1&id=<?php echo $comments['id']; ?>" class="icon-link feed accepted">
+                    Accept
+                </a>
+                <a href="feedback.php?review=0&id=<?php echo $comments['id']; ?>" class="icon-link feed rejected">
+                    Reject 
+                </a>
+            </div> 
+            
+        <?php    
+        
+        }
+        
+       
+        if (isset($_GET["review"]) and $_GET["review"] == 1)
+        {
+              
+            $this->acceptFeedback();
+            
+        }
+
+
+        if (isset($_GET["review"]) and $_GET["review"] == 0 )
+        {
+           
+            $this->rejectFeedback();
+
+        }
+   
+        
+    }
+    
+
+
+}
+
 
 

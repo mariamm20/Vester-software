@@ -24,6 +24,7 @@ $wishlist = new WishListView();
         <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/products-style.css" rel="stylesheet" />
+        <link href="stand-css/header-footer-style.css" rel="stylesheet"/> 
     </head>
 </head>
 
@@ -37,38 +38,7 @@ $wishlist = new WishListView();
             include "../includes/header.inc.php";
         ?>
   
-    <!--Menu part-->
-                <?php
-                if (isset($_SESSION["id"]))
-                {
-                ?>
-                <div class="menu-section" id="menu">
-                    <ul class="menu-list ">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.php">Products</a></li>
-                        <li><a href="#">Request Software</a></li>
-                    
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <?php
-                }
-                else
-                {
-                ?>
-                <div class="menu-section" id="menu">
-                    <ul class="menu-list ">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.php">Products</a></li>
-                        <li><a href="#">Request Software</a></li>
-                        <li><a href="sign-up.php">Sign up</a></li>
-                        <li><a href="sign-in.php">Sign In</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <?php
-                }
-                ?>
+   
     <!--Landing section-->
 
     <section class="software-room">
@@ -96,6 +66,20 @@ $wishlist = new WishListView();
                         <li><input type="checkbox" id="mac" class="checkboxClick Operating_System" value="support_mac"  /><label for="mac">&nbsp;MAC</label></li>
                         <li><input type="checkbox" id="linux" class=" checkboxClick Operating_System" value="support_linux" /><label for="linux">&nbsp;Linux</label></li>
                         <li><input type="checkbox" id="window" class=" checkboxClick Operating_System" value="support_windows"/><label for="window">&nbsp;Windows</label></li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li class="all-lists" data-bs-toggle="collapse" href="#prog" aria-expanded="true"
+                        aria-controls="prog" onclick="change2()" ><i class="fas fa-chevron-down b rotate"></i>
+                        Programming Langauge
+                    </li>
+                    <ul id="prog">
+                        <li><input type="checkbox" id="c" /><label for="c">&nbsp; 100$ - 200$ </label></li>
+                        <li><input type="checkbox" id="java" /><label for="java">&nbsp;500$ - 1000$</label></li>
+                        <li><input type="checkbox" id="c#" /><label for="c#">&nbsp;1000$-5000$</label></li>
+                        <li><input type="checkbox" id="py" /><label for="py">&nbsp;5000$-10000$</label></li>
+                        <li><input type="checkbox" id="php" /><label for="php">&nbsp;10000$-20000$</label></li>
                     </ul>
                 </ul>
 
@@ -155,34 +139,9 @@ $wishlist = new WishListView();
 
 
     <!--Footer -->
-    <footer>
-        <div>
-            <h5>Navigate to</h5>
-            <a href="../home/home.html"> <i class="fas fa-caret-right"></i> Home </a>
-            <a href="../products/products.html"> <i class="fas fa-caret-right"></i> Products </a>
-            <a href="../sign-up/sign-up.html"> <i class="fas fa-caret-right"></i> Sign up </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Reviews </a>
-        </div>
-        <div>
-            <h5>Features</h5>
-            <a href="#"><i class="fas fa-caret-right"></i> Sell Software </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Request Software </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Ask for Help </a>
-            <a href="#"><i class="fas fa-caret-right"></i> Privacy Policy </a>
-        </div>
-        <div>
-            <h5>Contact Us</h5>
-            <a href="#"><i class="fas fa-paper-plane"></i> vestersoftware_2021@gmail.com </a>
-            <a href="#"><i class="fas fa-phone-alt"></i> (+20)-1025635897</a>
-            <div class="icons">
-                <i class="fab fa-angellist" style="color: rgb(255, 232, 29);"></i>
-                <i class="fab fa-facebook-f "></i>
-                <i class="fab fa-twitter "></i>
-                <i class="fab fa-instagram"></i>
-            </div>
-        </div>
-        <span>&copy;All Rights Reserved 2021-2022</span>
-    </footer>
+<?php
+    include "../includes/footer.inc.php";
+    ?>
 
     <!-- JavaScript -->
     <script src="../assests/bootstrap.bundle.min.js"></script>
