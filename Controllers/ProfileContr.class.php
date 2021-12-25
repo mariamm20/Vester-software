@@ -4,11 +4,12 @@
 
         protected function getUserData(){
 
-            $stmt = $this->Connect()->query('SELECT * FROM users WHERE id = $_SESSION["id"]');
+            $stmt = $this->Connect()->query('SELECT * FROM users WHERE id =' . $_SESSION["id"]);
             $data = $stmt->fetchAll();
             return $data;
         
         }
+        
         /* edit the query statement
         protected function getPurchasedProducts(){
 
