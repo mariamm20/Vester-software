@@ -110,8 +110,8 @@
             <div class="inforamtion">
                 <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'" class="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../home/home.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="../products/products.html">Products</a></li>
+                        <li class="breadcrumb-item"><a href="home.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="products.php">Products</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Net product</li>
                     </ol>
                 </nav>

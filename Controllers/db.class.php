@@ -6,11 +6,7 @@ class Db {
     private $host ="localhost";
     private $user = "root" ;
     private $pwd ="";
-    private $dbname ="software" ;
-
-
-
-    
+    private $dbname ="vester_software" ;
 
     protected function  Connect(){
         $dns = 'mysql:host='.$this->host.';dbname='.$this->dbname;
@@ -22,6 +18,3 @@ class Db {
 
 } 
 
-
-// signup class ==> controls
-//signuo control ==>view

@@ -196,8 +196,6 @@ session_start();
             </div>
         </div>
 </div>
-
-
     <!--modal-->
     <div class="modal" tabindex="-1" id="contact">
         <div class="modal-dialog">
@@ -234,6 +232,7 @@ session_start();
         </div>
     </div>
 
+    
     <!--First Section landing page-->
     <section class="land">
         <div class="land-text">

@@ -19,9 +19,9 @@ class AdminView extends AdminContr{
                 <td><?php echo $item['Fname'] . " ".  $item['Lname']; ?></td>
                 <td><?php echo $item['category'];?></td>
                 <td>
-                    <a href="update-product.php/id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
+                    <a href="update-product.php?id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
                     &nbsp;
-                    <a href="?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+                    <a href="includes/remove-product.inc.php?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr> 
 
@@ -44,8 +44,6 @@ class AdminView extends AdminContr{
 
         $this->setProductContr($name,$description,$price,$category,$discount,$imageName,$thumbnailName, $fileName);
     }
-
-
 
 
     public function showUsers() {
@@ -80,6 +78,11 @@ class AdminView extends AdminContr{
         $this->setUserContr($Fname,$Lname,$email,$phone,$imageName,$role, $country,$password);
         echo "done";
     }
+    public function removeProduct($id){
+
+        $this->deleteProduct($id);
+    }
+
 
 }
 
@@ -189,6 +192,8 @@ class  Upload {
         return $fileNewName;
     }
     
+
+
 }
 
 class checkUserData extends AdminContr{

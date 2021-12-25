@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['cacount']))
+    if(isset($_POST['cacount']))
     {
 
         // get the data from the user
@@ -35,4 +35,5 @@ if(isset($_POST['cacount']))
 
 
     }
+?>
  
