@@ -13,7 +13,7 @@
 
         $wishListView->addItem($_GET["id"]);
 
-        header("Location:../home/products.php");
+        header("Location:../home/products.php?added");
     }
 
 ?>

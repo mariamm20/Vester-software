@@ -27,8 +27,25 @@
         $text = $_POST['text'];
         if (!empty($text)){
              $sql .=" AND name LIKE '"."%".$text. "%" ."' ";
-            
         }
+    }
+    if(isset($_POST['price'])){
+            $num = $_POST['price'];
+            if ($num == '1'){
+                $sql .=" AND price between 0 and 1000";
+            }
+            else if ($num == '2'){
+                $sql .=" AND price between 1000 and 2000";
+            }
+            else if ($num == '3'){
+                $sql .=" AND price between 2000 and 3000";
+            }
+            else if ($num == '4'){
+                $sql .=" AND price between 3000 and 10000";
+            }
+            else{
+                $sql .=" AND price between 10000 and 20000";
+            }
     }
 
     // includes

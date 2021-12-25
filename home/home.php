@@ -1,5 +1,11 @@
 <?php
 session_start();
+ // includes
+ include "../Controllers/db.class.php";
+ include "../Controllers/WishListContr.class.php";
+ include "../Views/WishListView.class.php";
+ include "../Controllers/homeContr.class.php";
+ include "../Views/homeView.class.php";
 ?>
 
 <!DOCTYPE html>
@@ -86,10 +92,7 @@ session_start();
             
          <!-- the php code  -->
          <?php
-                // includes
-                    include "../Controllers/db.class.php";
-                    include "../Controllers/homeContr.class.php";
-                    include "../Views/homeView.class.php";
+                    
                 // make an object fron the view
                     $home = new homeView();
 

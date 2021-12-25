@@ -117,7 +117,7 @@
                 }
         }else{
             ?>
-                <h3 align="center"> Sorry we can't find products with your filters</h3>'
+                <h3 align="center"> Sorry we can't find products with your filters</h3>
             <?php
         }
     }

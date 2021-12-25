@@ -5,11 +5,11 @@ $(document).ready(function () {
         var text = $(this).val();
         var Operating_System = get_selected_filter("Operating_System");
         var category = get_selected_filter("categoryFilter")
-
+        var price = $('.price_filter:checked').val();
         $.ajax({
             url:'../includes/search&filter.inc.php',
             method:'POST',
-            data:{action:action,text:text,category:category,Operating_System:Operating_System},
+            data:{action:action,text:text,category:category,Operating_System:Operating_System,price:price},
             success:function(response){
                 $(".parent-product").html(response);
                 // $('.loader').hide();
@@ -23,27 +23,30 @@ $(document).ready(function () {
         var action = 'action';
         var Operating_System = get_selected_filter("Operating_System");
         var category = get_selected_filter("categoryFilter")
-        console.log(category)
         var text = $('.searchInput').val();
+        var price =$('.price_filter:checked').val();
         $.ajax({
             url:'../includes/search&filter.inc.php',
             method:'POST',
-            data:{action:action,text:text,category:category,Operating_System:Operating_System},
+            data:{action:action,text:text,category:category,Operating_System:Operating_System,price:price},
             success:function(response){
                 $(".parent-product").html(response);
                 // $('.loader').hide();
-                console.log("success");
             }
         })
     });
+    $('.price_filter').click(function() {
+        $('.price_filter:checked').not(this).prop('checked', false);
+     });
+    
 
+    function get_selected_filter(text){
+        var filter_data=[];
+        $('.'+text+':checked').each(function () {
+            const name =$(this).val();
+            filter_data.push(name);   
+        });
+        return filter_data;
+    }
 
-function get_selected_filter(text){
-    var filter_data=[];
-    $('.'+text+':checked').each(function () {
-        const name =$(this).val();
-        filter_data.push(name);   
-    });
-    return filter_data;
-}
 });

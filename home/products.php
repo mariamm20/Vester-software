@@ -7,6 +7,7 @@ include "../Controllers/ProductsContr.class.php";
 include "../Controllers/WishListContr.class.php";
 include "../Views/ProductsView.class.php";
 include "../Views/WishListView.class.php";
+
 // make an object from the view
 $proView = new productView();
 $wishlist = new WishListView();
@@ -33,8 +34,6 @@ $wishlist = new WishListView();
  
 <!--header-->
         <?php
-            $wishlist->ShowMessage();
-
             include "../includes/header.inc.php";
         ?>
   
@@ -72,14 +71,14 @@ $wishlist = new WishListView();
                 <ul>
                     <li class="all-lists" data-bs-toggle="collapse" href="#prog" aria-expanded="true"
                         aria-controls="prog" onclick="change2()" ><i class="fas fa-chevron-down b rotate"></i>
-                        Programming Langauge
+                        Price Limit
                     </li>
                     <ul id="prog">
-                        <li><input type="checkbox" id="c" /><label for="c">&nbsp; 100$ - 200$ </label></li>
-                        <li><input type="checkbox" id="java" /><label for="java">&nbsp;500$ - 1000$</label></li>
-                        <li><input type="checkbox" id="c#" /><label for="c#">&nbsp;1000$-5000$</label></li>
-                        <li><input type="checkbox" id="py" /><label for="py">&nbsp;5000$-10000$</label></li>
-                        <li><input type="checkbox" id="php" /><label for="php">&nbsp;10000$-20000$</label></li>
+                        <li><input type="checkbox"  id="c"  class="checkboxClick price_filter" value ="1" /><label for="c">&nbsp; 0$ - 1000$ </label></li>
+                        <li><input type="checkbox" id="j"  class="checkboxClick price_filter" value ="2" /><label for="j">&nbsp;1000$ - 2000$</label></li>
+                        <li><input type="checkbox" id="c"  class="checkboxClick price_filter" value ="3"/><label for="c">&nbsp;2000$-3000$</label></li>
+                        <li><input type="checkbox" id="y"  class="checkboxClick price_filter" value ="4" /><label for="y">&nbsp;3000$-10000$</label></li>
+                        <li><input type="checkbox" id="p"  class="checkboxClick price_filter" value ="5"/><label for="p">&nbsp;10000$-20000$</label></li>
                     </ul>
                 </ul>
 
@@ -121,12 +120,6 @@ $wishlist = new WishListView();
             </div>
         </div>
     </section>
-
-
-
-
-
-
 
 
 
