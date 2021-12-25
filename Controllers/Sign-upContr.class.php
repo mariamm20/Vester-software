@@ -45,14 +45,18 @@ class Signup extends Db
         $resultCheck = false;
         if($stmt->rowCount() > 0) // number of errors  
         {
+            
+            
             $resultCheck = false;
         }
         else{
             $resultCheck = true;
         }
         return $resultCheck;
+        
     }
 
+    
 }
 
 

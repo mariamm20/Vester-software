@@ -19,9 +19,9 @@ class AdminView extends AdminContr{
                 <td><?php echo $item['Fname'] . " ".  $item['Lname']; ?></td>
                 <td><?php echo $item['category'];?></td>
                 <td>
-                    <a href="update-product.php/id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
+                    <a href="update-product.php?id=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-edit"></i></a>
                     &nbsp;
-                    <a href="?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+                    <a href="includes/remove-product.inc.php?remove=<?php echo $item['id'];?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr> 
 
@@ -44,8 +44,6 @@ class AdminView extends AdminContr{
 
         $this->setProductContr($name,$description,$price,$category,$discount,$imageName,$thumbnailName, $fileName);
     }
-
-
 
 
     public function showUsers() {
@@ -80,6 +78,11 @@ class AdminView extends AdminContr{
         $this->setUserContr($Fname,$Lname,$email,$phone,$imageName,$role, $country,$password);
         echo "done";
     }
+    public function removeProduct($id){
+
+        $this->deleteProduct($id);
+    }
+
 
 }
 
@@ -189,6 +192,8 @@ class  Upload {
         return $fileNewName;
     }
     
+
+
 }
 
 class checkUserData extends AdminContr{
@@ -372,6 +377,59 @@ class checkUserData extends AdminContr{
 
     
     }
+
+}
+
+// FEEDBACK
+class feedbackView extends AdminContr
+{
+    public function showFeedback()
+    {
+        $f_data= $this->getFeedback();
+
+
+        foreach($f_data as $comments)
+        {
+            
+            
+        ?>    
+            <div class="feature col">
+                <h3><?php echo "USER ID" . " " . $comments['user_id'] ?></h3>  <!-- user id -->
+                <h6><?php echo"PRODUCT ID" . " " . $comments['product_id'] ?></h6>   <!-- product id -->
+                <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product -->
+
+                <a href="feedback.php?review=1&id=<?php echo $comments['id']; ?>" class="icon-link feed accepted">
+                    Accept
+                </a>
+                <a href="feedback.php?review=0&id=<?php echo $comments['id']; ?>" class="icon-link feed rejected">
+                    Reject 
+                </a>
+            </div> 
+            
+        <?php    
+        
+        }
+        
+       
+        if (isset($_GET["review"]) and $_GET["review"] == 1)
+        {
+              
+            $this->acceptFeedback();
+            
+        }
+
+
+        if (isset($_GET["review"]) and $_GET["review"] == 0 )
+        {
+           
+            $this->rejectFeedback();
+
+        }
+   
+        
+    }
+    
+
 
 }
 

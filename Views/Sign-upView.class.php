@@ -34,6 +34,7 @@
 
         public function userSignup()
         {
+            
             if($this->emptyInput() == false)  
             {
                 //echo "Empty Input!";
@@ -43,6 +44,7 @@
 
             if($this->validateFname() == false)  
             {
+            
                 //echo "Invalid First Name!";
                 header("location: ../home/sign-up.php?error=invalidFname");
                 exit();
@@ -57,14 +59,23 @@
 
             if($this->validateEmail() == false)  
             {
+                
                 //echo "Invalid Email!";
                 header("location: ../home/sign-up.php?error=invalidEmail");
+                exit();
+            }  
+            if($this->passwordMatch() == false)  
+            {
+                
+                //echo "password and repeat password are not the same";
+                header("location: ../home/sign-up.php?error=passDontMatch");
                 exit();
             }  
 
             if($this->checkEmeilPhone() == false)  
             {
-                //echo "This Email Is Already Taken!";
+               
+                echo "This Email Is Already Taken!";
                 header("location: ../home/sign-up.php?error=takenEmailorPhone");
                 exit();
             }  
@@ -75,12 +86,23 @@
                 header("location: ../home/sign-up.php?error=InvalidPhoneNumber");
                 exit();
             }  
+            if($this->phoneLength() == false)  
+            {
+                //echo "Please revise this phone number!";
+                header("location: ../home/sign-up.php?error=phoneLength");
+                exit();
+            }  
+            
+            
+                
+
+
             $this->setUser($this->fname, $this->lname, $this->email,$this->pass,$this->country, $this->num);
 
         }
 
         //  ----------------  check if there any empty input  -------------------
-
+       
         private function emptyInput()
         {   
             $result = false; // assign the (value true or false) in it
@@ -89,6 +111,7 @@
             if(empty($this->fname) || empty($this->lname) || empty($this->email) || empty($this->pass) ||
             empty($this->country)  || empty($this->num) || empty($this->rpass))
             {
+                
                 $result = false; 
             }
             else
@@ -102,7 +125,7 @@
         private function validateFname()
         {
             $result = false;
-            if(!preg_match("/^[a-zA-z0-9]*$/",$this->fname ))
+            if(!preg_match("/^[a-zA-z]*$/",$this->fname ))
             {
                 $result = false;
             }
@@ -116,7 +139,7 @@
         private function validateLname()
         {
             $result = false;
-            if(!preg_match("/^[a-zA-z0-9]*$/",$this->lname))
+            if(!preg_match("/^[a-zA-z]*$/",$this->lname))
             {
                 $result = false;
             }
@@ -134,6 +157,7 @@
             if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
             {
                 $result = false;
+            
             }
             else
             {
@@ -148,6 +172,7 @@
             $result = false;
             if(!$this->checkUser($this->email,$this->num ))
             {
+                echo "Please, fill in every single field in the form...";
                 $result = false;
             }
             else
@@ -175,6 +200,33 @@
 
         
         }
+        private function passwordMatch()
+        {
+            $result = false;
+            if ($this->pass != $this->rpass)
+            {
+                $result = false;
+            }
+            else {
+                $result = true;
+            }
+            return $result;
+        }
+
+        private function phoneLength()
+        {
+            $result = false;
+            if (strlen($this->num) != 11 ) {
+               $result = false;
+            }
+            else {
+                $result = true;
+
+            }
+            return $result;
+
+        }
+        
 
         
 
