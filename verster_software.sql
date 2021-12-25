@@ -51,6 +51,7 @@ CREATE TABLE `contact_us` (
   `description` text NOT NULL,
   `email` varchar(70) NOT NULL,
   `name` varchar(20) NOT NULL,
+  `phone` varchar(11) DEFAULT NULL,
   `review` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
