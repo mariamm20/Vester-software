@@ -1,3 +1,11 @@
+<?php 
+
+include "../Views/messages.class.php";
+$message = new AlertMessages();
+$message->ShowMessage();
+
+?>
+
 <header>
         <div class=" header-navbar">
             <div>
@@ -114,24 +122,24 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                     </div>
                     <!--Body-->
-                    <form class="p-0">
+                    <form class="p-0" action="../includes/ContactUs.inc.php" method="POST">
                         <div class="modal-body">
         
                             <h5>Name</h5>
-                            <input type="text" placeholder="John Dawood" required />
+                            <input type="text" placeholder="John Dawood" required name="name" />
                             <h5>Email</h5>
-                            <input type="email" placeholder="user_email@gmail.com" required />
+                            <input type="email" placeholder="user_email@gmail.com" required name="email"  />
                             <h5>Phone Number</h5>
-                            <input type="text" placeholder="0123456789" required />
+                            <input type="text" placeholder="0123456789" required name="phone"  />
                             <h5>Message</h5>
-                            <textarea placeholder="Leave your message here"></textarea>
-        
+                            <textarea placeholder="Leave your message here" name="content" ></textarea>
                         </div>
                         <!--Footer-->
                         <div class="modal-footer">
         
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -164,116 +172,12 @@
                             <h4>Desired Softwares</h4>
                             <div class="line"></div>
                             <span>( 400 )</span>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--Product-->
-                        <div class="wishlist-product">
-                            <div class="left">
-                                <img src="../img/7.jpg" />
-                                <div>
-                                    <p><a href="#">Net Software</a></p>
-                                    <p>$ 0.00</p>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <a href="#">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-        
-        
-        
-        
+                        </div>   
+                        <?php 
+                            // make an object from the view
+                            $wishlistdata = new WishListView();
+                            $wishlistdata->showWishList();  
+                        ?> 
                     </div>
                 </div>
             </div>

@@ -13,22 +13,22 @@ if(isset($_POST['add_product']))
         $category = $_POST['category'];
         $discount = $_POST['discount'];
         $image = $_FILES['image'];
-        $thumbnail = $_FILES['thumbnail'];
+        $thumbnails = $_FILES['thumbnail'];
         $file = $_FILES['file'];
 
 
-       
+       print_r($thumbnails);
         
         
-        // includes
-        include "../../Controllers/db.class.php";
-        include "../../Controllers/AdminContr.class.php";
-        include "../../Views/AdminView.class.php";
+        // // includes
+        // include "../../Controllers/db.class.php";
+        // include "../../Controllers/AdminContr.class.php";
+        // include "../../Views/AdminView.class.php";
 
 
-        $add  = new AdminView();
+        // $add  = new AdminView();
 
-        $add->setProduct($name,$description,$price,$category,$discount,$image, $thumbnail, $file);
+        // $add->setProduct($name,$description,$price,$category,$discount,$image, $thumbnail, $file);
 
-        header("location: ../add-product.php?AddedSuccefully");
+        // header("location: ../add-product.php?AddedSuccefully");
 }

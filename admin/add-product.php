@@ -75,10 +75,9 @@ include "includes/header.inc.php";
                                 <p><i class="far fa-image
                                                     "></i> Add software image</p>
                                 <div class="in">
-                                    <input type="file" name="uploadfile" id="img" style="display:none;" onchange="javascript:showoneimg()" />
+                                    <input type="file" name="image" id="img" style="display:none;" onchange="javascript:showoneimg()" />
                                     <label for="img">Browse</label>
                                 </div>
-                        
                         
                             </div>
                             <div>
@@ -92,7 +91,7 @@ include "includes/header.inc.php";
                                 <p id="sm-font"><i class="far fa-images"></i> Add software thumbnails <span class="warn">( Only 4
                                         images )</span></p>
                                 <div class="in">
-                                    <input type="file" name="uploadfile" id="thumbnail" style="display:none;" multiple
+                                    <input type="file" name="thumbnail[]" id="thumbnail" style="display:none;" multiple
                                         onchange="javascript:show()" />
                                     <label for="thumbnail">Browse</label>
                                 </div>
@@ -108,40 +107,15 @@ include "includes/header.inc.php";
                             <div class="standard add-image">
                                 <p><i class="far fa-file"></i> Add software file</p>
                                 <div class="in">
-                                    <input type="file" name="uploadfile" id="files" style="display:none;" onchange="javascript:showfile()" />
+                                    <input type="file" name="file" id="files" style="display:none;" onchange="javascript:showfile()" />
                                     <label for="files">Browse</label>
                                 </div>
                             </div>
                             <div>
                                 <ul id="softfiles">
-                        
                                 </ul>
                             </div>
                         </div>
-
-                       
-                             
-                                    
-                                    
-
-<!--                             <div class="col-12" style="padding:10px 10px">
-                             
-                             <label for="image" class="form-label"> choose image for your product </label>
-                             <input type="file"  name="image" class="form-control-file" id="image" required>
-                             
-                            </div>
-                            <div class="col-12" style="padding:10px 10px">
-                                
-                                <label for="thumbnail" class="form-label"> choose image for your product thumbnail </label>
-                                <input type="file" name="thumbnail" class="form-control-file" id="thumbnail" required>
-                                
-                            </div>
-                            <div class="col-12" style="padding:10px 10px">
-                                <label for="file" class="form-label"> upload product file  </label>
-                                <input type="file"  name="file" class="form-control-file" id="file" required>
-                                
-                            </div>
-                            </div> -->
                             <br>
                             <br>
                             <br>

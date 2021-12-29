@@ -1,4 +1,13 @@
-<?php session_start()?>
+<?php session_start();
+ // includes
+ include "../Controllers/db.class.php";
+ include "../Controllers/WishListContr.class.php";
+ include "../Views/WishListView.class.php";
+ include "../Controllers/ProfileContr.class.php";
+include "../Views/ProfileView.class.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +30,10 @@
         <?php
         include "../includes/header.inc.php";
         ?>
-    
-
-
-    
-
 
     <div class="whole">
         <?php
-            include "../Controllers/db.class.php";
-            include "../Controllers/ProfileContr.class.php";
-            include "../Views/ProfileView.class.php";
+           
 
             $profView = new ProfileView();
 

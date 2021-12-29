@@ -1,5 +1,11 @@
 
+<?php
+ // includes
+ include "../Controllers/db.class.php";
+ include "../Controllers/WishListContr.class.php";
+ include "../Views/WishListView.class.php";
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,13 +53,6 @@
 
 
     </section>
-
-
-
-
-
-
-
     <!-- JavaScript -->
     <script src="../assests/bootstrap.bundle.min.js"></script>
     <script src="js/sign-in.js"></script>

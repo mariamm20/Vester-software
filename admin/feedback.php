@@ -31,7 +31,7 @@ include "includes/header.inc.php";
                     //include "../Controllers/feedback-adminContr.class.php";
                     include "../Controllers/AdminContr.class.php";
                     include "../Views/AdminView.class.php";
-                // make an object fron the view
+                // make an object from the view
                     $feedView = new feedbackView();
 
                 // call the method to show products

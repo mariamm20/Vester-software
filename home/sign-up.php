@@ -1,4 +1,8 @@
-
+<?php 
+ // includes
+ include "../Controllers/db.class.php";
+ include "../Controllers/WishListContr.class.php";
+ include "../Views/WishListView.class.php";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,9 +38,7 @@
                 <?php
                 include "../includes/signupHndler.inc.php";
                 ?>
-                
-
-            
+                            
             <form class="inputs" action="../includes/signup.inc.php" method="POST">
                 <div style="padding: 0;margin: 0;">
                     <input type="text"  class="special-width" name="fname" placeholder="First Name" />
