@@ -4,6 +4,11 @@ session_start();
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
  include "../Views/WishListView.class.php";
+ include "../Controllers/SingleProductContr.class.php";
+ include "../Views/SingleProduct.class.php";
+
+
+ 
 ?>
 
 
@@ -31,52 +36,11 @@ session_start();
     
     
     <section class="product-section">
-        <!--Images section on right-->
-        <div class="car">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"><img src="img/1.png"
-                            class="d-block w-100 small-img" alt="app img"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"><img src="img/2.png" class="d-block w-100 small-img"
-                            alt="app img"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"><img src="img/3.png" class="d-block w-100 small-img"
-                            alt="app img"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"><img src="img/4.png" class="d-block w-100 small-img"
-                            alt="app img"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"><img src="img/5.png" class="d-block w-100 small-img"
-                            alt="app img"></button>
-                </div>
-                <div class="carousel-inner ">
-                    <div class="carousel-item active">
-                        <img src="img/1.png" class="d-block w-100 img" alt="app img">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/2.png" class="d-block w-100 img" alt="app img">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/3.png" class="d-block w-100 img" alt="app img">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/4.png" class="d-block w-100 img" alt="app img">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/5.png" class="d-block w-100 img" alt="app img">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <i class="fas fa-chevron-left control"></i>
-                </button>
-                <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <i class="fas fa-chevron-right control"></i>
-                </button>
-            </div>
+        <!-- method of showing slider product images-->
+        <?php
+            $single = new singleView();
+            $single->showSingleProduct();
+        ?>
 
 
         </div>
@@ -185,10 +149,12 @@ session_start();
                                     <hr class="p-0">
                                 </div>
                             </div>
+                         <form action="" class="p-0">
                             <div class="submit-btn">
                                 <input type="text" placeholder="Write Your Review" required />
                                 <button>Submit</button>
                             </div>
+                         </form>
                         </div>
                     </div>
                 </div>
