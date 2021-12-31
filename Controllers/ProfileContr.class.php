@@ -10,11 +10,12 @@
         
         }
         
-        /* edit the query statement
-        protected function getPurchasedProducts(){
+        /*protected function getPurchasedProducts(){
 
-            $stmt = $this->Connect()->query('SELECT * FROM users WHERE id = $_SESSION["id"]');
-            $purchacedProducts = $stmt->fetchAll();
-            return $purchacedProducts;
+            $stmt = $this->Connect()->query('SELECT * FROM slaes WHERE id =' $_SESSION["id"]);
+            $purchasedProducts = $stmt->fetchAll();
+            return $purchasedProducts;
         
+        }
+        */
     }

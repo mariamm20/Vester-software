@@ -37,11 +37,11 @@
             <div class="content">
             
             <div class="userName">
-                <h4><?php $userData["Fname"]." ".$userData["Lname"];?></h4>
+                <h4><?php echo $userData["Fname"]." ".$userData["Lname"];?></h4>
                 <h5><i class="fas fa-cog"></i><a href="#">Setting</a></h5>
             </div>
             <div class="userRole">
-                <p><?php echo $userData["role"];?></p>
+                <p>Developer</p>
             </div>
             <div class="about">
                 <h5>About <?php echo $userData["Fname"] . " ".$userData["Lname"];?></h5>
@@ -54,4 +54,38 @@
             }
         }
 
+
+        public function showPurchasedProducts(){
+            $purchasedProducts= $this->getPurchasedProducts();
+            foreach($purchasedProducts as $purProducts){
+                ?>
+                <div class="tab-pane fade show active" id="purchased">
+                <div class="about head-table">
+                    <h5>Purchased Products</h5>
+                    <div class="line"></div>
+                </div>
+                <table class="table table-responsive">
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="table-width ov"><?php echo $purProducts["product_id"];?></td>
+                            <td class="p-0"><button>Open</button></td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="table-width ov"><?php echo $purProducts["product_id"];?></td>
+                            <td class="p-0"><button>Open</button></td>
+
+                        </tr>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <?php
+            }
+        }
     }
