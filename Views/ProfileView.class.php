@@ -6,6 +6,7 @@
             foreach ($data as $userData)
             {
             ?>
+            
             <div>
                 <div class="pt-0">
                     <img src="../uploads/images/<?php echo $userData["photo"];?>" class="p-0"  alt="profile picture" />

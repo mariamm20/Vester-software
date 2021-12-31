@@ -1,5 +1,5 @@
 <?php
-
+session_start();
  // includes
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";

@@ -175,8 +175,8 @@ $message->ShowMessage();
                         </div>   
                         <?php 
                             // make an object from the view
-                            $wishlistdata = new WishListView();
-                            $wishlistdata->showWishList();  
+                           $wishlistdata = new WishListView();
+                           $wishlistdata->showWishList();  
                         ?> 
                     </div>
                 </div>

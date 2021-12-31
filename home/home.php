@@ -3,7 +3,7 @@ session_start();
  // includes
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
- include "../Views/WishListView.class.php";
+include "../Views/WishListView.class.php";
  include "../Controllers/homeContr.class.php";
  include "../Views/homeView.class.php";
 ?>
