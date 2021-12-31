@@ -1,38 +1,37 @@
-let section = document.getElementById("menu");
-let bar = document.querySelector(".fa-bars");
-let header = document.querySelector("header");
-let cart = document.querySelector(".cart");
-let logo = document.querySelector(".v a");
+var output = document.getElementById("images");
+let showoneimg = function () {
 
-function menu() {
-    section.classList.add("smooth");
-    if (section.style.display == "none") {
-        section.style.display = "flex";
-        let s = window.innerHeight - 75;
-        section.style.height = `${s}px`;
-        bar.classList.remove("fa-bars");
-        bar.classList.add("fa-times");
-        document.body.style.overflowY = "hidden";
-        header.style.backgroundColor = "#1c2750"
-        header.style.color = "#fff";
-        cart.style.color = "#1c2750";
-        logo.style.color = "#fff";
-        document.body.style.padding = "0px";
-
+    var input = document.getElementById("img");
+    if(output.style.display == "none"){
+        output.style.display == "block"
     }
-    else {
-        section.style.display = "none";
-        bar.classList.remove("fa-times");
-        bar.classList.add("fa-bars");
-        document.body.style.overflow = "visible";
-        header.style.backgroundColor = "#fff";
-        header.style.color = "#1c2750";
-        logo.style.color = "#1c2750";
-        document.body.style.padding = "5px";
-
+    
+    output.style.display = "block";
+    if (output.innerHTML == "") {
+        for (let i = 0; i < 1; i++) {
+            output.innerHTML += '<li>' + input.files.item(i).name + '</li>';
+        }
+    } else {
+        output.innerHTML = "";
+        for (let i = 0; i < 1; i++) {
+            output.innerHTML += '<li>' + input.files.item(i).name + '</li>';
+        }
     }
 
 }
+var btn1 = document.querySelector(".change-list .btn1");
+btn1.addEventListener("click", function(){
+output.innerHTML="";
+output.style.display="none";
+})
+var btn2 = document.querySelector(".change-list .btn2");
+btn2.addEventListener("click", function () {
+    output.innerHTML = "";
+    output.style.display = "none";
+})
+
+
+
 
 
 function myFunction() {

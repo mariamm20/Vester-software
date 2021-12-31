@@ -6,19 +6,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../img/favicon.ico" />
         <title>Vester Software</title>
-        <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
-        <link href="css/sign-up-style.css" rel="stylesheet" />
-        <link href="../header-footer-style.css" rel="stylesheet"/>
+        <link href="css/request-style.css" rel="stylesheet" />
+        <link href="../header-footer-style.css" rel="stylesheet" />
     </head>
 </head>
 
-<body>
 <header>
     <div class=" header-navbar">
-        <div>
+        <div class="finished">
             <h2 class="v"><a href="home.html">Vester&nbsp;Software</a></h2>
+            <img src="../img/icon.png" onclick="TurnFireworksOn()">
+            <img src="../img/stop.png" style="width: 25px ; height: 25px; " onclick="TurnFireworksOff()"/>
         </div>
         <div class="d-flex justify-content-center menu ">
             <div class="d-flex justify-content-center" style="height: 43.6px; cursor: pointer;"
@@ -244,81 +248,63 @@
 
 </header>
 
-    <!--First Section-->
-    <section class="main">
-        <div class="form-content">
-            <h2>Sign Up</h2>
-            <div class="info">
-                <p>
-                    <i class="fas fa-info-circle"></i>
-                    This email email already exist 
-                    
-                </p>
-            </div>
-            <form class="inputs">
-                
-                <div style="padding: 0;margin: 0;">
-                    <input type="text" required class="special-width" placeholder="First Name" />
-                    <input type="text" required class="special-width" placeholder="Last Name" />
-                </div>
-                <input type="email" required class="just-width" placeholder="email@yahoo.com" />
-                <br>
-                <input type="password" required class="just-width" placeholder="Password" /><br>
-                <select class="just-width" id = "countries" name="country"></select><br>
-                <input type="date" required class="just-width" /><br>
-                <div class="check">
-                    <input type="checkbox" id="accept" required /><label for="accept">Accept all privacy
-                        policy</label><br>
-                    <input type="checkbox" id="robot" required /><label for="robot">I a person not a robot</label>
-                </div>
-                <button type="submit" class="create-btn c-btn">Create Account</button>
-            </form>
+
+
+
+<!--First Section landing page-->
+<section class="land">
+    <div class="land-text">
+        <p class="intro">Get benifit from new features</p>
+        <h2>
+            <span class="pick-up">Request A Safe And</span><br>
+            <span class="pick-up">Trusty Software For</span><br>
+            <span class="pick-up">Your Organization</span>
+        </h2>
+        <p class="text">
+            Know the initial price of the requested
+            software <br> and ask it if it is suitable for you .
+        </p>
+        <button class="shop-btn">
+            Start Now
+        </button>
+    </div>
+    <div class="img-div">
+        <img src="../img/13.jpg" alt="coding" class="first-img" />
+    </div>
+</section>
+<section>
+    <div class="quiz-app">
+
+        <div class="quiz-area"></div>
+        <div class="answers-area"></div>
+
+        <div class="btns">
+            <button class="prev-button"><i class="fas fa-arrow-left"></i> Previous </button>
+            <button class="next-button">Next <i class="fas fa-arrow-right"></i></button>
         </div>
 
-
-        <div class="content">
-            <div class="create-btn">Sign Up For Free</div>
-            <div>
-                <p class="become">Become part of our company</p>
-            </div>
-            <div class="phrases" style="display: flex; flex-direction: row; justify-content: center;">
-                <div class="icons" >
-                    <i class="fas fa-check" style="margin-top: 4px;"></i>
-                    <i class="fas fa-check"></i>
-                    <i class="fas fa-check"></i>
-                    <i class="fas fa-check"></i>
-                    <i class="fas fa-check"></i>
-                </div>
-                <div class="words" >
-                    <span>Get One Free Software</span>
-                    <span>Buy Trusted and Save Software</span>
-                    <span>Sell Your Software</span>
-                    <span>Get Our Daily Offers</span>
-                    <span>Request A Software For<br> Your Company</span>
-                </div>
-
-            </div>
-            <p class="already">Already have an account?</p>
-            <button class="reverse-btn contact-btn" onclick="window.location='../sign-in/sign-in.html';">
-                Sign In
-            </button>
-
-
-
-
-
-
+        <div class="quiz-info">
+            <div class="category"><i class="fas fa-coins"></i> Application&nbsp;Cost</div>
+            <div class="count">$ <span></span></div>
         </div>
+        <form>
+            <div class="results">
 
-    </section>
+                <button class="submit-button w-100" id="req">Request</button>
+            </div>
+        </form>
+    </div>
+</section>
 
 
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
 
-    <script src="../assests/bootstrap.bundle.min.js"></script>
+<script src="../assests/bootstrap.bundle.min.js"></script>
 
-    <script src="js/sign-up.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/jquery.fireworks.js"></script>
+<script src="js/request.js"></script>
 </body>
 
 </html>
