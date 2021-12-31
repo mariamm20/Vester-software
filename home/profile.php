@@ -1,9 +1,9 @@
 <?php session_start();
  // includes
- include "../Controllers/db.class.php";
- include "../Controllers/WishListContr.class.php";
- include "../Views/WishListView.class.php";
- include "../Controllers/ProfileContr.class.php";
+include "../Controllers/db.class.php";
+include "../Controllers/WishListContr.class.php";
+include "../Views/WishListView.class.php";
+include "../Controllers/ProfileContr.class.php";
 include "../Views/ProfileView.class.php";
 
 
@@ -33,7 +33,6 @@ include "../Views/ProfileView.class.php";
 
     <div class="whole">
         <?php
-           
 
             $profView = new ProfileView();
 
@@ -55,32 +54,15 @@ include "../Views/ProfileView.class.php";
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="purchased">
-                        <div class="about head-table">
-                            <h5>Purchased Products</h5>
-                            <div class="line"></div>
-                        </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td class="table-width ov">Net Software</td>
-                                    <td class="p-0"><button>Open</button></td>
+                    <!-- purchased products -->
+                    <?php
+                    $profView-> showPurchasedProducts();
+                    ?>
 
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td class="table-width ov">Kit Software</td>
-                                    <td class="p-0"><button>Open</button></td>
-
-                                </tr>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-                    </div>
+                    <!-- products for sale  -->
+                    <?php
+                    $profView-> showProductsForSale();
+                    ?>
                     <div class="tab-pane fade" id="sale">
                         <div class="about head-table">
                             <h5>Products For Sale</h5>

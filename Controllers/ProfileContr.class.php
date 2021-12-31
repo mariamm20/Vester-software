@@ -9,13 +9,22 @@
             return $data;
         
         }
-    }
         
-    //     /* edit the query statement
-    //     protected function getPurchasedProducts(){
+        protected function getPurchasedProducts(){
 
-    //         $stmt = $this->Connect()->query('SELECT * FROM users WHERE id = $_SESSION["id"]');
-    //         $purchacedProducts = $stmt->fetchAll();
-    //         return $purchacedProducts;
+            $stmt = $this->Connect()->query('SELECT p.id, p.name FROM slaes as s join products as p on s.product_id = p.id WHERE s.user_id =' . $_SESSION["id"]);
+            $purchasedProducts = $stmt->fetchAll();
+            return $purchasedProducts;
         
-    // }
+        }
+        
+
+        /*protected function getProductsForSale(){
+
+            $stmt = $this->Connect()->query('SELECT p.id, p.name FROM slaes as s join products as p on s.product_id = p.id WHERE s.user_id =' . $_SESSION["id"]);
+            $saleProducts = $stmt->fetchAll();
+            return $saleProducts;
+        
+        }
+        */
+    }
