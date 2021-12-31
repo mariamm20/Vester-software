@@ -9,12 +9,13 @@
             return $data;
         
         }
-        
-        /* edit the query statement
-        protected function getPurchasedProducts(){
-
-            $stmt = $this->Connect()->query('SELECT * FROM users WHERE id = $_SESSION["id"]');
-            $purchacedProducts = $stmt->fetchAll();
-            return $purchacedProducts;
-        
     }
+        
+    //     /* edit the query statement
+    //     protected function getPurchasedProducts(){
+
+    //         $stmt = $this->Connect()->query('SELECT * FROM users WHERE id = $_SESSION["id"]');
+    //         $purchacedProducts = $stmt->fetchAll();
+    //         return $purchacedProducts;
+        
+    // }

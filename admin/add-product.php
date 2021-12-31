@@ -1,5 +1,13 @@
 <?php
+ // includes
+
 include "includes/header.inc.php";
+include "../Controllers/db.class.php";
+include "../Controllers/AdminContr.class.php";
+include "../Views/AdminView.class.php";
+ //  make object from view class
+ $AdminView = new AdminView(); 
+
 ?>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -17,7 +25,7 @@ include "includes/header.inc.php";
                 </div>
                 <div class="col-md-7 col-lg-8">
                 
-                    <form class="needs-validation" novalidate=""  action="includes/add-product.inc.php" method="POST" enctype="multipart/form-data">
+                    <form class="needs-validation" novalidate=""  action="includes/product.inc.php" method="POST" enctype="multipart/form-data">
                         <div class="row g-12">
                             <div class="col-sm-12">
                                 <label for="productName" class="form-label"><i class="fas fa-signature"></i>&nbsp;
@@ -59,18 +67,25 @@ include "includes/header.inc.php";
                                     &nbsp;Software category</label>
                                 <select class="form-select" id="Category" required=""  name="category">
                                     <option value="">Choose...</option>
-                                    <option value="1">School</option>
-                                    <option value="2">mo</option>
-                                    <option value="1">hb</option>
-                                    <option>wo</option>
-                                    <option>se</option>
+                                    <?php 
+                                    // call show method
+                                    $AdminView->showCategory();
+                                    ?>  
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid Category.
                                 </div>
                             </div>
-                                    
-                               <div class="top">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="support_mac" value="1">Support MAC devices</label>
+                            </div>  
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="support_linux" value="1">Support Linux devices</label>
+                            </div>  
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="support_windows" value="1">Support Windows devices</label>
+                            </div>  
+                            <div class="top">
                             <div class="standard add-image">
                                 <p><i class="far fa-image
                                                     "></i> Add software image</p>

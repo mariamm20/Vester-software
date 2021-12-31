@@ -30,3 +30,22 @@ if(isset($_POST['add_user']))
 
         header("location: ../add-user.php?AddedSuccefully");
 }
+if(isset($_GET['remove']))
+    {
+
+        // get the data from the user
+
+        $id= $_GET['remove'];
+
+        
+        // includes
+        include "../../Controllers/db.class.php";
+        include "../../Controllers/AdminContr.class.php";
+        include "../../Views/AdminView.class.php";
+
+
+        $remove  = new AdminView();
+        $remove->deleteUser($id);
+
+        header("location: ../all-users.php?removedSuccessfully");
+}
