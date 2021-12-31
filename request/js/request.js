@@ -40,9 +40,9 @@ function getQuestions() {
             }
 
             submitButton.onclick = () => {
-
-                currentIndex++;
                 checkAnswer(questionsObject[currentIndex], questionsCount);
+                currentIndex++;
+                
                 
                 questionArea.innerHTML = '';
                 answerArea.innerHTML = '';
