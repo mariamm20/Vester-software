@@ -89,7 +89,7 @@ $message->ShowMessage();
         }
         else {
         ?>
-        <div class="collapse" id="navbarToggleExternalContent">
+        <div class="collapse" id="navbarToggleExternalContent" >
 
         <ul class="menu-list ">
             <li><a href="home.php">Home</a></li>
@@ -145,7 +145,12 @@ $message->ShowMessage();
             </div>
         </div>
         <!--Wishlist Modal-->
-        
+
+
+        <?php
+        if (isset($_SESSION["id"]))
+        {
+        ?>
         <div class="modal" tabindex="-1" id="wishlist">
             <div class="modal-dialog modal-dialog-scrollable">
                 <!--Content-->
@@ -177,6 +182,9 @@ $message->ShowMessage();
                 </div>
             </div>
         </div>
+        <?php
+        }
+        ?>
 
 
 

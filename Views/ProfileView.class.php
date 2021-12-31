@@ -68,18 +68,18 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td class="table-width ov"><?php echo $purProducts["product_id"];?></td>
+                            <td class="table-width ov"><?php echo $purProducts["name"];?></td>
                             <td class="p-0"><button>Open</button></td>
 
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td class="table-width ov"><?php echo $purProducts["product_id"];?></td>
+                            <td class="table-width ov"><?php echo $purProducts["name"];?></td>
                             <td class="p-0"><button>Open</button></td>
 
                         </tr>
 
-                        </tr>
+                        </atr>
 
                     </tbody>
                 </table>
@@ -87,5 +87,10 @@
             </div>
             <?php
             }
+        }
+
+
+        public function showProductsForSale(){
+
         }
     }

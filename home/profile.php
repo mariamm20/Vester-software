@@ -55,7 +55,14 @@ include "../Views/ProfileView.class.php";
                 </ul>
                 <div class="tab-content">
                     <!-- purchased products -->
-                    
+                    <?php
+                    $profView-> showPurchasedProducts();
+                    ?>
+
+                    <!-- products for sale  -->
+                    <?php
+                    $profView-> showProductsForSale();
+                    ?>
                     <div class="tab-pane fade" id="sale">
                         <div class="about head-table">
                             <h5>Products For Sale</h5>

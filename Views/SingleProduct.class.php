@@ -152,12 +152,12 @@
                                     <hr class="p-0">
                                 </div>
                             </div>
-                            <form action="" method="">
-                                <div class="submit-btn">
-                                    <input type="text" placeholder="Write Your Review" name="review" required />
-                                    <button type="submit">Submit</button>
-                                </div>
-                            </form>
+                            <form action="" class="p-0" method="post">
+                            <div class="submit-btn">
+                                <input type="text" placeholder="Write Your Review" required name="review"/>
+                                <button>Submit</button>
+                            </div>
+                         </form>
                         </div>
                     </div>
                 </div>
