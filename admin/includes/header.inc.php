@@ -1,5 +1,8 @@
 <?php
 // session_start();
+include "../Views/messages.class.php";
+$message = new AlertMessages();
+$message->ShowMessage();
 ?>
 <!DOCTYPE html>
 <html lang="en">

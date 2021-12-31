@@ -17,7 +17,7 @@ include "includes/header.inc.php";
                 <div class="col-md-7 col-lg-8">
 
 
-                    <form class="needs-validation" novalidate="" action="includes/add-user.inc.php" method="POST" enctype="multipart/form-data">
+                    <form class="needs-validation" novalidate="" action="includes/user.inc.php" method="POST" enctype="multipart/form-data">
                         <div class="row g-12">
                             <div class="col-sm-6">
                                 <label for="userFirstName" class="form-label"><i class="fas fa-signature"></i>&nbsp;
@@ -95,7 +95,7 @@ include "includes/header.inc.php";
                             User</button>
                         <br>
                         <br>
-                </div>
+                    </div>
 
 
 
