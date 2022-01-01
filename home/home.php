@@ -86,7 +86,7 @@ include "../Views/WishListView.class.php";
     </section>
     <!--Third section -->
     <section class="products">
-        <p class="intro">Get to know to us</p>
+        <p class="intro" style="text-align: center;">Get to know to us</p>
         <h2>Our Products</h2>
         <div class="main">
             

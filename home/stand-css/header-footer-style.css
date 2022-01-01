@@ -246,10 +246,10 @@ header{
 }
 
 .header-contact{
-    background-image: url("img/10.jpg");
+    background-image: url("10.jpg");
 }
 .header-wishlist{
-    background-image: url("img/12.jpg");
+    background-image: url("12.jpg");
 }
 .header-wishlist .contact-header h4{
     letter-spacing: 16px;
