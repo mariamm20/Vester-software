@@ -37,7 +37,7 @@
                 <div class="d-flex justify-content-between price">
                     <div class="price-text">
                         <h5>Price</h5>
-                        <p><?php echo $products['price']; ?></p>   <!-- "product price ==> 50$" -->
+                        <p><?php echo $products['price'] . "$"; ?></p>   <!-- "product price ==> 50$" -->
                     </div>
                     <div class="add-to-cart"> 
                         <a href="../includes/wishlist.inc.php?id=<?php echo $products['id'];  ?> "> Add To WishList</a>  <!-- product id -->
