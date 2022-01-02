@@ -21,7 +21,7 @@
         "title": "How do people login?",
         "answer_1": "Email",
         "answer_2": "Social Media",
-        "answer_3": "Both",
+        "answer_3": "Phone Number",
         "price_1": 40,
         "price_2": 20,
         "price_3": 10
@@ -40,8 +40,8 @@
         "answer_1": "Premium support  $450",
         "answer_2": "Business support $350",
         "answer_3": "Growth support  $200",
-        "price_1": 40,
-        "price_2": 20,
-        "price_3": 10
+        "price_1": 450,
+        "price_2": 350,
+        "price_3": 200
     }
 ]
