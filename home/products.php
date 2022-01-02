@@ -107,7 +107,8 @@ $wishlist = new WishListView();
                     <li class="breadcrumb-item"><a href="home.php">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Products</li>
                 </ol>
-            </nav>
+            </nav>  
+            <div class="loader-Container"> <div class="loader"><span></span></div></div>
             <div class="parent-product">
             <!-- the php code  -->
                     <?php

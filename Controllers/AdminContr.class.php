@@ -132,6 +132,24 @@
             $stmt = $this->Connect()->prepare($query);
             $check =$stmt->execute([$name,$description,$price,$discount,$imageName, $fourth_thumbnail,$category,$fileName,$first_thumbnail,$second_thumbnail,$third_thumbnail,$support_windows,$support_mac,$support_linux,$id]);
         }
+        protected function getUsersNumber(){
+            $stmt = $this->Connect()->prepare("SELECT Count(*) FROM users");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
+        protected function getProductsNumber(){
+            $stmt = $this->Connect()->prepare("SELECT Count(*) FROM products");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
+        protected function getMaxUsers(){
+            $stmt = $this->Connect()->prepare("SELECT max(id) FROM users");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
 
     }
 ?>

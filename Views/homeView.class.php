@@ -47,10 +47,10 @@ class homeView extends homeCont
                         <p><?php echo $products['price'] . "$" ?></p>       <!-- software price -->
                     </div>
                     <div class="add-to-cart">
-                    <a href="home.php?id=<?php echo $products['id'];  ?> "> Add to cart </a>  <!-- product id -->
+                    <a href=<?php if (isset($_SESSION["id"])){ echo  "../includes/wishlist.inc.php?id=". $products['id'];}else{echo '?LoginFirst';}?>> Add to WishList </a>  <!-- product id -->
                     </div>
                     <div class="cart-icon">
-                        <a href="#"><i class="fab fa-opencart fa-2x"></i> </a>
+                        <a href=<?php if (isset($_SESSION["id"])){ echo  "../includes/wishlist.inc.php?id=". $products['id'];}else{echo '?LoginFirst';}?>><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
              
 
