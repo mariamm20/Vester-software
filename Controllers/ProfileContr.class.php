@@ -27,4 +27,21 @@
         
         }
         */
+
+        protected function getProileReview(){
+
+            $stmt = $this->Connect()->query('SELECT `content` FROM `feedback` WHERE `review` =1 AND `user_id` = '. $_SESSION["id"]);
+            $yourReview = $stmt->fetchAll();
+            return $yourReview;
+        
+        }
+
+        /*protected function getProductsForSale(){
+
+            $stmt = $this->Connect()->query('');
+            $productsForSale = $stmt->fetchAll();
+            return $productsForSale;
+        
+        }
+        */
     }

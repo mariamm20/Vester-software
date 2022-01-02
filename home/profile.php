@@ -55,14 +55,13 @@ include "../Views/ProfileView.class.php";
                 </ul>
                 <div class="tab-content">
                     <!-- purchased products -->
+                    
                     <?php
                     $profView-> showPurchasedProducts();
                     ?>
 
                     <!-- products for sale  -->
-                    <?php
-                    $profView-> showProductsForSale();
-                    ?>
+                    
                     <div class="tab-pane fade" id="sale">
                         <div class="about head-table">
                             <h5>Products For Sale</h5>
@@ -115,54 +114,14 @@ include "../Views/ProfileView.class.php";
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane fade train" id="reviews">
-                        <div class="about head-table">
-                            <h5>Your Reviews</h5>
-                            <div class="line"></div>
-                        </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                                <thead style="border: 1px solid #ccc;">
-                                    <tr>
-                                        <th scope="col" class="left">Submitted Comments</th>
-                                        <th scope="col">Date</th>
+                <!-- Your Review -->
 
+                <?php
 
-                                    </tr>
-                                </thead>
-                                <tr>
-                                    <th class="table-width comment left" scope="row">" This is a good software. I
-                                        recomment it to you "" This is a good software. I recomment it to you "" This is
-                                        a good software. I recomment it to you "" This is a good software. I recomment
-                                        it to you "" This is a good software. I recomment it to you "" This is a good
-                                        software. I recomment it to you "" This is a good software. I recomment it to
-                                        you "
-                                        <div class="ps-0">
-                                            <button class="show-product ps-0"><i class="far fa-eye"></i> Show comment </button>
-                                        </div>
-                                    </th>
-                                    <td class="date">28/12/2021</td>
+                    $yourReview = new ProfileView();
 
-
-                                </tr>
-                                <tr>
-                                    <th class="table-width comment left" scope="row">" This is a good software. I
-                                        recomment it to you "
-                                        <div class="ps-0">
-                                            <button class="show-product ps-0"><i class="far fa-eye"></i> Show comment </button>
-                                        </div>
-                                    </th>
-                                    <td class="date">3/1/2023</td>
-
-                                </tr>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-
+                    $yourReview-> showYourReview();
+                ?>
 
 
                 </div>

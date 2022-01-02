@@ -36,7 +36,7 @@ class homeView extends homeCont
                 ?>  
                 </p>
                 <div class="more-des">
-                <a href="home.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"--> 
+                <a href="single-product.php?id=<?php echo $products['id'];  ?>"> more-description  </a> <!--  "product id"--> 
                 </div>
 
                 </div>
