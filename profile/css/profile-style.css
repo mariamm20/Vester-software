@@ -164,13 +164,14 @@ td button{
     padding: 9px;
 }
 
-.head-table{
+.tab-content .head-table{
     padding: 0;
     position: relative;
     top:7px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 0;
 }
 .table-width-sale{
     width: 95%;
