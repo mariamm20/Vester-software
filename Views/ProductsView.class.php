@@ -37,13 +37,14 @@
                 <div class="d-flex justify-content-between price">
                     <div class="price-text">
                         <h5>Price</h5>
-                        <p><?php echo $products['price']; ?></p>   <!-- "product price ==> 50$" -->
+                        <p><?php echo $products['price'] . "$"; ?></p>   <!-- "product price ==> 50$" -->
                     </div>
                     <div class="add-to-cart"> 
-                        <a href="../includes/wishlist.inc.php?id=<?php echo $products['id'];  ?> "> Add To WishList</a>  <!-- product id -->
+                        <a href=<?php if (isset($_SESSION["id"])){ echo  "../includes/wishlist.inc.php?id=". $products['id'];}else{echo '?LoginFirst';}?>> Add To WishList</a>  <!-- product id -->
                     </div>
                     <div class="cart-icon">
-                        <a href="../includes/wishlist.inc.php?id=<?php echo $products['id'];  ?> "><i class="fab fa-opencart fa-2x"></i> </a>
+                        <a 
+                        href=<?php if (isset($_SESSION["id"])){ echo  "../includes/wishlist.inc.php?id=". $products['id'];}else{echo "?LoginFirst";}?>><i class="fab fa-opencart fa-2x"></i> </a>
                     </div>
                 </div>
             </div>

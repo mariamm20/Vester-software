@@ -9,7 +9,7 @@ $message->ShowMessage();
 <header>
         <div class=" header-navbar">
             <div>
-                <h2 class="v"><a href="home.html">Vester&nbsp;Software</a></h2>
+                <h2 class="v"><a href="home.php">Vester&nbsp;Software</a></h2>
             </div>
             <div class="d-flex justify-content-center menu ">
                 <div class="d-flex justify-content-center" style="height: 43.6px; cursor: pointer;" data-bs-target="#wishlist"
@@ -18,15 +18,11 @@ $message->ShowMessage();
                     <span class="cart-number">Wishlist</span>
                 </div>
                 <!--User Icon-->
-                <?php
-                if (isset($_SESSION["id"]))
-                {
-                ?>
-                <div class="dropdown">
+                
+                <div class="dropdown" <?php if (!isset($_SESSION["id"])){echo 'style="display:none;"';}?>>
                     <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-
                         <li class="dropdown-item user-name"><?php echo "Hello " . $_SESSION["fname"] . "!"; ?></li>
                         <li>
                             <hr class="dropdown-divider p-0">
@@ -35,26 +31,6 @@ $message->ShowMessage();
                         <li><a class="dropdown-item" href="sign-out.php">Sign out</a></li>
                     </ul>
                 </div>
-                <?php
-                }
-                else {
-                ?>
-                    <div class="dropdown" style="display:none;">
-                    <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false"></i>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-
-                        <li class="dropdown-item user-name">Jack Jerry</li>
-                        <li>
-                            <hr class="dropdown-divider p-0">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-                <?php
-                }
-                ?>
 
 
                 
@@ -79,9 +55,9 @@ $message->ShowMessage();
                 <ul class="menu-list ">
                     <li><a href="home.php">Home</a></li>
                     <li><a href="products.php">Products</a></li>
-                    <li><a href="#">Request Software</a></li>
+                    <li><a href="request.php">Request Software</a></li>
                     
-                    <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
+                    <li><a href="" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
                 </ul>
 
             </div>
@@ -94,10 +70,10 @@ $message->ShowMessage();
         <ul class="menu-list ">
             <li><a href="home.php">Home</a></li>
             <li><a href="products.php">Products</a></li>
-            <li><a href="#">Request Software</a></li>
+            <li><a href="request.php">Request Software</a></li>
             <li><a href="sign-up.php">Sign up</a></li>
             <li><a href="sign-in.php">Sign In</a></li>
-            <li><a href="#" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
+            <li><a href="" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
         </ul>
 
         </div>
@@ -157,7 +133,7 @@ $message->ShowMessage();
                 <div class="modal-content">
                     <!--Header-->
                     <div class="modal-header header-wishlist ">
-                        <div class="contact-header">
+                            <div class="contact-header">
                             <p>Make a wish come true</p>
                             <h4>
                                 Wishlist
@@ -175,8 +151,8 @@ $message->ShowMessage();
                         </div>   
                         <?php 
                             // make an object from the view
-                            $wishlistdata = new WishListView();
-                            $wishlistdata->showWishList();  
+                           $wishlistdata = new WishListView();
+                           $wishlistdata->showWishList();  
                         ?> 
                     </div>
                 </div>
@@ -185,9 +161,6 @@ $message->ShowMessage();
         <?php
         }
         ?>
-
-
-
     </header>
 
 

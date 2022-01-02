@@ -14,7 +14,5 @@ class Db {
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
         return $pdo ;
     }
-
-
 } 
 

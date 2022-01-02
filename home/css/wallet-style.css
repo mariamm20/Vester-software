@@ -32,19 +32,19 @@
     width: 60px;
     
 }
-.about h4{
+.content .about h4{
     margin-bottom: 0;
     padding-bottom: 0;
     font-weight: 600;
 }
-.head-table{
+.content .head-table{
     padding: 0;
     position: relative;
     top:7px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    margin-bottom: 0;
 }
 .head-table .line{
     position: absolute;

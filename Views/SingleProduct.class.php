@@ -1,8 +1,37 @@
 <?php
+    class review extends singleContr
+    {
+        
+        private $user_id ;
+        private $comment;
+        private $product_id ;
+        private $review ;
+
+        public function __construct($user_id, $comment, $product_id, $review) 
+        {
+            $this->comment = $comment;
+            $this->user_id = $user_id;
+            $this->product_id = $product_id;
+            $this->review = $review;
+        }
+        public function userReview()
+        {
+            $this->setReview($this->user_id,$this->comment, $this->product_id, $this->review) ;
+        }
+
+        
+
+
+    }
     class singleView extends singleContr{
+
+
         public function showSingleProduct()
         {
             $single_product = $this->getSingleProduct();
+            $review = $this->getReview();
+            
+
             foreach($single_product as $s_product)
             {
             ?>
@@ -11,7 +40,7 @@
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"><img src="<?php echo $product_images["image"] ?>"
+                                class="active" aria-current="true" aria-label="Slide 1"><img src="<?php echo $s_product["image"] ?>"
                                     class="d-block w-100 small-img" alt="app img"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                                 aria-label="Slide 2"><img src="<?php echo $s_product["image"] ?>" class="d-block w-100 small-img"
@@ -128,37 +157,37 @@
                                 <button>Add to wishlist</button>
                             </div>
                         </div>
+                       
                         <div class="tab-pane fade train" id="reviews">
                             <h4 class="mt-2">Reviews</h4>
                             <div class="features">
+                            <?php
+                            foreach($review as $r)
+                            {
+
+                            
+                            ?>
                                 <div class="p-0 m-0">
+                                
                                     <p style="font-weight: 600;"><i class="far fa-user" style="color: #21bfca;"></i>
-                                        Mona
-                                        Zakii</p>
-                                    <q>Nice Desktop appliction to use during work.</q>
+                                    
+                                       <?php echo $r['Fname'] . " " . $r['Lname'] ;?></p>
+                                    
+                                    <q> <?php echo $r['content']  ;?></q>
                                     <hr class="p-0">
                                 </div>
-                                <div class="p-0 m-0">
-                                    <p style="font-weight: 600;"><i class="far fa-user" style="color: #21bfca;"></i>
-                                        Ahmed
-                                        Helmy</p>
-                                    <q>Nice Desktop appliction to use during work.</q>
-                                    <hr class="p-0">
-                                </div>
-                                <div class="p-0 m-0">
-                                    <p style="font-weight: 600;"><i class="far fa-user" style="color: #21bfca;"></i>
-                                        Kareem Abd El Aziz</p>
-                                    <q>Nice Desktop appliction to use during work.</q>
-                                    <hr class="p-0">
-                                </div>
+                                <?php
+                                }
+                                ?>
                             </div>
-                            <form action="" class="p-0" method="post">
+                            <form action="../includes/review.inc.php" class="p-0" method="POST">
                             <div class="submit-btn">
                                 <input type="text" placeholder="Write Your Review" required name="review"/>
-                                <button>Submit</button>
+                                <button name = "e_review">Submit</button>
                             </div>
                             </form>
                         </div>
+                        
                     </div>
                 </div>
 

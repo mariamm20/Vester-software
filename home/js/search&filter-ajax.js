@@ -1,6 +1,7 @@
 $(document).ready(function () {
+    $('.loader-Container').hide();
     $('.searchInput').keyup(function(){
-        // $('.loader').show();
+        $('.loader-Container').show();
         var action = 'action';
         var text = $(this).val();
         var Operating_System = get_selected_filter("Operating_System");
@@ -12,14 +13,14 @@ $(document).ready(function () {
             data:{action:action,text:text,category:category,Operating_System:Operating_System,price:price},
             success:function(response){
                 $(".parent-product").html(response);
-                // $('.loader').hide();
+                $('.loader-Container').hide();
             }
         })
     });
 
       
     $('.checkboxClick').click(function(){
-        // $('.loader').show();
+        $('.loader-Container').show();
         var action = 'action';
         var Operating_System = get_selected_filter("Operating_System");
         var category = get_selected_filter("categoryFilter")
@@ -31,7 +32,7 @@ $(document).ready(function () {
             data:{action:action,text:text,category:category,Operating_System:Operating_System,price:price},
             success:function(response){
                 $(".parent-product").html(response);
-                // $('.loader').hide();
+                $('.loader-Container').hide();
             }
         })
     });

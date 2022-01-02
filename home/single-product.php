@@ -1,6 +1,5 @@
 <?php
 session_start();
-
  // includes
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
@@ -45,10 +44,7 @@ session_start();
 
 
         </div>
-        
-
-    </section>
-
+       
     <section class="similar">
         <p class="intro">Get to know to more products</p>
         <h3>People Also Like</h3>

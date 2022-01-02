@@ -18,13 +18,16 @@
         }
 
 
-        protected function setProductContr($name,$description,$price,$category,$discount,$image, $thumbnail, $file){
+        protected function setProductContr($name,$description,$price,$category,
+        $discount,$image,$first_thumbnail,$second_thumbnail,$third_thumbnail, $fourth_thumbnail, 
+        $file,$support_windows,$support_mac,$support_linux){
         
-            $query="INSERT INTO products( name, description,price, discound,image,thumbnail,created_at,user_id,category_id, file) 
-                VALUES (?,?,?,?,?,?,now(),?,?,?)";
+            $query="INSERT INTO products(name, description,price,discound,image,thumbnail,created_at,user_id,category_id, file,img1,img2,img3,support_windows,support_mac,support_linux) 
+                VALUES (?,?,?,?,?,?,now(),?,?,?,?,?,?,?,?,?)";
             $stmt = $this->Connect()->prepare($query);
 
-            $check =$stmt->execute([$name,$description,$price,$discount,$image, $thumbnail,$_SESSION["id"],$category, $file]);
+            $check =$stmt->execute([$name,$description,$price,$discount,$image, $fourth_thumbnail,$_SESSION["id"],$category,
+             $file,$first_thumbnail,$second_thumbnail,$third_thumbnail,$support_windows,$support_mac,$support_linux]);
         }
 
 
@@ -42,7 +45,7 @@
             $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
             $query="INSERT INTO users( Fname, Lname,email, phone,photo,role,country,password,created_at) 
-                VALUES (?,?,?,?,?,?,?,?,now()";
+                VALUES (?,?,?,?,?,?,?,?,now())";
             $stmt = $this->Connect()->prepare($query);
 
             $check =$stmt->execute([$Fname,$Lname,$email,$phone,$photo, $role,$country, $hashPassword]);
@@ -77,7 +80,12 @@
         protected function deleteProduct($id){
             $stmt = $this->Connect()->prepare( "DELETE FROM products WHERE id= ?");
             $stmt->execute(array($id));
-            return $stmt;
+            
+        }
+        protected function deleteUserContr($id){
+            $stmt = $this->Connect()->prepare( "DELETE FROM users WHERE id= ?");
+            $stmt->execute(array($id));
+       
         }
 
 
@@ -104,7 +112,44 @@
 
         }
 
-    
+        protected function getCategory(){
+            $stmt = $this->Connect()->query("SELECT * FROM category");
+            $f_data = $stmt->fetchAll();
+            return $f_data;    
+        }
+
+        protected function getProduct($id){
+            $stmt = $this->Connect()->prepare("SELECT * FROM products where id = ?");
+            $stmt->execute([$id]);
+            $f_data = $stmt->fetch();
+            return $f_data;    
+        }
+       
+        protected function updateProductContr($id,$name,$description,$price,$category,
+        $discount,$imageName,$first_thumbnail,$second_thumbnail,$third_thumbnail, 
+        $fourth_thumbnail, $fileName,$support_windows,$support_mac,$support_linux){
+            $query="UPDATE products SET  name =?, description=?,price=?,discound=? ,image=?,thumbnail=?,category_id=?, file=?,img1=?,img2=?,img3=?,support_windows=?,support_mac=?,support_linux=? where id = ? ";
+            $stmt = $this->Connect()->prepare($query);
+            $check =$stmt->execute([$name,$description,$price,$discount,$imageName, $fourth_thumbnail,$category,$fileName,$first_thumbnail,$second_thumbnail,$third_thumbnail,$support_windows,$support_mac,$support_linux,$id]);
+        }
+        protected function getUsersNumber(){
+            $stmt = $this->Connect()->prepare("SELECT Count(*) FROM users");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
+        protected function getProductsNumber(){
+            $stmt = $this->Connect()->prepare("SELECT Count(*) FROM products");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
+        protected function getMaxUsers(){
+            $stmt = $this->Connect()->prepare("SELECT max(id) FROM users");
+            $stmt->execute();
+            $data =$stmt->fetch();
+            return $data;
+        }
 
     }
 ?>
