@@ -21,7 +21,7 @@ let showoneimg = function () {
     
     output.style.display = "block";
     if (output.innerHTML == "") {
-        for (let i = 0; i < 1; i++) {
+        for (let i = 0; i < 1; i++) {   
             output.innerHTML += '<li>' + input.files.item(i).name + '</li>';
         }
     } else {

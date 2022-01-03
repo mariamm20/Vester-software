@@ -23,187 +23,25 @@ include "includes/header.inc.php";
                             <th scope="col">#</th>
                             <th scope="col">User name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Order</th>
-                            <th scope="col">Setting</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Host_plan</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Send AT</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>random</td>
-                            <td>data</td>
-                            <td>placeholder</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>placeholder</td>
-                            <td>irrelevant</td>
-                            <td>visual</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>data</td>
-                            <td>rich</td>
-                            <td>dashboard</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>information</td>
-                            <td>placeholder</td>
-                            <td>illustrative</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>text</td>
-                            <td>random</td>
-                            <td>layout</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>dashboard</td>
-                            <td>irrelevant</td>
-                            <td>text</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>dashboard</td>
-                            <td>illustrative</td>
-                            <td>rich</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>placeholder</td>
-                            <td>tabular</td>
-                            <td>information</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>random</td>
-                            <td>data</td>
-                            <td>placeholder</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>placeholder</td>
-                            <td>irrelevant</td>
-                            <td>visual</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>data</td>
-                            <td>rich</td>
-                            <td>dashboard</td>
-                            <td>
-                                <a href="update.html" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>information</td>
-                            <td>placeholder</td>
-                            <td>illustrative</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>text</td>
-                            <td>placeholder</td>
-                            <td>layout</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>dashboard</td>
-                            <td>irrelevant</td>
-                            <td>text</td>
-                            <td>
-                                <a href="update.html" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>dashboard</td>
-                            <td>illustrative</td>
-                            <td>rich</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>random</td>
-                            <td>tabular</td>
-                            <td>information</td>
-                            <td>
-                                <a href="#" class="icon-link"><i class="fas fa-check"></i></a>
-                                &nbsp;
-                                <a href="#" class="icon-link"><i class="fas fa-times"></i></a>
-                            </td>
-                        </tr>
+                            <?php 
+                             // includes
+                    include "../Controllers/db.class.php";
+                    include "../Controllers/AdminContr.class.php";
+                    include "../Views/AdminView.class.php";
+                // make an object from the view
+                    $requests  = new AdminView();
+
+                    $requests->ShowRequest();
+                            ?>
+
                     </tbody>
                 </table>
 

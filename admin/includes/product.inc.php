@@ -49,13 +49,13 @@ if(isset($_POST['update_product']))
         $support_linux =0;
         $support_mac =0;
         $support_windows =0;
-        if($_POST['support_linux']){
+        if(isset($_POST['support_linux'])){
             $support_linux = $_POST['support_linux'];
         }
-        if($_POST['support_mac']){
+        if(isset($_POST['support_mac'])){
             $support_mac = $_POST['support_mac'];
         }
-        if($_POST['support_windows']){
+        if(isset($_POST['support_windows'])){
             $support_windows = $_POST['support_windows'];
         }
         $name = $_POST['name'];

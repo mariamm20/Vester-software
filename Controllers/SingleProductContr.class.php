@@ -1,5 +1,4 @@
 <?php
-session_start();
 
     class singleContr extends Db{
 
@@ -15,32 +14,26 @@ session_start();
         protected function getReview()
         {
             $id = $_GET["id"];
-            $stmt = $this->Connect()->query("SELECT * from feedback as F join users as s where review = 1  and F.product_id = $id and F.user_id = s.id" );
+            $stmt = $this->Connect()->query("SELECT u.Fname,u.Lname,f.content from feedback as F join users as u on u.id = f.user_id  where f.review = 1" );
 
             $data = $stmt->fetchAll();
             return $data;
         }
 
         // submit a review on a product
-        protected function setReview($user_id, $comment,$product_id, $review)
+        protected function setReview( $comment,$product_id)
         {
             $uid = $_SESSION['id'];
+            $stmt = $this->Connect()->prepare("INSERT INTO feedback (user_id, content, product_id, review) VALUES (?, ?, ?, NULL) " );
+            $stmt->execute(array($uid,$comment,$product_id));
             
-            $id = $_GET["id"];
-            $stmt = $this->Connect()->prepare("INSERT INTO feedback (user_id, content, product_id, review) VALUES ($uid, ?, $id, NULL) " );
-            
-            if (!  $stmt->execute(array($comment)))
+        }
+        protected function getSimilarProducts($category)
         {
-            $stmt = null;  // if it faild the statement will be closed
-            header("location: ../home/home.php?error=stmtfailed");
-            exit();
+            $stmt = $this->Connect()->prepare("SELECT * FROM products where category_id = ? ORDER BY id DESC LIMIT 3" );
+            $stmt->execute(array($category));    
+            $data =$stmt->fetchAll();
+            return $data;
         }
-
-        $stmt =null;
-            
-            
-        }
-       
         
-    
     }
