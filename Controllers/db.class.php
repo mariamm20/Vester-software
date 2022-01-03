@@ -6,7 +6,7 @@ class Db {
     private $host ="localhost";
     private $user = "root" ;
     private $pwd ="";
-    private $dbname ="software" ;
+    private $dbname ="vester_software" ;
 
     protected function  Connect(){
         $dns = 'mysql:host='.$this->host.';dbname='.$this->dbname;
@@ -14,7 +14,5 @@ class Db {
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
         return $pdo ;
     }
-
-
 } 
 

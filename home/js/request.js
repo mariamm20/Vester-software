@@ -203,5 +203,7 @@ function TurnFireworksOn() {
 function TurnFireworksOff(){
     $('.land').fireworks('destroy');
 }
+$('.submit-button').click(function () {
+    console.log(arr);
 
-console.log(arr);
+})

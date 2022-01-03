@@ -6,14 +6,12 @@
         public function ShowMessage(){
             if(isset($_GET["check"])){
                 $this->MessageContent("warning","Product already exist in the WishList","products.php");
-
             }
             if(isset($_GET["added"])){
                 $this->MessageContent("success","Product added successfully to the WishList","products.php");
             }
             if(isset($_GET["removed"])){
-                $this->MessageContent("success","Product removed successfully from the WishList","products.php");
-                
+                $this->MessageContent("success","Product removed successfully from the WishList","products.php");  
             }
             if(isset($_GET["contactUsSuccessfully"])){
                 $this->MessageContent("success","you data has been sent successfully we will contact you soon","home.php");
@@ -32,6 +30,9 @@
             }
             if(isset($_GET["removedSuccessfully"])){
                 $this->MessageContent("success","product deleted successfully","all-products.php");
+            }
+            if(isset($_GET["LoginFirst"])){
+                $this->MessageContent("warning","you must be login first <a href='sign-in.php'><strong>Login</strong></a>","products.php");
             }
 
         }

@@ -39,7 +39,7 @@
             
             <div class="userName">
                 <h4><?php echo $userData["Fname"]." ".$userData["Lname"];?></h4>
-                <h5><i class="fas fa-cog"></i><a href="#">Setting</a></h5>
+                <h5><i class="fas fa-cog"></i><a href="setting.php">Setting</a></h5>
             </div>
             <div class="userRole">
                 <p>Developer</p>
@@ -67,25 +67,28 @@
                 </div>
                 <table class="table table-responsive">
                     <tbody>
-                 <?php
-                    foreach($purchasedProducts as $purProducts)
-                    {
-                       
-                        
-                ?>
-                        <tr>
-                            <th scope="row">1</th>
-                   
+                        <?php
+                        foreach($purchasedProducts as $purProducts){
+                            ?>
+                            <tr>
+                            <?php $i =1 ;?>
+                            <th scope="row"><?php echo $i;?></th>
                             <td class="table-width ov"><?php echo $purProducts["name"];?></td>
                             <td class="p-0"><button>Open</button></td>
+                            
 
                         </tr>
+                        
                         <?php
-                        
-            }
-            
-            ?>
-                        
+                        $i++;
+                        }
+                        ?>
+                        <!-- <tr>
+                            <th scope="row">2</th>
+                            <td class="table-width ov"><?php // echo $purProducts["name"];?></td>
+                            <td class="p-0"><button>Open</button></td>
+
+                        </tr> -->
 
                         </atr>
 
@@ -94,11 +97,61 @@
 
             </div>
             <?php
-            
+            }
+        
+
+
+        public function showYourReview(){
+            $yourReview =  $this->getProileReview();
+            ?>
+            <div class="tab-pane fade train" id="reviews">
+            <div class="about head-table">
+                <h5>Your Reviews</h5>
+                <div class="line"></div>
+            </div>
+            <table class="table table-responsive">
+                <tbody>
+                    <thead style="border: 1px solid #ccc;">
+                        <tr>
+                            <th scope="col" class="left">Submitted Comments</th>
+                            <th scope="col">Date</th>
+
+
+                        </tr>
+                    </thead>
+                    <tr>
+                        <?php
+                            foreach($yourReview as $yourRev){
+                        ?>
+                        <th class="table-width comment left" scope="row">
+                            <?php echo $yourRev["content"]?>
+                            <div class="ps-0">
+                                <button class="show-product ps-0"><i class="far fa-eye"></i> Show comment </button>
+                            </div>
+                        </th>
+                        <td class="date">28/12/2021</td>
+
+                        </tr>
+            <?php
+            }      
+            ?>    
+                    <!-- <tr>
+                        <th class="table-width comment left" scope="row">" This is a good software. I
+                            recomment it to you "
+                            <div class="ps-0">
+                                <button class="show-product ps-0"><i class="far fa-eye"></i> Show comment </button>
+                            </div>
+                        </th>
+                        <td class="date">3/1/2023</td>
+
+                    </tr> -->
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <?php
         }
 
-
-        public function showProductsForSale(){
-
-        }
     }

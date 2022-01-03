@@ -296,6 +296,18 @@ class AdminView extends AdminContr{
         $discount,$imageName,$first_thumbnail,$second_thumbnail,$third_thumbnail, 
         $fourth_thumbnail, $fileName,$support_windows,$support_mac,$support_linux);
     }
+    public function showUsersNumber(){
+        $number = $this->getUsersNumber();
+        echo $number["Count(*)"];
+    }
+    public function showMaxUsers(){
+        $number = $this->getMaxUsers();
+        echo $number["max(id)"];
+    }
+    public function showProductsNumber(){
+        $number = $this->getProductsNumber();
+        echo $number["Count(*)"];
+    }
 
 }
 

@@ -185,7 +185,7 @@
                                 <input type="text" placeholder="Write Your Review" required name="review"/>
                                 <button name = "e_review">Submit</button>
                             </div>
-                         </form>
+                            </form>
                         </div>
                         
                     </div>
@@ -202,5 +202,7 @@
             }
             
         }
+
+        
         
     }

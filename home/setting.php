@@ -3,6 +3,7 @@
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
  include "../Views/WishListView.class.php";
+ include "../Controllers/Setting.Contr.class.php";
  ?>
 
 
@@ -27,12 +28,11 @@
     include "../includes/header.inc.php";
     ?>
     
-
     <div class="whole">
         <!--Picture Side-->
         <div>
             <div class="pt-0">
-                <img src="../img/6.png" class="p-0" alt="profile picture" />
+                <img src="../img/6.png" class="p-0" alt="profile picture" name="photo"/>
             </div>
             <div class="change-profile">
                 <a href="#" data-bs-target="#change-modal" data-bs-toggle="modal">Change profile picture</a>
@@ -46,7 +46,7 @@
                             <h5 class="modal-title" id="staticBackdropLabel">Change you profile picture</h5>
                             <button type="button" class="btn-close btn1" data-bs-dismiss="modal" aria-label="Close" >X</button>
                         </div>
-                        <form>
+                        <form method="post">
                             <div class="modal-body ">
                                 
                                     <div class="standard add-image">
@@ -80,15 +80,15 @@
             <div class="user-social">
                 <ul>
                     <li>
-                        <p><i class="fas fa-globe"></i> Website</p>
+                        <p name="website"><i class="fas fa-globe"></i> Website</p>
                         <input type="text" placeholder="https://bootdey.com" required />
                     </li>
                     <li>
-                        <p><i class="fab fa-github"></i> Github</p>
+                        <p name="github"><i class="fab fa-github"></i> Github</p>
                         <input type="text" placeholder="bootdey" required />
                     </li>
                     <li>
-                        <p><i class="fab fa-twitter"></i> Twitter</p>
+                        <p name="twitter"><i class="fab fa-twitter"></i> Twitter</p>
                         <input type="text" placeholder="@bootdey" required />
                     </li>
                     <li>
@@ -113,22 +113,22 @@
                 <div class="name">
                     <div class="names">
                         <p>First Name</p>
-                        <input type="text" placeholder="John" required />
+                        <input type="text" placeholder="John" name="firstname" required />
                     </div>
                     <div class="names">
                         <p>Last Name</p>
-                        <input type="text" placeholder="Jerry" required />
+                        <input type="text" placeholder="Jerry" name="lastname" required />
                     </div>
 
                 </div>
 
                 <div class="standard">
                     <p>Description</p>
-                    <input type="text" placeholder="Software Engineer" required />
+                    <input type="text" placeholder="Software Engineer" name="jobtitle" required />
                 </div>
                 <div class="standard">
                     <p>About You</p>
-                    <input type="text" placeholder="Lorem ipsum dolor sit amet" required />
+                    <input type="text" placeholder="Lorem ipsum dolor sit amet" name="descr" required />
                 </div>
 
             </div>
@@ -145,7 +145,7 @@
             <div class="top">
                 <div class="standard">
                     <p>New Email</p>
-                    <input type="email" placeholder="user_mail@gmail.com" required />
+                    <input type="email" placeholder="user_mail@gmail.com" name="email" required />
                 </div>
             </div>
             <br>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="standard">
                     <p>New Password</p>
-                    <input type="password" placeholder="**********" class="pass2" required />
+                    <input type="password" placeholder="**********" class="pass2" name="pass" required />
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -177,14 +177,14 @@
             <div class="top">
                 <div class="standard">
                     <p>Phone Number</p>
-                    <input type="text" placeholder="0123456789" required />
+                    <input type="text" placeholder="0123456789" name="phone" required />
                 </div>
                 
             </div>
             <br>
             <br>
             <div class="save">
-                <button>
+                <button name="save">
                     Save Changes
                 </button>
             </div>

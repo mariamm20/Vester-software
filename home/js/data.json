@@ -2,46 +2,46 @@
     {
         "title": "What type of app are you building ?",
         "answer_1": "Desktop Application",
-        "answer_2": "Mobile Appliction",
+        "answer_2": "Mobile Application",
         "answer_3": "Web Application",
-        "price_1": 40,
-        "price_2": 10,
-        "price_3": 20
+        "price_1": 400,
+        "price_2": 500,
+        "price_3": 600
     },
     {
         "title": "What features would you like your app to have?",
         "answer_1": "Maps",
         "answer_2": "Forms",
         "answer_3": "Chat",
-        "price_1": 40,
-        "price_2": 20,
-        "price_3": 10
+        "price_1": 150,
+        "price_2": 80,
+        "price_3": 120
     },
     {
         "title": "How do people login?",
         "answer_1": "Email",
         "answer_2": "Social Media",
-        "answer_3": "Phone Number",
-        "price_1": 40,
-        "price_2": 20,
-        "price_3": 10
+        "answer_3": "other",
+        "price_1": 50,
+        "price_2": 200,
+        "price_3": 100
     },
     {
         "title": "What device features will your app need to integrate with?",
         "answer_1": "Camera",
         "answer_2": "Bluetooth",
         "answer_3": "API's",
-        "price_1": 40,
-        "price_2": 20,
-        "price_3": 10
+        "price_1": 80,
+        "price_2": 50,
+        "price_3": 200
     },
     {
         "title": "Host and develop your app",
         "answer_1": "Premium support  $450",
         "answer_2": "Business support $350",
-        "answer_3": "Growth support  $200",
+        "answer_3": "Growth support  $250",
         "price_1": 450,
         "price_2": 350,
-        "price_3": 200
+        "price_3": 250
     }
 ]
