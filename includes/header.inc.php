@@ -147,7 +147,7 @@ $message->ShowMessage();
                         <div class="about head-table">
                             <h4>Desired Softwares</h4>
                             <div class="line"></div>
-                            <span>( 400 )</span>
+                            
                         </div>   
                         <?php 
                             // make an object from the view

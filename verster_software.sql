@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2022 at 08:49 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Jan 03, 2022 at 09:19 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vester_software`
+-- Database: `software`
 --
 
 -- --------------------------------------------------------
@@ -37,8 +37,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'hospital'),
-(2, 'clinic');
+(1, 'Desktop'),
+(2, 'website');
 
 -- --------------------------------------------------------
 
@@ -54,14 +54,6 @@ CREATE TABLE `contact_us` (
   `phone` varchar(11) DEFAULT NULL,
   `review` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `contact_us`
---
-
-INSERT INTO `contact_us` (`id`, `description`, `email`, `name`, `phone`, `review`) VALUES
-(19, 'hhhh', 'h@gmail.com', 'hesham', '01282304755', 1),
-(21, ' hello', 'O@gmail.com', 'shady', '01282306599', 1);
 
 -- --------------------------------------------------------
 
@@ -83,12 +75,7 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `user_id`, `content`, `product_id`, `review`, `created_at`) VALUES
-(3, 1, ' no no no no no no', 8, 1, '2022-01-03'),
-(4, 1, ' no no no no no no 12', 8, 1, '2022-01-03'),
-(5, 1, ' no no no no no no 321', 8, 1, '2022-01-03'),
-(6, 6, 'done', 8, 1, '2022-01-03'),
-(7, 6, 'ok', 8, NULL, '2022-01-03'),
-(8, 6, 'ok', 8, 1, '2022-01-03');
+(9, 7, 'A really good software, I recomment it to you ', 15, 1, '2022-01-03');
 
 -- --------------------------------------------------------
 
@@ -121,13 +108,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `discound`, `image`, `thumbnail`, `created_at`, `file`, `img1`, `img2`, `img3`, `user_id`, `category_id`, `support_mac`, `support_linux`, `support_windows`) VALUES
-(8, 'test', 'this is goooood', 9768, 7, '61ceb700a47a2.jpg', '61ceb700a50b9.png', '2021-12-31 09:53:36', '61ceb700a52a0.rar', '61ceb700a49c6.jpg', '61ceb700a4bcb.jpg', '61ceb700a4eca.jpg', 1, 1, 1, 0, 1),
-(9, 'Finall', '   finallly', 625, 0, '61cf329e9fe2d.png', '61cf17b50cb01.png', '2021-12-31 10:19:21', '61cf329ea0ca8.rar', '61cf329ea0276.png', '61cf329ea0614.png', '61cf329ea0984.png', 1, 1, 0, 1, 1),
-(10, 'Finall 2', '   finallly', 625, 0, '61cf329e9fe2d.png', '61cf17b50cb01.png', '2021-12-31 10:19:21', '61cf329ea0ca8.rar', '61cf329ea0276.png', '61cf329ea0614.png', '61cf329ea0984.png', 1, 1, 0, 1, 1),
-(11, 'test all', '\r\n this is my description  this is my description  this is my description  this is my description  this is my description  this is my description  this is my description ', 1292, 12, '61d21bfeb9c46.jpg', '61d21bfeba2b6.png', '2022-01-02 23:41:18', '61d21bfeba4a4.rar', '61d21bfeb9da4.jpg', '61d21bfeb9f8e.jpg', '61d21bfeba10c.jpg', 6, 1, 0, 1, 1),
-(12, 'jknkj', 'hjhjg', 8798, NULL, '61d2978b49dda.png', '61d2978b4a6a5.jpg', '2022-01-03 08:28:27', '61d2978b4a861.rar', '61d2978b49f99.png', '61d2978b4a1aa.png', '61d2978b4a466.png', 6, 2, 0, 0, 1),
-(13, 'jhkjhj', 'hbjhj', 65535, NULL, '61d297c3c982b.png', NULL, '2022-01-03 08:29:23', '61d297c3c9b65.rar', '61d297c3c99ac.png', NULL, NULL, 6, 2, 0, 1, 0),
-(14, 'jnj', 'jnkjnkj', 9987, NULL, '61d29a88a9377.png', NULL, '2022-01-03 08:41:12', '61d29a88a9765.rar', '61d29a88a9507.png', NULL, NULL, 6, 2, 0, 1, 1);
+(15, 'pro- screen recorder', 'It is a fast and good screen recorder . It can cupture multiple screens not only one. You can record your meeting and your lessons.', 50, NULL, '61d2b0252befd.jpg', '61d2b0252cbe6.jpg', '2022-01-03 10:13:25', '61d2b0252ceb8.zip', '61d2b0252c2da.png', '61d2b0252c5f3.jpg', '61d2b0252c8f9.jpg', 7, 1, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -145,17 +126,6 @@ CREATE TABLE `request` (
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `request`
---
-
-INSERT INTO `request` (`id`, `description`, `type`, `host`, `review`, `user_id`, `created_at`) VALUES
-(2, 'Maps,Email,Camera,Premium support', 'Desktop Application', 'Premium support', NULL, 6, '2022-01-03 07:10:56'),
-(3, 'Maps,Forms,Chat,Email,Social Media,other,Camera,API\'s,Business support', 'Mobile Application', 'Business support', NULL, 6, '2022-01-03 07:12:13'),
-(4, 'Email,Camera,Premium support', 'Desktop Application', 'Maps', 1, 6, '2022-01-03 07:39:49'),
-(5, 'Email,Camera,Premium support', 'Desktop Application', 'Maps', 0, 6, '2022-01-03 07:40:31'),
-(6, 'Maps,Email,Camera', 'Desktop Application', 'Premium support', 1, 6, '2022-01-03 07:41:38');
-
 -- --------------------------------------------------------
 
 --
@@ -168,14 +138,6 @@ CREATE TABLE `slaes` (
   `product_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `slaes`
---
-
-INSERT INTO `slaes` (`id`, `user_id`, `product_id`, `created_at`) VALUES
-(3, 6, 11, '2021-12-31 14:19:29'),
-(4, 6, 9, '2021-12-31 14:19:46');
 
 -- --------------------------------------------------------
 
@@ -208,10 +170,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Fname`, `Lname`, `email`, `phone`, `job_title`, `photo`, `created_at`, `last_login`, `role`, `password`, `country`, `about`, `github`, `twitter`, `linkedin`, `website`) VALUES
-(1, 'mohamed', 'hesham', 'm@gmail.com', '01282304755', NULL, 'logo.jpg', '0000-00-00 00:00:00', '2021-12-31 16:24:13', 'admin', '$2y$10$4hGWRGRUTNc4nDhGLhhqQe91fRGV7vf2CUOMxalTbqxgil22gCL9e', 'Egypt', 'mk', 'mariamm20', 'elonmusk', 'mohammedhesham888', 'mk'),
-(3, 'omar', 'nader', 'O@gmail.com', '01282306599', NULL, '61cf4eb2e7bcd.png', '2021-12-31 20:40:51', '0000-00-00 00:00:00', 'user', '$2y$10$OIkT.x69AAkn9q52PiCOrONB.kTK7bWHZO0sdp/1JgNiF/llXYX4S', 'Egypt', '', '', '', '', ''),
-(5, 'mohamed', 'hesham', 'm2@gmail.com', '01282309985', NULL, 'r.png', '2021-12-31 20:53:13', '0000-00-00 00:00:00', 'admin', '$2y$10$K1QjEmjvTNmQZLYb4vO4zOpGuyFR6PYvkl.nVEGvkhn3L8s6YujWG', 'Egypt', '', '', '', '', ''),
-(6, 'ka', 'ma', 'ka@gmail.com', '01295847236', 'django-developer', '61d26ad9668e9.jpg', '2022-01-01 17:41:42', '2022-01-03 09:23:06', 'user', '$2y$10$IKsH/2fclmj8f2yHgRUnn..LAXEpTj4LvXkYRehTi0A.E0fE92iYe', 'alex', 'kqn qw', 'BJ.git', 'HH', 'LL', 'MO.com');
+(7, 'alaa', 'attia', 'alaaatia147@gmail.com', '01061840560', NULL, 'r.png', '2022-01-03 10:03:57', '2022-01-03 10:04:00', '', '$2y$10$hYd6oiX9DKyAmku2PSIQu.huttjzcVIFakS/WN6yQue/mGSIhGQRa', 'Egypt', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -230,10 +189,7 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `user_id`, `product_id`) VALUES
-(14, 6, 10),
-(15, 6, 9),
-(17, 6, 8),
-(18, 6, 13);
+(19, 7, 15);
 
 --
 -- Indexes for dumped tables
@@ -316,13 +272,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `request`
@@ -340,13 +296,13 @@ ALTER TABLE `slaes`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
