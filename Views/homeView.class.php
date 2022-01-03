@@ -13,7 +13,7 @@ class homeView extends homeCont
           <div class="main-div">
                 <img src="../img/5.jpg" />
                 <div class="name-product">
-                    <h4><?php echo $products['name'] ?></h4>  <!-- software name -->
+                    <h4><?php echo ucfirst($products['name'] )?></h4>  <!-- software name -->
                 <div>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>

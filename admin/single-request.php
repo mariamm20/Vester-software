@@ -3,7 +3,7 @@ include "includes/header.inc.php";
 ?>
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Content Details <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
+                    <h1 class="h2">Request Details <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
 
                     <div class="pickColor">
                         <p>Change Color</p>
