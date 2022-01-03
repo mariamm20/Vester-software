@@ -32,6 +32,7 @@ $wishlist = new WishListView();
 <body>
 <!--header-->
 <?php
+
             include "../includes/header.inc.php";
 ?>
   
@@ -77,6 +78,7 @@ $wishlist = new WishListView();
                 <button class="submit-button w-100" id="req" name="sumite">Request</button>
             </div>
     </div>
+    <div class="ajaxr"></div>
 </section>
 
 

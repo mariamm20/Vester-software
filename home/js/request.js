@@ -58,7 +58,7 @@ function getQuestions() {
         }
     }
     Request.open("get", "js/data.json", true);
-    Request.send();
+    Request.send();  
 }
 
 
@@ -87,7 +87,7 @@ function addQuestionData(obj, count) {
                 mainDiv.className = "answer";
                 let input = document.createElement("input");
                 input.type = "checkbox";
-                input.id = `answer_${i}`;
+                input.id = `answer_${i} `;
                 input.name = "question";
                 input.dataset.answer = obj[`answer_${i}`];
 
@@ -125,8 +125,6 @@ function addQuestionData(obj, count) {
                 if (i == 1) {
                     input.checked = true;
                 }
-
-
                 mainDiv.appendChild(input);
                 mainDiv.appendChild(label);
 
@@ -146,13 +144,11 @@ function checkAnswer(obj, count) {
 
             if (answers[i].checked) {
                 theChosenAnswer = answers[i].dataset.answer;
-                
                 price += obj[`price_${i + 1}`];
                 countSpan.innerHTML = price;
                 arr.push(theChosenAnswer);
             }
-            
-
+        
         }
     }
 }
@@ -185,10 +181,7 @@ function showResults(count) {
         answerArea.remove();
         submitButton.remove();
         prevButton.remove();
-        requestButton.style.display="block";
-        
-
-        
+        requestButton.style.display="block";   
     }
 };
 
@@ -203,7 +196,25 @@ function TurnFireworksOn() {
 function TurnFireworksOff(){
     $('.land').fireworks('destroy');
 }
-$('.submit-button').click(function () {
-    console.log(arr);
 
-})
+
+
+
+$('.submit-button').click(function () {
+        console.log("salk");
+        var action = 'action';
+        var type = arr.shift(0);
+        var host = arr.pop();
+        $.ajax({
+            url:'../includes/request.inc.php',
+            method:'POST',
+            data:{action:action,host:host,type:type,price:price,arr:arr.toString()},
+            success:function(response){
+                if(response=="done"){
+                    window.location="http://localhost/Vester-software/home/home.php?addedRequestSuccfully"
+                }else if(response == 'loginFirst'){
+                    window.location="http://localhost/Vester-software/home/home.php?LoginFirst"
+                }
+            }
+        })
+});

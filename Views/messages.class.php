@@ -19,6 +19,9 @@
             if(isset($_GET["AddedSuccefully"])){
                 $this->MessageContent("success","you product added successfully","admin.php");
             }
+            if(isset($_GET["uAddedSuccefully"])){
+                $this->MessageContent("success","you product added successfully","products.php");
+            }
             if(isset($_GET["extensionerror"])){
                 $this->MessageContent("error","Allowed extentions are jpg, jpeg, png, rar, zip only ","add-product.php");
             }
@@ -33,6 +36,9 @@
             }
             if(isset($_GET["LoginFirst"])){
                 $this->MessageContent("warning","you must be login first <a href='sign-in.php'><strong>Login</strong></a>","products.php");
+            }
+            if(isset($_GET["addedRequestSuccfully"])){
+                $this->MessageContent("success"," your request sended successfully we will contact with you soon","home.php");
             }
 
         }

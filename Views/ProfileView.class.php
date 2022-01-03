@@ -42,7 +42,7 @@
                 <h5><i class="fas fa-cog"></i><a href="setting.php">Setting</a></h5>
             </div>
             <div class="userRole">
-                <p>Developer</p>
+                <p> <?php echo $userData["job_title"];?></p>
             </div>
             <div class="about">
                 <h5>About <?php echo $userData["Fname"] . " ".$userData["Lname"];?></h5>
@@ -68,27 +68,18 @@
                 <table class="table table-responsive">
                     <tbody>
                         <?php
-                        foreach($purchasedProducts as $purProducts){
+                        for($i =0 ;$i<count($purchasedProducts);$i++){
                             ?>
                             <tr>
-                            <?php $i =1 ;?>
-                            <th scope="row"><?php echo $i;?></th>
-                            <td class="table-width ov"><?php echo $purProducts["name"];?></td>
-                            <td class="p-0"><button>Open</button></td>
-                            
-
-                        </tr>
+                            <th scope="row"><?php echo $i+1;?></th>
+                            <td class="table-width ov"><?php echo $purchasedProducts[$i]["name"];?></td>
+                            <td class="p-0"><a href="single-product.php?id=<?php echo $purchasedProducts[$i]["id"];?>"><button>Open</button></a></td>  
+                            </tr>
                         
                         <?php
-                        $i++;
+                      
                         }
                         ?>
-                        <!-- <tr>
-                            <th scope="row">2</th>
-                            <td class="table-width ov"><?php // echo $purProducts["name"];?></td>
-                            <td class="p-0"><button>Open</button></td>
-
-                        </tr> -->
 
                         </atr>
 
@@ -115,22 +106,19 @@
                         <tr>
                             <th scope="col" class="left">Submitted Comments</th>
                             <th scope="col">Date</th>
-
-
                         </tr>
                     </thead>
                     <tr>
                         <?php
                             foreach($yourReview as $yourRev){
                         ?>
-                        <th class="table-width comment left" scope="row">
-                            <?php echo $yourRev["content"]?>
-                            <div class="ps-0">
-                                <button class="show-product ps-0"><i class="far fa-eye"></i> Show comment </button>
-                            </div>
-                        </th>
-                        <td class="date">28/12/2021</td>
-
+                                <th class="table-width comment left" scope="row">
+                                    <?php echo $yourRev["content"]?>
+                                    <div class="ps-0">
+                                        <button class="show-product ps-0"><a href="single-product.php?id=<?php echo $yourRev["product_id"] ?>"><i class="far fa-eye"></i> Show Product</a> </button>
+                                    </div>
+                                </th>
+                                <td class="date"> <?php echo $yourRev["created_at"]?></td>
                         </tr>
             <?php
             }      
@@ -153,5 +141,42 @@
         </div>
         <?php
         }
+        public function showHisProducts(){
+            $data = $this->getHisProducts();
 
+            for($i=0 ; $i<count($data);$i++){
+
+                ?>
+                <tr>
+                    <th scope="row"> <?php echo $i+1; ?></th>
+                    <td class="table-width ov"><?php echo $data[$i]["name"] ?></td>
+                 </tr>
+               <?php
+            }
+        }
+        public function showHisRequestes(){
+            $data = $this->getHisRequestes();
+
+            for($i=0 ; $i<count($data);$i++){
+                ?>  
+                            <tr>
+                                    <th scope="row"><?php echo $i+1;  ?></th>
+                                    <td class="table-width ov"><?php echo $data[$i]["type"] ?></td>
+                                    <td class="p-0"> <?php 
+                                                if(isset($data[$i]['review'])){
+                                                    if($data[$i]['review'] == 1){
+                                                        echo "Accepted";
+                                                    }else{
+                                                        echo "Rejected"; 
+                                                    }
+                                                } else{
+                                                    echo "not reviewed";    
+                                                }
+                                            ?></td>
+                                    <td class="table-width ov"><?php echo  $data[$i]["created_at"] ?></td>
+
+                            </tr>
+               <?php
+            }
+        }
     }

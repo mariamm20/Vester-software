@@ -56,7 +56,7 @@ $message->ShowMessage();
                     <li><a href="home.php">Home</a></li>
                     <li><a href="products.php">Products</a></li>
                     <li><a href="request.php">Request Software</a></li>
-                    
+                    <li><a href="add-product.php">Add Product</a></li>
                     <li><a href="" data-bs-target="#contact" data-bs-toggle="modal">Contact Us</a></li>
                 </ul>
 
