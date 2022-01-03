@@ -98,7 +98,7 @@ class AdminView extends AdminContr{
         $imageName = null;
         if($photo['size'] != 0){
             $image_obj = new Upload("image",$photo,'add-user.php&');
-        $imageName =$image_obj->save();
+            $imageName =$image_obj->save();
         }
 
 
@@ -308,6 +308,199 @@ class AdminView extends AdminContr{
         $number = $this->getProductsNumber();
         echo $number["Count(*)"];
     }
+    public function showContactUs(){
+        $data = $this->getContactUs();
+        foreach($data as $row){
+        ?>
+
+            <tr>
+            <td><?php echo $row['id'];?></td>
+            <td><?php echo $row['name'];?></td>
+            <td><?php echo $row['email'];?></td>
+            <td><?php 
+                if(isset($row['review'])){
+                    if($row['review'] == 1){
+                        echo "Accepted";
+                    }else{
+                        echo "Rejected"; 
+                    }
+                } else{
+                    echo "not reviewed";    
+                }
+            ?></td>
+            <td>
+                <a href="single-contuct.php?id=<?php echo $row['id']?> " class="icon-link"><i class="fas fa fa-eye"></i></a>
+                &nbsp;
+                &nbsp;
+                <a href="includes/contact-us.php?remove=<?php echo $row["id"]?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr> 
+
+        <?php
+        }
+
+    }
+    public function  showContactUsSingle(){
+        if(isset($_GET["id"])){
+            $id = $_GET["id"];
+            $data = $this->getContactUsSingle($id);
+            ?>
+            <div class="cname">
+                    <h4>
+                        Name
+                    </h4>
+                    <p>
+                    <?php echo $data["name"];?>
+                    </p>
+
+                </div>
+                <div class="cemail">
+                    <h4>Email</h4>
+                    <p>
+                       <?php echo $data["email"];?>
+                    </p>
+                </div>
+                <div class="cphone">
+                    <h4>Phone Number</h4>
+                    <p>
+                    <?php echo $data["phone"];?>
+                    </p>
+                </div>
+                <div class="feature col" style="border: none;">
+                    <h3>Content</h3>
+                    <p> <?php echo $data["description"];?></p>
+                    <?php
+                    if(!isset($data['review'])){
+                        ?>
+                        <a href="includes/contact-us.php?accepted=<?php echo $data["id"]?>" class="icon-link feed accepted">
+                        Accept
+                    </a>
+                    <a href="includes/contact-us.php?rejected=<?php echo $data["id"]?>" class="icon-link feed rejected">
+                        Reject
+                    </a>
+                    <?php
+                    }
+                    ?>
+                </div>
+            <?php
+        }else{
+            header("location: ../contact-us.php");
+        }
+    }
+    public function acceptedContactUS($id){
+        $this->acceptedContactUSContr($id);
+    }
+    public function rejectedContactUS($id){
+        $this->rejectedContactUSContr($id);
+    }
+    public function removeContactUS($id){
+        $this->removeContactUSContr($id);
+    }
+    public function ShowRequest(){
+        $data = $this->getRequest();
+        foreach ($data as $row) {
+            ?>
+               <tr>
+                            <td><?php echo $row["id"];?></td>
+                            <td><?php echo $row["Fname"] ." ". $row["Lname"];?></td>
+                            <td><?php echo $row["email"];?></td>
+                            <td><?php echo $row["type"];?></td>
+                            <td><?php echo $row["host"];?></td>
+                            <td><?php 
+                if(isset($row['review'])){
+                    if($row['review'] == 1){
+                        echo "Accepted";
+                    }else{
+                        echo "Rejected"; 
+                    }
+                } else{
+                    echo "not reviewed";    
+                }
+            ?></td>
+                            <td><?php echo $row["created_at"];?></td>
+                        
+                            <td>
+                                <a href="single-request.php?id=<?php echo $row['id']?> " class="icon-link"><i class="fas fa fa-eye"></i></a>
+                                &nbsp;
+                                &nbsp;
+                                <a href="includes/request.php?remove=<?php echo $row["id"]?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        
+                        </tr>
+            <?php
+        }
+
+    }
+    public function  showRequestSingle(){
+        if(isset($_GET["id"])){
+            $id = $_GET["id"];
+            $data = $this->getRequestSingle($id);
+            ?>
+            <div class="cname">
+                    <h4>
+                        User Name
+                    </h4>
+                    <p>
+                    <?php  echo $data["Fname"] ." ". $data["Lname"]?>
+                    </p>
+
+                </div>
+                <div class="cemail">
+                    <h4>Email</h4>
+                    <p>
+                    <?php echo $data["email"];?>
+                    </p>
+                </div>
+                <div class="cphone">
+                    <h4>phone</h4>
+                    <p>
+                    <?php echo $data["phone"];?>
+                    </p>
+                </div>
+                <div class="cphone">
+                    <h4>Type</h4>
+                    <p>
+                    <?php echo $data["type"];?>
+                    </p>
+                </div>
+                
+                <div class="cphone">
+                    <h4>Host Plan</h4>
+                    <p>
+                    <?php echo $data["host"];?>
+                    </p>
+                </div>
+                <div class="feature col" style="border: none;">
+                    <h3>Description</h3>
+                    <p> <?php echo $data["description"];?></p>
+                    <?php
+                    if(!isset($data['review'])){
+                        ?>
+                        <a href="includes/request.inc.php?accepted=<?php echo $data["id"]?>" class="icon-link feed accepted">
+                        Accept
+                    </a>
+                    <a href="includes/request.inc.php?rejected=<?php echo $data["id"]?>" class="icon-link feed rejected">
+                        Reject
+                    </a>
+                    <?php
+                    }
+                    ?>
+                </div>
+            <?php
+        }else{
+            header("location: ../request.php");
+        }
+    }
+    public function acceptedRequest($id){
+        $this->acceptedRequestContr($id);
+    }
+    public function rejectedRequest($id){
+        $this->rejectedRequestContr($id);
+    }
+    public function removeRequest($id){
+        $this->removeRequestContr($id);
+    }
+
 
 }
 

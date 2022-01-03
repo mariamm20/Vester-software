@@ -5,6 +5,8 @@ include "../Controllers/WishListContr.class.php";
 include "../Views/WishListView.class.php";
 include "../Controllers/ProfileContr.class.php";
 include "../Views/ProfileView.class.php";
+            $profView = new ProfileView();
+
 
 
 ?>
@@ -34,7 +36,6 @@ include "../Views/ProfileView.class.php";
     <div class="whole">
         <?php
 
-            $profView = new ProfileView();
 
             $profView-> showData();
         ?>     
@@ -70,21 +71,10 @@ include "../Views/ProfileView.class.php";
                         </div>
                         <table class="table table-responsive">
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td class="table-width-sale ov ">Net Software</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td class="table-width ov">Kit Software</td>
-
-
-                                </tr>
-
-                                </tr>
-
+                                <?php
+                            $profView->showHisProducts();
+                                
+?>
                             </tbody>
                         </table>
 
@@ -96,21 +86,10 @@ include "../Views/ProfileView.class.php";
                         </div>
                         <table class="table table-responsive">
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td class="table-width ov">Net Software</td>
-                                    <td class="p-0"><button>State</button></td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td class="table-width ov">Kit Software</td>
-                                    <td class="p-0"><button>State</button></td>
-
-                                </tr>
-
-                                </tr>
-
+                                <?php
+                                    $profView->showHisRequestes();
+                                ?>
+              
                             </tbody>
                         </table>
                     </div>

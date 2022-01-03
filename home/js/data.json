@@ -37,9 +37,9 @@
     },
     {
         "title": "Host and develop your app",
-        "answer_1": "Premium support  $450",
-        "answer_2": "Business support $350",
-        "answer_3": "Growth support  $250",
+        "answer_1": "Premium support",
+        "answer_2": "Business support",
+        "answer_3": "Growth support",
         "price_1": 450,
         "price_2": 350,
         "price_3": 250

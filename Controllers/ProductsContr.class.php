@@ -18,5 +18,16 @@ class productCont extends Db
         $p_data = $stmt->fetchAll();
         return $p_data;
     }
+  protected function setProductContr($name,$description,$price,$category
+        ,$image,$first_thumbnail,$second_thumbnail,$third_thumbnail, $fourth_thumbnail, 
+        $file,$support_windows,$support_mac,$support_linux){
+        
+            $query="INSERT INTO products(name, description,price,image,thumbnail,created_at,user_id,category_id, file,img1,img2,img3,support_windows,support_mac,support_linux) 
+                VALUES (?,?,?,?,?,now(),?,?,?,?,?,?,?,?,?)";
+            $stmt = $this->Connect()->prepare($query);
+
+            $check =$stmt->execute([$name,$description,$price,$image, $fourth_thumbnail,$_SESSION["id"],$category,
+             $file,$first_thumbnail,$second_thumbnail,$third_thumbnail,$support_windows,$support_mac,$support_linux]);
+        }
 
 }

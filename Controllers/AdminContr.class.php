@@ -150,6 +150,53 @@
             $data =$stmt->fetch();
             return $data;
         }
-
+        protected function getContactUs(){
+            $stmt = $this->Connect()->prepare("SELECT * FROM contact_us");
+            $stmt->execute();
+            $data =$stmt->fetchAll();
+            return $data;
+        }
+        protected function getContactUsSingle($id){
+            $stmt = $this->Connect()->prepare("SELECT * FROM contact_us where id = ? ");
+            $stmt->execute([$id]);
+            $data =$stmt->fetch();
+            return $data;
+        }
+        protected function acceptedContactUSContr($id){
+            $stmt = $this->Connect()->prepare("UPDATE  contact_us SET review = 1 where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function rejectedContactUSContr($id){
+            $stmt = $this->Connect()->prepare("UPDATE  contact_us SET review = 0 where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function removeContactUSContr($id){
+            $stmt = $this->Connect()->prepare("DELETE FROM contact_us  where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function acceptedRequestContr($id){
+            $stmt = $this->Connect()->prepare("UPDATE  request SET review = 1 where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function rejectedRequestContr($id){
+            $stmt = $this->Connect()->prepare("UPDATE  request SET review = 0 where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function removeRequestContr($id){
+            $stmt = $this->Connect()->prepare("DELETE FROM request  where id = ? ");
+            $stmt->execute([$id]);
+        }
+        protected function getRequest(){
+            $stmt = $this->Connect()->prepare("SELECT s.id,u.email ,s.type,s.host,s.created_at, u.Fname,u.Lname,s.description,s.review FROM request as s join users as u on s.user_id = u.id");
+            $stmt->execute();
+            $data =$stmt->fetchAll();
+            return $data;
+        }
+        protected function getRequestSingle($id){
+            $stmt = $this->Connect()->prepare("SELECT s.id,u.email ,s.type,s.host,s.created_at, u.Fname,u.Lname,s.description,s.review,u.phone FROM request as s join users as u on s.user_id = u.id where s.id = ?");
+            $stmt->execute([$id]);
+            $data =$stmt->fetch();
+            return $data;
+        }
     }
 ?>

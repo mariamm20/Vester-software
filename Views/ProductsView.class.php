@@ -122,5 +122,60 @@
             <?php
         }
     }
+    public function ShowCategoriesOption(){
+        $p_data = $this->getCategories();
+
     
+        foreach ($p_data as $category)
+        {
+        ?>
+           <option value ="<?php echo $category['id']?>"><?php echo $category['name']?></option>
+        <?php
+        }
+    }
+    public function setProduct($name,$description,$price,$category,$image, $thumbnails, $file,$support_windows,$support_mac,$support_linux){
+        $imageName =null;
+        if(isset($image)){
+            $image_obj = new Upload("image",$image,'home/add-product.php?');
+            $imageName =$image_obj->save();
+        }
+        $first_thumbnail = null;
+        $second_thumbnail = null;
+        $third_thumbnail = null;
+        $fourth_thumbnail = null;
+  
+        for( $i=0 ; $i<count($thumbnails['name']) ; $i++){
+            $photo = array(
+                "name" => $thumbnails['name'][$i],
+                "type"=> $thumbnails['type'][$i],
+                "tmp_name"=> $thumbnails['tmp_name'][$i],
+                "error"=> $thumbnails['error'][$i],
+                "size"=> $thumbnails['size'][$i],
+            );
+            $thumbnail_obj = new Upload("image",$photo,'home/add-product.php?');
+            if($i==0){
+                $first_thumbnail = $thumbnail_obj->save();
+            }elseif ($i ==1) {
+                $second_thumbnail = $thumbnail_obj->save();
+
+            }
+            elseif ($i ==2) {
+                $third_thumbnail = $thumbnail_obj->save();
+            }
+            else{
+                $fourth_thumbnail = $thumbnail_obj->save();
+
+            }
+        }
+        $fileName = null;
+        if(isset($file)){
+            $file_obj = new Upload("file",$file,'home/add-product.php?');
+        $fileName =$file_obj->save();
+        }
+
+
+        $this->setProductContr($name,$description,$price,$category,
+        $imageName,$first_thumbnail,$second_thumbnail,$third_thumbnail, 
+        $fourth_thumbnail, $fileName,$support_windows,$support_mac,$support_linux);
+    }
  }
