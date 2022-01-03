@@ -1,5 +1,6 @@
 <?php 
  // includes
+ session_start();
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
  include "../Views/WishListView.class.php";

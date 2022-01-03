@@ -1,9 +1,11 @@
 <?php
 
-    class settingContr extends Db{
+    class settingContr extends Db
+    {
         // short solution
-        protected function updateProfile(){
-            /*if(isset($_POST['save']))
+        protected function updateProfile()
+        {
+            if(isset($_POST['save']))
             {
                // the right section 
                 $firstName = $_POST['firstname'];
@@ -26,12 +28,12 @@
                 $pdoQuery = 'UPDATE users SET firstname=:firstname, lastname=:lastname, 
                             jobtitle=:jobtitle, descr=:descr, email=:email,pass=:pass,
                             phone=:phone, photo=:photo, website=:website, github=:github
-                            twitter=:twitter, linkedin=:linkedin WHERE id=' . $_SESSION["id"]
+                            twitter=:twitter, linkedin=:linkedin WHERE id=' . $_SESSION["id"];
     
                 $pdoQuery_run = $pdo->prepare($pdoQuery);
                 $pdoQuery_exec = $pdoQuery_run->execute(array(":firstname"=>firstname,":lastname"=>lastname,":jobtitle"=>jobtitle,
                 ":descr"=>descr, ":email"=>email,":pass"=>pass,":phone"=>phone,":photo"=>photo,":website"=>website,
-                ":github"=>github,":twitter"=>twitter,":linkedin"=>linkedin))
+                ":github"=>github,":twitter"=>twitter,":linkedin"=>linkedin));
     
                 if($pdoQuery_exec)
                 {
@@ -40,36 +42,38 @@
                 {
                     echo '<script>alert(Data Not Updated )</script>';
                 }
-        }*/
+        
 
         $stmt = $this->Connect()->query('UPDATE `users` SET `Fname`= firstname,`Lname`= lastname,
         `email`= email,`phone`= phone,`password`= pass,`github`=github,`twitter`=twitter,
-        `linkedin`=linkedin,`website`= website WHERE `id`' . = $_SESSION["id"]);
+        `linkedin`=linkedin,`website`= website WHERE `id` = ' .  $_SESSION["id"]);
         $updateProfile = $stmt->fetchAll();
         return $updateProfile;
     
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
