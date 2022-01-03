@@ -85,7 +85,9 @@
                 $settingViewPage->showUserData();
                 ?>
                 </ul>
-                <button name="save_media" style="border:0px;background:white;padding:0px;float:right;padding-right:30px;"> Save </button>
+                <div class="save" style="width:auto">
+                <button name="save_media"> Save </button>
+                </div>
             </div>
         </form>
         </div>

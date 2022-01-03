@@ -46,7 +46,7 @@ include "../Views/WishListView.class.php";
                 great work. And
                 the only way to do great work is to love what you do.
             </p>
-            <button class="shop-btn">
+            <button class="shop-btn" onclick="location.href='products.php'">
                 Shop Now
             </button>
         </div>
@@ -76,7 +76,7 @@ include "../Views/WishListView.class.php";
                     company by selling
                     trusty and save softwares. Hope you enjoy shopping.
                 </p>
-                <button class="reverse-btn contact-btn">
+                <button class="reverse-btn contact-btn" data-bs-target="#contact" data-bs-toggle="modal">
                     Contact Us
                 </button>
             </div>

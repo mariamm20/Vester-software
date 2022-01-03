@@ -76,15 +76,17 @@ include "../Views/AdminView.class.php";
                                     Please select a valid Category.
                                 </div>
                             </div>
+                            <div style="position: relative; top: 14px;">
                             <div class="checkbox">
-                                <label><input type="checkbox" name="support_mac" value="1">Support MAC devices</label>
+                                <label><input type="checkbox" name="support_mac" value="1"> Support MAC devices</label>
                             </div>  
                             <div class="checkbox">
-                                <label><input type="checkbox" name="support_linux" value="1">Support Linux devices</label>
+                                <label><input type="checkbox" name="support_linux" value="1"> Support Linux devices</label>
                             </div>  
                             <div class="checkbox">
-                                <label><input type="checkbox" name="support_windows" value="1">Support Windows devices</label>
-                            </div>  
+                                <label><input type="checkbox" name="support_windows" value="1"> Support Windows devices</label>
+                            </div> 
+</div> 
                             <div class="top">
                             <div class="standard add-image">
                                 <p><i class="far fa-image
