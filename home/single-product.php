@@ -29,6 +29,27 @@ session_start();
 </head>
 
 <body>
+  <div class="modal fade" id="buy-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                        <div class="modal-content change-list">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                                <button type="button" class="btn-close btn1" data-bs-dismiss="modal" aria-label="Close">X</button>
+                            </div>
+                            <form>
+                                <div class="modal-body ">
+                <h4 class="text-center">Are you sure to  buy it ?</h4><br>
+                                </div>
+                                <div class="modal-footer">
+                
+                                    <button type="button" class="btn btn-primary">Yes</button>
+                                    <button type="button" class="btn btn-secondary btn2" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
 <?php
     include "../includes/header.inc.php";
