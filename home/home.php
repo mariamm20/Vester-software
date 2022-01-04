@@ -21,7 +21,7 @@ include "../Views/WishListView.class.php";
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/home-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css " rel="stylesheet"/>
-        <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
+        <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 
     </head>
 </head>
@@ -255,7 +255,7 @@ include "../Views/WishListView.class.php";
     ?>
 
     <!-- JavaScript -->
-     <script src="../node_modules/aos/dist/aos.js"></script>
+     <script src="node_modules/aos/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
