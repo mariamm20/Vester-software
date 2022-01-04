@@ -285,6 +285,23 @@ q{
 
 
 
+.change-list .modal-header{
+    height: auto;
+    background-color: #fff;
+}
+.change-list .modal-footer button{
+    width: 48%;
+}
+.change-list .modal-header .btn-close{
+    position: relative;
+    bottom: 2px;
+    background: none;
+    color: #1c2750;
+}
+
+
+
+
 
 @media (max-width:1189px) {
     .nav-tabs .nav-link{
