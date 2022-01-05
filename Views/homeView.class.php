@@ -11,7 +11,7 @@ class homeView extends homeCont
         {
         ?>
           <div class="main-div">
-                <img src="../img/5.jpg" />
+                <img src="../uploads/images/<?php echo $products['image'];?>" />
                 <div class="name-product">
                     <h4><?php echo ucfirst($products['name'] )?></h4>  <!-- software name -->
                 <div>

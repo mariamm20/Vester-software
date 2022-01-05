@@ -23,6 +23,8 @@ $message->ShowMessage();
     <script src="https://kit.fontawesome.com/5108fa3256.js" crossorigin="anonymous"></script>
     <link href="../assests/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -33,7 +35,7 @@ $message->ShowMessage();
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <input class="form-control  w-100 searchInput" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control  w-100 searchInput" type="text" placeholder="Search" id="search-input" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
                 <a class="nav-link text-white px-3" href="includes/sign-out.php">Sign out</a>

@@ -22,7 +22,8 @@ include "../Views/WishListView.class.php";
         <link href="css/home-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css " rel="stylesheet"/>
         <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
-
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 
@@ -64,7 +65,7 @@ include "../Views/WishListView.class.php";
                 <!--Footer-->
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-primary" onclick="location.href='../request/request.html'" >Start Now</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../home/request.php'" >Start Now</button>
                 </div>
             </form>
         </div>
