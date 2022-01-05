@@ -17,7 +17,7 @@ include "includes/header.inc.php";
                     </div>
                 </div>
                 <!--Table-->
-                <table class="table table-striped table-sm">
+                <table class="table table-striped table-sm"  id="search-table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -28,7 +28,7 @@ include "includes/header.inc.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                    <?php
                     // includes
                     include "../Controllers/db.class.php";
                     include "../Controllers/AdminContr.class.php";

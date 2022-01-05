@@ -25,6 +25,8 @@ $wishlist = new WishListView();
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/request-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 
@@ -51,15 +53,16 @@ $wishlist = new WishListView();
             Know the initial price of the requested
             software <br> and ask it if it is suitable for you .
         </p>
-        <button class="shop-btn">
+        <a href="#app-section"><button class="shop-btn">
             Start Now
         </button>
+</a>
     </div>
     <div class="img-div">
         <img src="../img/13.jpg" alt="coding" class="first-img" />
     </div>
 </section>
-<section>
+<section id="app-section">
     <div class="quiz-app">
 
         <div class="quiz-area"></div>

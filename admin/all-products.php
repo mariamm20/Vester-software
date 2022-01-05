@@ -17,7 +17,7 @@ include "includes/header.inc.php";
                 </div>
  
                 <!--Table-->
-                <table class="table table-striped table-sm">
+                <table class="table table-striped table-sm" id="search-table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

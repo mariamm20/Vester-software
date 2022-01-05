@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_GET['id']) ){
+    header("location:products.php");
+}
  // includes
  include "../Controllers/db.class.php";
  include "../Controllers/WishListContr.class.php";
@@ -25,6 +28,8 @@ session_start();
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/single-product-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 
@@ -37,24 +42,22 @@ session_start();
                                 <h5 class="modal-title" id="staticBackdropLabel"></h5>
                                 <button type="button" class="btn-close btn1" data-bs-dismiss="modal" aria-label="Close">X</button>
                             </div>
-                            <form>
-                                <div class="modal-body ">
-                <h4 class="text-center">Are you sure to  buy it ?</h4><br>
+                            <form action="../includes/sale.inc.php" method="POST">
+                                <div class="modal-body">
+                                <h4 class="text-center" id="rtext">Are you sure to  buy it ?</h4><br>
                                 </div>
                                 <div class="modal-footer">
-                
-                                    <button type="button" class="btn btn-primary">Yes</button>
+                                    <input type="hidden" id = "product_id_input" name="id" value="<?php echo $_GET["id"];?>"/>
+                                    <button type="submit" name="submit" id ="submit-buy" class="btn btn-primary">Yes</button>
                                     <button type="button" class="btn btn-secondary btn2" data-bs-dismiss="modal">Cancel</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-
-<?php
-    include "../includes/header.inc.php";
-    ?>
-    
+                <?php
+                include "../includes/header.inc.php";
+                ?>
     
     <section class="product-section">
         <!-- method of showing slider product images-->
@@ -62,18 +65,6 @@ session_start();
             $single = new singleView();
             $single->showSingleProduct();
         ?>
-
-
-      
-
-
-
-
-
-
-
-
-
 <!--footer-->
     <?php
     include "../includes/footer.inc.php";
@@ -83,7 +74,10 @@ session_start();
 
     <!-- JavaScript -->
     <script src="../assests/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/JQuery3.3.1.js"></script>
     <script src="js/single-product.js"></script>
+
 </body>
 
 </html>

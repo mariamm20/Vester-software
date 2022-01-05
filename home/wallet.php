@@ -11,9 +11,10 @@
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/wallet-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
-
 <body>
     <?php
     include "../includes/header.inc.php";

@@ -3,8 +3,6 @@
 
 
 class AdminView extends AdminContr{
-
-
     public function showProducts() {
 
         $data = $this->getProducts();
@@ -12,7 +10,7 @@ class AdminView extends AdminContr{
         foreach($data as $item){
 
         ?>
-            <tr>
+            <tr id="search-tr">
                 <td><?php echo $item['id'];?></td>
                 <td><?php echo $item['name'];?></td>
                 <td><?php echo $item['price'];?></td>
@@ -29,7 +27,6 @@ class AdminView extends AdminContr{
         }
 
     }
-     
     public function setProduct($name,$description,$price,$category,$discount,$image, $thumbnails, $file,$support_windows,$support_mac,$support_linux){
 
         $image_obj = new Upload("image",$image,'add-product');
@@ -71,8 +68,6 @@ class AdminView extends AdminContr{
         $discount,$imageName,$first_thumbnail,$second_thumbnail,$third_thumbnail, 
         $fourth_thumbnail, $fileName,$support_windows,$support_mac,$support_linux);
     }
-
-
     public function showUsers() {
 
         $data = $this->getUsers();
@@ -423,7 +418,7 @@ class AdminView extends AdminContr{
                                 <a href="single-request.php?id=<?php echo $row['id']?> " class="icon-link"><i class="fas fa fa-eye"></i></a>
                                 &nbsp;
                                 &nbsp;
-                                <a href="includes/request.php?remove=<?php echo $row["id"]?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
+                                <a href="includes/request.inc.php?remove=<?php echo $row["id"]?>" class="icon-link"><i class="fas fa-trash-alt"></i></a>
                             </td>
                         
                         </tr>
@@ -500,8 +495,6 @@ class AdminView extends AdminContr{
     public function removeRequest($id){
         $this->removeRequestContr($id);
     }
-
-
 }
 
 class  Upload {
@@ -801,19 +794,16 @@ class checkUserData extends AdminContr{
 // FEEDBACK
 class feedbackView extends AdminContr
 {
-    public function showFeedback()
-    {
+    public function showFeedback(){
         $f_data= $this->getFeedback();
 
 
         foreach($f_data as $comments)
         {
-            
-            
         ?>    
             <div class="feature col">
                 <h3><?php echo "USER ID" . " " . $comments['user_id'] ?></h3>  <!-- user id -->
-                <h6><?php echo"PRODUCT ID" . " " . $comments['product_id'] ?></h6>   <!-- product id -->
+               <a href="../home/single-product.php?id=<?php echo $comments['product_id']; ?>"> <h6><?php echo"PRODUCT ID" . " " . $comments['product_id'] ?></h6> </a> <!-- product id -->
                 <p><?php  echo $comments['content'] ?></p> <!-- the comment on the product -->
 
                 <a href="feedback.php?review=1&id=<?php echo $comments['id']; ?>" class="icon-link feed accepted">
@@ -825,7 +815,6 @@ class feedbackView extends AdminContr
             </div> 
             
         <?php    
-        
         }
         
        
@@ -846,10 +835,4 @@ class feedbackView extends AdminContr
    
         
     }
-    
-
-
 }
-
-
-

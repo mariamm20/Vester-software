@@ -40,6 +40,9 @@
             if(isset($_GET["addedRequestSuccfully"])){
                 $this->MessageContent("success"," your request sended successfully we will contact with you soon","home.php");
             }
+            if(isset($_GET["AdminOnly"])){
+                $this->MessageContent("error"," Only admins can access this page","home.php");
+            }
 
         }
 

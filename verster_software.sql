@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2022 at 09:19 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Jan 05, 2022 at 02:13 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,13 +70,6 @@ CREATE TABLE `feedback` (
   `created_at` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`id`, `user_id`, `content`, `product_id`, `review`, `created_at`) VALUES
-(9, 7, 'A really good software, I recomment it to you ', 15, 1, '2022-01-03');
-
 -- --------------------------------------------------------
 
 --
@@ -102,13 +95,6 @@ CREATE TABLE `products` (
   `support_linux` tinyint(1) NOT NULL DEFAULT 0,
   `support_windows` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `products`
---
-
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `discound`, `image`, `thumbnail`, `created_at`, `file`, `img1`, `img2`, `img3`, `user_id`, `category_id`, `support_mac`, `support_linux`, `support_windows`) VALUES
-(15, 'pro- screen recorder', 'It is a fast and good screen recorder . It can cupture multiple screens not only one. You can record your meeting and your lessons.', 50, NULL, '61d2b0252befd.jpg', '61d2b0252cbe6.jpg', '2022-01-03 10:13:25', '61d2b0252ceb8.zip', '61d2b0252c2da.png', '61d2b0252c5f3.jpg', '61d2b0252c8f9.jpg', 7, 1, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -165,13 +151,6 @@ CREATE TABLE `users` (
   `website` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `Fname`, `Lname`, `email`, `phone`, `job_title`, `photo`, `created_at`, `last_login`, `role`, `password`, `country`, `about`, `github`, `twitter`, `linkedin`, `website`) VALUES
-(7, 'alaa', 'attia', 'alaaatia147@gmail.com', '01061840560', NULL, 'r.png', '2022-01-03 10:03:57', '2022-01-03 10:04:00', '', '$2y$10$hYd6oiX9DKyAmku2PSIQu.huttjzcVIFakS/WN6yQue/mGSIhGQRa', 'Egypt', '', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -183,13 +162,6 @@ CREATE TABLE `wishlist` (
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `wishlist`
---
-
-INSERT INTO `wishlist` (`id`, `user_id`, `product_id`) VALUES
-(19, 7, 15);
 
 --
 -- Indexes for dumped tables
@@ -290,7 +262,7 @@ ALTER TABLE `request`
 -- AUTO_INCREMENT for table `slaes`
 --
 ALTER TABLE `slaes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -332,8 +304,8 @@ ALTER TABLE `request`
 -- Constraints for table `slaes`
 --
 ALTER TABLE `slaes`
-  ADD CONSTRAINT `slaes_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION,
-  ADD CONSTRAINT `slaes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
+  ADD CONSTRAINT `slaes_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `slaes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `wishlist`

@@ -6,9 +6,9 @@ include "../Views/WishListView.class.php";
 include "../Controllers/ProfileContr.class.php";
 include "../Views/ProfileView.class.php";
             $profView = new ProfileView();
-
-
-
+if(!isset($_SESSION['id']) ){
+    header("location:sign-in.php");
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +23,8 @@ include "../Views/ProfileView.class.php";
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
         <link href="css/profile-style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 

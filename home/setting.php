@@ -9,7 +9,10 @@
  include "../Views/SettingView.class.php";
 
  $settingViewPage = new SettingView(); 
-
+ if(!isset($_SESSION['id']) ){
+    header("location:sign-in.php");
+}
+        
  ?>
 
 
@@ -26,6 +29,9 @@
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
         <link href="css/setting-style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
+        
     </head>
 </head>
 
