@@ -4,7 +4,7 @@ if(!isset($_SESSION['id'])){
     header("location:../../home/sign-in.php");
 }else{
      if($_SESSION['role'] !="admin"){
-        header("location: ../../home/home.php?AdminOnly");
+        header("location: ../home/home.php?AdminOnly");
 
      }
 }

@@ -50,7 +50,7 @@
                 
                 <input type="password"  class="just-width" name="pass" placeholder="Password" /><br>
                 <input type="password"  class="just-width" name="rpass" placeholder="Enter Password Again" /><br>
-               <select class="just-width" id = "countries" name="country"></select><br>
+               <select class="just-width" id = "countries" name="country" placeholder="Country"></select><br>
                 <input type ="text"  class="just-width" name="num" placeholder="Phone Number"/><br>
                 <div class="check">
                     <input type="checkbox" id="accept" required /><label for="accept">Accept all privacy

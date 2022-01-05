@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2022 at 02:13 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Jan 05, 2022 at 09:40 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,6 +55,13 @@ CREATE TABLE `contact_us` (
   `review` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id`, `description`, `email`, `name`, `phone`, `review`) VALUES
+(22, 'i have a problem in adding my product', 'mohamedhesham@gmail.com', 'mohamed hesham', '01061840564', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -96,6 +103,15 @@ CREATE TABLE `products` (
   `support_windows` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `discound`, `image`, `thumbnail`, `created_at`, `file`, `img1`, `img2`, `img3`, `user_id`, `category_id`, `support_mac`, `support_linux`, `support_windows`) VALUES
+(16, 'Camera motion sensor system', 'This camera motion sensor system can detect motion (even the slightest ones) and trigger an alarm. It uses a motion detector algorithm for detecting movements. ', 50, NULL, '61d5b3a08c6dc.jpg', '61d5b3a08cff4.jpg', '2022-01-05 17:05:04', '61d5b3a08d09b.zip', '61d5b3a08cda4.jpg', '61d5b3a08ce98.jpg', '61d5b3a08cf4c.jpg', 8, 1, 0, 0, 1),
+(18, ' Android task monitoring', 'This project is exclusively designed to simplify the tracking and monitoring of day-to-day activities of the busy modern life. We are so busy in our daily lives right now that it becomes impossible to keep track of our daily events, meetings, and appointments.', 60, NULL, '61d5b71f32e1e.jpg', '61d5b71f3370a.jpg', '2022-01-05 17:19:59', '61d5b71f337b5.zip', '61d5b71f334d0.jpg', '61d5b71f3359e.jpg', '61d5b71f3365c.jpg', 8, 1, 1, 0, 0),
+(19, 'employee management system', 'This project aims to build an employee management system that consolidates all the relevant information on a company’s human resources. It has two major components – Admin and Employee.', 80, NULL, '61d5b99bcb732.jpg', '61d5b99bcbd84.jpg', '2022-01-05 17:30:35', '61d5b99bcbe2c.zip', '61d5b99bcbb6d.jpg', '61d5b99bcbc25.jpg', '61d5b99bcbce0.jpg', 8, 2, 0, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -125,6 +141,14 @@ CREATE TABLE `slaes` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `slaes`
+--
+
+INSERT INTO `slaes` (`id`, `user_id`, `product_id`, `created_at`) VALUES
+(62, 8, 18, '2022-01-05 17:20:34'),
+(63, 8, 18, '2022-01-05 17:20:34');
+
 -- --------------------------------------------------------
 
 --
@@ -150,6 +174,13 @@ CREATE TABLE `users` (
   `linkedin` varchar(100) NOT NULL,
   `website` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `Fname`, `Lname`, `email`, `phone`, `job_title`, `photo`, `created_at`, `last_login`, `role`, `password`, `country`, `about`, `github`, `twitter`, `linkedin`, `website`) VALUES
+(8, 'alaa', 'attia', 'alaaatia147@gmail.com', '01061840560', 'Software Engineer', 'r.png', '2022-01-05 16:49:15', '2022-01-05 22:20:22', 'admin', '$2y$10$abW4FTimQaXb3KJGB4dmYOuAu1lv4LU/KfkKTNLwBYmdyqUw/Yho6', 'Egypt', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -238,7 +269,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -250,7 +281,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `request`
@@ -262,13 +293,13 @@ ALTER TABLE `request`
 -- AUTO_INCREMENT for table `slaes`
 --
 ALTER TABLE `slaes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
