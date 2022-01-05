@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2022 at 11:01 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Jan 06, 2022 at 12:11 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `software`
+-- Database: `vester_software`
 --
 
 -- --------------------------------------------------------
@@ -90,12 +90,12 @@ CREATE TABLE `products` (
   `price` smallint(5) UNSIGNED NOT NULL,
   `discound` tinyint(4) DEFAULT NULL,
   `image` varchar(100) DEFAULT 'logo.jpg',
-  `thumbnail` varchar(100) DEFAULT NULL,
+  `thumbnail` varchar(100) DEFAULT 'logo.jpg	',
   `created_at` datetime NOT NULL,
   `file` varchar(100) NOT NULL,
-  `img1` varchar(100) DEFAULT NULL,
-  `img2` varchar(100) DEFAULT NULL,
-  `img3` varchar(100) DEFAULT NULL,
+  `img1` varchar(100) DEFAULT 'logo.jpg	',
+  `img2` varchar(100) DEFAULT 'logo.jpg	',
+  `img3` varchar(100) DEFAULT 'logo.jpg	',
   `user_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   `support_mac` tinyint(1) NOT NULL DEFAULT 0,
@@ -108,9 +108,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `discound`, `image`, `thumbnail`, `created_at`, `file`, `img1`, `img2`, `img3`, `user_id`, `category_id`, `support_mac`, `support_linux`, `support_windows`) VALUES
-(16, 'Camera motion sensor system', 'This camera motion sensor system can detect motion (even the slightest ones) and trigger an alarm. It uses a motion detector algorithm for detecting movements. ', 50, NULL, '61d5b3a08c6dc.jpg', '61d5b3a08cff4.jpg', '2022-01-05 17:05:04', '61d2b0252ceb8.zip', '61d5b3a08cda4.jpg', '61d5b3a08ce98.jpg', '61d5b3a08cf4c.jpg', 8, 1, 0, 0, 1),
-(18, ' Android task monitoring', 'This project is exclusively designed to simplify the tracking and monitoring of day-to-day activities of the busy modern life. We are so busy in our daily lives right now that it becomes impossible to keep track of our daily events, meetings, and appointments.', 60, NULL, '61d5b71f32e1e.jpg', '61d5b71f3370a.jpg', '2022-01-05 17:19:59', '61d2b0252ceb8.zip', '61d5b71f334d0.jpg', '61d5b71f3359e.jpg', '61d5b71f3365c.jpg', 8, 1, 1, 0, 0),
-(19, 'employee management system', 'This project aims to build an employee management system that consolidates all the relevant information on a company’s human resources. It has two major components – Admin and Employee.', 80, NULL, '61d5b99bcb732.jpg', '61d5b99bcbd84.jpg', '2022-01-05 17:30:35', '61d2b0252ceb8.zip', '61d5b99bcbb6d.jpg', '61d5b99bcbc25.jpg', '61d5b99bcbce0.jpg', 8, 2, 0, 1, 1);
+(16, 'Camera motion sensor system', 'This camera motion sensor system can detect motion (even the slightest ones) and trigger an alarm. It uses a motion detector algorithm for detecting movements. ', 500, 0, '61d622cb483bc.png', '61d622cb487a4.png', '2022-01-05 17:05:04', '61d2b0252ceb8.zip', '61d6229fdb569.jpg', '61d6229fdb263.jpg', '61d622cb481bd.png', 8, 1, 1, 0, 1),
+(18, ' Android task monitoring', '   This project is exclusively designed to simplify the tracking and monitoring of day-to-day activities of the busy modern life. We are so busy in our daily lives right now that it becomes impossible to keep track of our daily events, meetings, and appointments.', 3000, 0, '61d6229fdb01c.jpg', '61d6229fdb6bc.jpg', '2022-01-05 17:19:59', '61d2b0252ceb8.zip', '61d6229fdb263.jpg', '61d6229fdb3fc.png', '61d6229fdb569.jpg', 8, 1, 1, 1, 1),
+(19, 'employee management system', ' This project aims to build an employee management system that consolidates all the relevant information on a company’s human resources. It has two major components – Admin and Employee.', 1200, 0, '61d622cb481bd.png', 'logo.jpg', '2022-01-05 17:30:35', '61d2b0252ceb8.zip', '61d622cb483bc.png', '61d622cb485b7.jpg', '61d622cb487a4.png', 8, 2, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +180,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Fname`, `Lname`, `email`, `phone`, `job_title`, `photo`, `created_at`, `last_login`, `role`, `password`, `country`, `about`, `github`, `twitter`, `linkedin`, `website`) VALUES
-(8, 'alaa', 'attia', 'alaaatia147@gmail.com', '01061840560', 'Software Engineer', 'r.png', '2022-01-05 16:49:15', '2022-01-05 22:20:22', 'admin', '$2y$10$abW4FTimQaXb3KJGB4dmYOuAu1lv4LU/KfkKTNLwBYmdyqUw/Yho6', 'Egypt', '', '', '', '', '');
+(8, 'admin', 'admin', 'admin@gmail.com', '01061840560', 'Software Engineer', 'r.png', '2022-01-05 16:49:15', '2022-01-06 00:31:56', 'admin', '$2y$10$abW4FTimQaXb3KJGB4dmYOuAu1lv4LU/KfkKTNLwBYmdyqUw/Yho6', 'Egypt', '', '', '', '', '');
 
 -- --------------------------------------------------------
 

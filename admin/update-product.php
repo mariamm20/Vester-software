@@ -11,7 +11,7 @@
 ?>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex  flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Add Product <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
+            <h1 class="h2">Update Product <a href="#" onclick="appear()"><i class="fas fa-cog"></i></a></h1>
             <div class="pickColor">
                 <p>Change Color</p>
                 <ul>
@@ -25,7 +25,7 @@
         <div class="col-md-7 col-lg-8">
             <form class="needs-validation" novalidate=""  action="includes/product.inc.php?id=<?php echo $id ?>" method="POST" enctype="multipart/form-data">
                     <?php 
-                    $AdminView->showProduct(9);
+                    $AdminView->showProduct($_GET['id']);
                     ?>
                     <br>
                     <br>
