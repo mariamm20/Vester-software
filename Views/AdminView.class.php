@@ -124,8 +124,8 @@ class AdminView extends AdminContr{
                     <div class="col-sm-12">
                         <label for="productName" class="form-label"><i class="fas fa-signature"></i>&nbsp;
                             Software name</label>
-                        <input type="text" class="form-control " id="productName" placeholder="Mongo" value="<?php echo $data["name"];?>"
-                            required="" name="name">
+                        <input type="text" class="form-control " id="productName" placeholder="Mongo" value="<?php echo $data['name'];?>"
+                            required name="name">
                         <div class="invalid-feedback">
                             Valid product name is required.
                         </div>
@@ -141,7 +141,7 @@ class AdminView extends AdminContr{
                     <div class="col-12">
                         <label for="price" class="form-label"><i class="fas fa-dollar-sign"></i> &nbsp;Software
                             price</label>
-                        <input type="number" class="form-control " value="<?php echo $data["price"];?>" id="price" placeholder="12$" name="price" required>
+                        <input type="number" class="form-control " value="<?php echo $data["price"];?>" id="price" placeholder="12$" name="price" required />
                         <div class="invalid-feedback">
                             Please enter software price.
                         </div>
@@ -159,7 +159,7 @@ class AdminView extends AdminContr{
                     <div class="col-md-12">
                         <label for="Category" class="form-label"><i class="fas fa-layer-group"></i>
                             &nbsp;Software category</label>
-                        <select class="form-select" id="Category" required=""  name="category">
+                        <select class="form-select" id="Category" required  name="category">
                             <option value="">Choose...</option>
                             <?php 
                             // call show method
@@ -198,7 +198,7 @@ class AdminView extends AdminContr{
                     <div class="standard add-image">
                         <p><i class="far fa-image" ></i> Add software image</p>
                         <div class="in">
-                            <input type="file" name="image" id="img" style="display:none;" onchange="javascript:showoneimg()" />
+                            <input type="file" name="image" id="img" style="display:none;" onchange="javascript:showoneimg()" required/>
                             <label for="img">Browse</label>
                         </div>
                     </div>
@@ -213,7 +213,7 @@ class AdminView extends AdminContr{
                         <p id="sm-font"><i class="far fa-images"></i> Add software thumbnails <span class="warn">( Only 4
                                 images )</span></p>
                         <div class="in">
-                            <input type="file" name="thumbnail[]" id="thumbnail" style="display:none;" multiple
+                            <input type="file" name="thumbnail[]" id="thumbnail" style="display:none;" multiple required
                                 onchange="javascript:show()" />
                             <label for="thumbnail">Browse</label>
                         </div>
@@ -228,7 +228,7 @@ class AdminView extends AdminContr{
                     <div class="standard add-image">
                         <p><i class="far fa-file"></i> Add software file</p>
                         <div class="in">
-                            <input type="file" name="file" id="files" style="display:none;" onchange="javascript:showfile()" />
+                            <input type="file" name="file" id="files" style="display:none;" onchange="javascript:showfile()" required/>
                             <label for="files">Browse</label>
                         </div>
                     </div>

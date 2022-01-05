@@ -67,9 +67,6 @@ if(isset($_POST['update_product']))
         $thumbnails = $_FILES['thumbnail'];
         $file = $_FILES['file'];
         
-       
-       
-      
         // includes
         include "../../Controllers/db.class.php";
         include "../../Controllers/AdminContr.class.php";
