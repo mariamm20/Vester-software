@@ -134,7 +134,7 @@
                                 ?>
                             </span></h4>
                             <div class="btns">
-                                <button>Buy Now</button>
+                                <button data-bs-target="#buy-modal" data-bs-toggle="modal">Buy Now</button>
                                 <button><a href=<?php if (isset($_SESSION["id"])){ echo  "../includes/wishlist.inc.php?id=". $s_product['id'];}else{echo '?LoginFirst';}?> style="color:white;text-decoration:none !important; ">Add to wishlist</a></button>
                             </div>
                         </div>
@@ -152,7 +152,7 @@
 
                             </ul>
                             <div class="btns">
-                                <button>Buy Now</button>
+                                <button data-bs-target="#buy-modal" data-bs-toggle="modal">Buy Now</button>
                                 <button>Add to wishlist</button>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                             <h5 class="mt-2">Price: <span class="font-grey">10.9$</span></h5>
                             <h5 class="mt-2">Duration: <span class="font-grey">3 hours</span></h5>
                             <div class="btns">
-                                <button>Buy Now</button>
+                                <button data-bs-target="#buy-modal" data-bs-toggle="modal">Buy Now</button>
                                 <button>Add to wishlist</button>
                             </div>
                         </div>

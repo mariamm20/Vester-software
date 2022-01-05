@@ -21,6 +21,8 @@ include "../Views/WishListView.class.php";
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/home-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css " rel="stylesheet"/>
+        <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+
     </head>
 </head>
 
@@ -30,10 +32,48 @@ include "../Views/WishListView.class.php";
     include "../includes/header.inc.php";
     ?>
     
-    
+    <div class="modal" tabindex="-1" id="start-modal" >
+    <div class="modal-dialog modal-dialog-centered">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header start-body">
+                <div class="contact-header ">
+                    
+                    <h4>
+                        Our New Features
+                    </h4>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <!--Body-->
+            <form class="p-0">
+                <div class="modal-body " >
+
+                    <h5 style="line-height: 2em; display: flex;"><i class="far fa-question-circle" style="position: relative;top: 5px;"></i> Try our new feature to calculate the <br>
+                        price of your software</h5> 
+                        
+                        <p style="line-height: 2em;">
+                            Very Simple, You must answer a number of question.
+                            Then, We calculate Its cost. If it suitable for you, request it!
+                        </p>
+                    
+
+
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" onclick="location.href='../request/request.html'" >Start Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
     <!--First Section landing page-->
     <section class="land">
-        <div class="land-text">
+        <div class="land-text" data-aos="fade-right">
             <p class="intro">Indroducing Vester Software</p>
             <h2>
                 <span class="pick-up">Pick Up A Save</span><br>
@@ -63,8 +103,8 @@ include "../Views/WishListView.class.php";
             </div>
         </div>
 
-        <div>
-            <div class="about-text">
+        
+            <div class="about-text" data-aos="fade-left">
                 <p class="intro">About Us</p>
                 <h3 class="about-title">
                     ” One day you will wake up and there won’t be any more time to do the things you’ve always wanted.
@@ -86,8 +126,8 @@ include "../Views/WishListView.class.php";
     </section>
     <!--Third section -->
     <section class="products">
-        <p class="intro" style="text-align: center;">Get to know to us</p>
-        <h2>Our Products</h2>
+        <p class="intro" style="text-align: center;" data-aos="zoom-in">Get to know to us</p>
+        <h2 data-aos="zoom-in">Our Products</h2>
         <div class="main">
             
          <!-- the php code  -->
@@ -110,7 +150,7 @@ include "../Views/WishListView.class.php";
     </section>
     <!--Forth section-->
     <section class="request">
-        <div class="land-text req-text">
+        <div class="land-text req-text" data-aos="fade-right">
             <p class="intro">Get to know new features </p>
             <h2>
                 <span class="pick-up-edit">Make a Request for </span><br>
@@ -137,8 +177,8 @@ include "../Views/WishListView.class.php";
     </section>
     <!--Fifth section-->
     <div style="text-align: center; padding-top: 50px;">
-        <p class="intro">OUR TESTIMONIALS</p>
-        <h2>Why They Recommend Us</h2>
+        <p class="intro" data-aos="zoom-in">OUR TESTIMONIALS</p>
+        <h2 data-aos="zoom-in">Why They Recommend Us</h2>
     </div>
     <section class="review">
 
@@ -215,6 +255,16 @@ include "../Views/WishListView.class.php";
     ?>
 
     <!-- JavaScript -->
+     <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#start-modal').modal('show');
+        });
+    </script>
     <script src="../assests/bootstrap.bundle.min.js"></script>
     <script src="js/home.js"></script>
 </body>
