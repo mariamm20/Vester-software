@@ -64,7 +64,7 @@ include "../Views/WishListView.class.php";
                 <!--Footer-->
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-primary" onclick="location.href='../request/request.html'" >Start Now</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='request.php'" >Start Now</button>
                 </div>
             </form>
         </div>
