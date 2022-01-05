@@ -26,6 +26,8 @@ $wishlist = new WishListView();
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/products-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/> 
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 
@@ -112,8 +114,6 @@ $wishlist = new WishListView();
             <div class="parent-product">
             <!-- the php code  -->
                     <?php
-                    
-
                     // call the method to show products
                     
                         $proView->showProducts();

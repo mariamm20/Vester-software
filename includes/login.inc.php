@@ -23,7 +23,13 @@ if(isset($_POST['submit']))
         $LoginView->userLogin();
 
         // going back to front page 
-        header("location: ../home/home.php?error=none");
+        if($_SESSION['role'] == "admin"){
+            header("location: ../admin/admin.php");
+
+        }else{
+            header("location: ../home/home.php?error=none");
+        }
+
 
 
 

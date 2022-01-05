@@ -178,4 +178,23 @@
         $imageName,$first_thumbnail,$second_thumbnail,$third_thumbnail, 
         $fourth_thumbnail, $fileName,$support_windows,$support_mac,$support_linux);
     }
- }
+    public function setSale($id){
+        $this->setSaleContr($id);
+        $file = $this->getFileName($id);
+        echo "1";
+        $this->download($file["file"],$id);
+    }
+    public function download($file,$id){
+        $path= "../uploads/files/".$file;
+        $fileExt = explode(".",$file);
+        $fileFinalExt = strtolower(end($fileExt));
+        header("Cache-Control: public");
+        header("Content-Description File Transfer");
+        header("Content-Disposition: attachment;filename=".basename($file));
+        header("Content-Type: application/".$fileFinalExt);
+        header("Content-Transfer-Encoding:binary");
+        readfile($path);
+        exit();
+
+    }
+}

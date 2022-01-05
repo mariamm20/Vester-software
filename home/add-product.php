@@ -1,3 +1,20 @@
+<?php 
+
+session_start();
+if(!isset($_SESSION['id']) ){
+    header("location:sign-in.php");
+}
+include "../Controllers/db.class.php";
+include "../Controllers/ProductsContr.class.php";
+include "../Controllers/WishListContr.class.php";
+include "../Views/ProductsView.class.php";
+include "../Views/WishListView.class.php";
+//  make object from view class
+$addpage = new productView(); 
+$wishlist = new WishListView();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +28,8 @@
         <link href="../assests/bootstrap.min.css" rel="stylesheet">
         <link href="css/add-style.css" rel="stylesheet" />
         <link href="stand-css/header-footer-style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../assests/fontawesome/css/fontawesome.min.css">
     </head>
 </head>
 
@@ -18,12 +37,7 @@
    
     <?php
     include "../includes/header.inc.php";
-    include "../Controllers/db.class.php";
-    include "../Controllers/ProductsContr.class.php";
-    include "../Views/ProductsView.class.php";
-    //  make object from view class
-    $addpage = new productView(); 
-
+   
     ?>
 
     <div class="whole">

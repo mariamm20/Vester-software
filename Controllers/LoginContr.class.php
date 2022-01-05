@@ -64,8 +64,9 @@ class Login extends Db
             $_SESSION["email"] = $user[0]["email"];
             $_SESSION["id"] = $user[0]["id"];
             $_SESSION['fname'] =$user[0]['Fname'];
+            $_SESSION['role'] =$user[0]['role'];
             $stmt = null;
-
+                
             
             $query = "UPDATE users set last_login = now()  where id = ". $_SESSION['id'];
             $stmt= $this->Connect()->query($query);

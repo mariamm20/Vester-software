@@ -14,7 +14,7 @@
         protected function getReview()
         {
             $id = $_GET["id"];
-            $stmt = $this->Connect()->query("SELECT u.Fname,u.Lname,f.content from feedback as F join users as u on u.id = f.user_id  where f.review = 1" );
+            $stmt = $this->Connect()->query("SELECT u.Fname,u.Lname,f.content from feedback as F join users as u on u.id = f.user_id  where f.review = 1 and f.product_id = ". $id );
 
             $data = $stmt->fetchAll();
             return $data;
