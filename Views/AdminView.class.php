@@ -536,8 +536,8 @@ class  Upload {
 
     private function check_Extension( ){
     
-        $allowedExt ;
-        $result;
+        $allowedExt = false;
+        $result = false;
         if($this->type === "file"){
             $allowedExt = array('zip','rar');
         }else{
@@ -553,7 +553,7 @@ class  Upload {
     }
     private function check_size(){
 
-        $result ;
+        $result = false;
         if($this->type === "file"){
             // the file must be smaller than 500m
             if($this->fileSize <= 524288000){
@@ -579,7 +579,7 @@ class  Upload {
 
     }
     private function Check_Errors(){
-        $result;
+        $result = false;
         if($this->fileError == 0){
             $result= true;
         }else{

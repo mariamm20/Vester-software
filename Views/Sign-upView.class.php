@@ -40,7 +40,7 @@
                 //echo "Empty Input!";
                 header("location: ../home/sign-up.php?error=emptyinput");
                 exit();
-            }  
+            }
 
             if($this->validateFname() == false)  
             {
