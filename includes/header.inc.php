@@ -23,7 +23,7 @@ $message->ShowMessage();
                     <i class="fas fa-user-circle fa-2x dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li class="dropdown-item user-name"><?php echo "Hello " . $_SESSION["fname"] . "!"; ?></li>
+                        <li class="dropdown-item user-name"><?php echo "Hello " . $_SESSION["Fname"] . "!"; ?></li>
                         <li>
                             <hr class="dropdown-divider p-0">
                         </li>
